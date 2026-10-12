@@ -2,204 +2,195 @@
   "number": 37,
   "code": "data_submission",
   "title": "Data Submission",
-  "group": "Credit Reference Bureau",
-  "frequency": "periodic",
   "endpoint": "/api/v1/flows/rest/API_DATASUBMISSIONSYNC/1.0/submitDataSubmissionInfo",
   "array_key": "DATA_SUBMISSION_INFO",
-  "notes": "",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "number",
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1",
+      "payload_key": "ROW_ID",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "CREDIT REFERENCE BUREAU CODE",
+      "type": "string",
+      "description": "The code the reporting Credit Reference Bureau (E.g. XYZ = 060002)",
+      "example": "0600001",
+      "payload_key": "CREDIT REFERENCE BUREAU CODE",
+      "key_confidence": 1.0,
+      "key": "credit_reference_bureau_code"
+    },
+    {
+      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
+      "type": "date",
+      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY}",
+      "example": "3-Jun-2020",
+      "payload_key": "REPORTING DATE",
+      "key_confidence": 0.62,
+      "key": "business_reporting_day_month_year"
+    },
+    {
+      "name": "CATEGORY OF SUBMITTING INSTITUTION",
+      "type": "string",
+      "description": "Category of instutition. E.g. Comercial Banks, Microfinance Banks, DBFB Banks, Regulated Saccos, Unregulated Saccos, etc",
+      "example": "CRBSBIC01",
+      "payload_key": "CATEGORY OF SUBMITTING INST",
+      "key_confidence": 1.0,
+      "key": "category_of_submitting_institution"
+    },
+    {
+      "name": "SUBMITTING INSTITUTION CODE",
+      "type": "string",
+      "description": "Institution Code of the submitting instutition. E.g. Bank code issued by KBA (e.g. KCB = 01) for Commercial Banks.",
+      "example": "0000001",
+      "payload_key": "SUBMITTING INSTITUTION CODE",
+      "key_confidence": 1.0,
+      "key": "submitting_institution_code"
+    },
+    {
+      "name": "FILE NAME",
+      "type": "string",
+      "description": "The name of the file being submitted. E.g. Credit Application file.",
+      "example": "Credit Application File",
+      "payload_key": "FILE NAME",
+      "key_confidence": 1.0,
+      "key": "file_name"
+    },
+    {
+      "name": "BATCH NUMBER",
+      "type": "string",
+      "description": "The Batch Number of the file.",
+      "example": "449388",
+      "payload_key": "BATCH NUMBER",
+      "key_confidence": 1.0,
+      "key": "batch_number"
+    },
+    {
+      "name": "DATE SUBMITTED",
+      "type": "date",
+      "description": "The date when the file was submitted. Format {DD- MMM-YYYY}",
+      "example": "1-Jun-2020",
+      "payload_key": "DATE SUBMITTED",
+      "key_confidence": 1.0,
+      "key": "date_submitted"
+    },
+    {
+      "name": "DATE WHEN LOGS WERE SENT",
+      "type": "date",
+      "description": "The date when logs were sent to the submitting institution. Format {DD-MMM-YYYY}",
+      "example": "1-Jun-2020",
+      "payload_key": "DATE WHEN LOGS WERE SENT",
+      "key_confidence": 1.0,
+      "key": "date_when_logs_were_sent"
+    },
+    {
+      "name": "EMAIL OF PERSON RECEIVING LOGS",
+      "type": "string",
+      "description": "The email address of the person that received the logs sent.",
+      "example": "A.N.OTHER@gmail.com",
+      "payload_key": "EMAIL OF PERSON RECEIVING LOGS",
+      "key_confidence": 1.0,
+      "key": "email_of_person_receiving_logs"
+    },
+    {
+      "name": "REMARKS",
+      "type": "string",
+      "description": "Any remarks accompanying the records.",
+      "example": "GI file has invalid column count",
+      "payload_key": "REMARKS",
+      "key_confidence": 1.0,
+      "key": "remarks"
+    },
+    {
+      "name": "CATEGORY OF RECORD SUBMITTED",
+      "type": "string",
+      "description": "Category of record submitted. List drawn from both the current monthly and daily batch files {Non- Individual Consumer and Account Information, Individual Consumer, Employment and Account Information, Stakeholder Information, Guarantor Information, Bounced Cheque Information, Collateral Register, Fraudulent Activities Information, Credit Application Information etc}",
+      "example": "CRBRFTC02",
+      "payload_key": "CATEGORY OF RECORD SUBMITTED",
+      "key_confidence": 1.0,
+      "key": "category_of_record_submitted"
+    },
+    {
+      "name": "FILE NAMING CONVENTION STATUS",
+      "type": "string",
+      "description": "Whether the file naming convention is correct {C}, Incorrect {IC} or the file was not submitted {DNS}",
+      "example": "C",
+      "payload_key": "FILE NAMING CONVENTION STATUS",
+      "key_confidence": 1.0,
+      "key": "file_naming_convention_status"
+    },
+    {
+      "name": "FILE FORMAT STATUS",
+      "type": "string",
+      "description": "Whether the file format is correct {C}, Incorrect {IC} or the file was not submitted {DNS}",
+      "example": "C",
+      "payload_key": "FILE FORMAT STATUS",
+      "key_confidence": 1.0,
+      "key": "file_format_status"
+    },
+    {
+      "name": "NUMBER OF EXTRACTS SUBMITTED",
+      "type": "number",
+      "description": "The number of extracts submitted per each category of records submitted",
+      "example": "8",
+      "payload_key": "NUMBER OF EXTRACTS SUBMITTED",
+      "key_confidence": 1.0,
+      "key": "number_of_extracts_submitted"
+    },
+    {
+      "name": "NUMBER OF EXTRACTS ACCEPTED",
+      "type": "number",
+      "description": "The number of extracts accepted per each category of records submitted",
+      "example": "8",
+      "payload_key": "NUMBER OF EXTRACT ACCEPTED",
+      "key_confidence": 1.0,
+      "key": "number_of_extracts_accepted"
+    },
+    {
+      "name": "NUMBER OF RECORDS SUBMITTED",
+      "type": "number",
+      "description": "The number of records submitted per each category of extracts submitted",
+      "example": "437,071",
+      "payload_key": "NUMBER OF RECORD SUBMITTED",
+      "key_confidence": 1.0,
+      "key": "number_of_records_submitted"
+    },
+    {
+      "name": "NUMBER OF RECORDS ACCEPTED",
+      "type": "number",
+      "description": "The number of records accepted per each category of extracts submitted",
+      "example": "437,056",
+      "payload_key": "NUMBER OF RECORD ACCEPTED",
+      "key_confidence": 1.0,
+      "key": "number_of_records_accepted"
+    },
+    {
+      "name": "NUMBER OF RECORDS REJECTED",
+      "type": "number",
+      "description": "The number of records rejected per each category of extracts submitted",
+      "example": "15",
+      "payload_key": "NUMBER OF RECORDS REJECTED",
+      "key_confidence": 0,
+      "key": "number_of_records_rejected"
+    },
+    {
+      "name": "NUMBER OF MANDATORY FIELDS SUBMITED",
+      "type": "number",
+      "description": "The number of mandatory fields sumitted per each category of records submitted",
+      "example": "32",
+      "payload_key": "NO OF MANDATORY FIELD SUBMITED",
+      "key_confidence": 0.88,
+      "key": "number_of_mandatory_fields_submited"
+    }
+  ],
+  "unmatched_sample_keys": [
+    "DATE DOWNLOADED"
+  ],
   "source_pages": [
     186,
     191
-  ],
-  "fields": [
-    {
-      "key": "row_id",
-      "name": "ROW ID",
-      "payload_key": "ROW_ID",
-      "type": "number",
-      "required": true,
-      "description": "A unique sequential number, running from the first record to the last.",
-      "example": "1"
-    },
-    {
-      "key": "credit_reference_bureau_code",
-      "name": "CREDIT REFERENCE BUREAU CODE",
-      "payload_key": "CREDIT REFERENCE BUREAU CODE",
-      "type": "string",
-      "required": false,
-      "description": "The code the reporting Credit Reference Bureau (E.g. XYZ = 060002)",
-      "example": "0600001"
-    },
-    {
-      "key": "business_reporting_day_month_year",
-      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
-      "payload_key": "REPORTING DATE",
-      "type": "date",
-      "required": true,
-      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY}",
-      "example": "3-Jun-2020"
-    },
-    {
-      "key": "category_of_submitting_institution",
-      "name": "CATEGORY OF SUBMITTING INSTITUTION",
-      "payload_key": "CATEGORY OF SUBMITTING INST",
-      "type": "string",
-      "required": false,
-      "description": "Category of instutition. E.g. Comercial Banks, Microfinance Banks, DBFB Banks, Regulated Saccos, Unregulated Saccos, etc",
-      "example": "CRBSBIC01"
-    },
-    {
-      "key": "submitting_institution_code",
-      "name": "SUBMITTING INSTITUTION CODE",
-      "payload_key": "SUBMITTING INSTITUTION CODE",
-      "type": "string",
-      "required": false,
-      "description": "Institution Code of the submitting instutition. E.g. Bank code issued by KBA (e.g. KCB = 01) for Commercial Banks.",
-      "example": "0000001"
-    },
-    {
-      "key": "file_name",
-      "name": "FILE NAME",
-      "payload_key": "FILE NAME",
-      "type": "string",
-      "required": false,
-      "description": "The name of the file being submitted. E.g. Credit Application file.",
-      "example": "Credit Application File"
-    },
-    {
-      "key": "batch_number",
-      "name": "BATCH NUMBER",
-      "payload_key": "BATCH NUMBER",
-      "type": "string",
-      "required": false,
-      "description": "The Batch Number of the file.",
-      "example": "449388"
-    },
-    {
-      "key": "date_submitted",
-      "name": "DATE SUBMITTED",
-      "payload_key": "DATE SUBMITTED",
-      "type": "date",
-      "required": false,
-      "description": "The date when the file was submitted. Format {DD- MMM-YYYY}",
-      "example": "1-Jun-2020"
-    },
-    {
-      "key": "date_when_logs_were_sent",
-      "name": "DATE WHEN LOGS WERE SENT",
-      "payload_key": "DATE WHEN LOGS WERE SENT",
-      "type": "date",
-      "required": false,
-      "description": "The date when logs were sent to the submitting institution. Format {DD-MMM-YYYY}",
-      "example": "1-Jun-2020"
-    },
-    {
-      "key": "email_of_person_receiving_logs",
-      "name": "EMAIL OF PERSON RECEIVING LOGS",
-      "payload_key": "EMAIL OF PERSON RECEIVING LOGS",
-      "type": "string",
-      "required": false,
-      "description": "The email address of the person that received the logs sent.",
-      "example": "A.N.OTHER@gmail.com"
-    },
-    {
-      "key": "remarks",
-      "name": "REMARKS",
-      "payload_key": "REMARKS",
-      "type": "string",
-      "required": false,
-      "description": "Any remarks accompanying the records.",
-      "example": "GI file has invalid column count"
-    },
-    {
-      "key": "category_of_record_submitted",
-      "name": "CATEGORY OF RECORD SUBMITTED",
-      "payload_key": "CATEGORY OF RECORD SUBMITTED",
-      "type": "string",
-      "required": false,
-      "description": "Category of record submitted. List drawn from both the current monthly and daily batch files {Non- Individual Consumer and Account Information, Individual Consumer, Employment and Account Information, Stakeholder Information, Guarantor Information, Bounced Cheque Information, Collateral Register, Fraudulent Activities Information, Credit Application Information etc}",
-      "example": "CRBRFTC02"
-    },
-    {
-      "key": "file_naming_convention_status",
-      "name": "FILE NAMING CONVENTION STATUS",
-      "payload_key": "FILE NAMING CONVENTION STATUS",
-      "type": "string",
-      "required": false,
-      "description": "Whether the file naming convention is correct {C}, Incorrect {IC} or the file was not submitted {DNS}",
-      "example": "C"
-    },
-    {
-      "key": "file_format_status",
-      "name": "FILE FORMAT STATUS",
-      "payload_key": "FILE FORMAT STATUS",
-      "type": "string",
-      "required": false,
-      "description": "Whether the file format is correct {C}, Incorrect {IC} or the file was not submitted {DNS}",
-      "example": "C"
-    },
-    {
-      "key": "number_of_extracts_submitted",
-      "name": "NUMBER OF EXTRACTS SUBMITTED",
-      "payload_key": "NUMBER OF EXTRACTS SUBMITTED",
-      "type": "number",
-      "required": false,
-      "description": "The number of extracts submitted per each category of records submitted",
-      "example": "8"
-    },
-    {
-      "key": "number_of_extracts_accepted",
-      "name": "NUMBER OF EXTRACTS ACCEPTED",
-      "payload_key": "NUMBER OF EXTRACT ACCEPTED",
-      "type": "number",
-      "required": false,
-      "description": "The number of extracts accepted per each category of records submitted",
-      "example": "8"
-    },
-    {
-      "key": "number_of_records_submitted",
-      "name": "NUMBER OF RECORDS SUBMITTED",
-      "payload_key": "NUMBER OF RECORD SUBMITTED",
-      "type": "number",
-      "required": false,
-      "description": "The number of records submitted per each category of extracts submitted",
-      "example": "437,071"
-    },
-    {
-      "key": "number_of_records_accepted",
-      "name": "NUMBER OF RECORDS ACCEPTED",
-      "payload_key": "NUMBER OF RECORD ACCEPTED",
-      "type": "number",
-      "required": false,
-      "description": "The number of records accepted per each category of extracts submitted",
-      "example": "437,056"
-    },
-    {
-      "key": "number_of_records_rejected",
-      "name": "NUMBER OF RECORDS REJECTED",
-      "payload_key": "NUMBER OF RECORDS REJECTED",
-      "type": "number",
-      "required": false,
-      "description": "The number of records rejected per each category of extracts submitted",
-      "example": "15"
-    },
-    {
-      "key": "number_of_mandatory_fields_submited",
-      "name": "NUMBER OF MANDATORY FIELDS SUBMITED",
-      "payload_key": "NO OF MANDATORY FIELD SUBMITED",
-      "type": "number",
-      "required": false,
-      "description": "The number of mandatory fields sumitted per each category of records submitted",
-      "example": "32"
-    },
-    {
-      "key": "date_downloaded",
-      "name": "DATE DOWNLOADED",
-      "payload_key": "DATE DOWNLOADED",
-      "type": "date",
-      "required": false,
-      "description": "Appears in CBK's sample payload but not in the field table.",
-      "example": ""
-    }
   ]
 }

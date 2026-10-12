@@ -2,231 +2,229 @@
   "number": 8,
   "code": "accounts_attributes",
   "title": "Accounts Attributes",
-  "group": "Accounts & Deposits",
-  "frequency": "periodic",
   "endpoint": "/api/v1/flows/rest/API_DEPOSITCONTRACTSINFOSYNC/1.0/submitDepositContractsData",
   "array_key": "ACCOUNTS_ATTRIBUTES",
-  "notes": "The guide gives this dataset the same endpoint as Deposit Contracts (#15). Confirm the correct endpoint with CBK.",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "number",
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1",
+      "payload_key": "ROW ID",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "BANK CODE",
+      "type": "string",
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA).",
+      "example": "0000001",
+      "payload_key": "BANK CODE",
+      "key_confidence": 1.0,
+      "key": "bank_code"
+    },
+    {
+      "name": "BRANCH ID",
+      "type": "string",
+      "description": "Branch code where the account was opened/operated from.",
+      "example": "003",
+      "payload_key": "BRANCH ID",
+      "key_confidence": 1.0,
+      "key": "branch_id"
+    },
+    {
+      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
+      "type": "date",
+      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY} as per ISO 8601.",
+      "example": "03-May-2022",
+      "payload_key": "BUSINESS REPORTING DAY, MONTH & YEAR",
+      "key_confidence": 1.0,
+      "key": "business_reporting_day_month_year"
+    },
+    {
+      "name": "CUSTOMER ID",
+      "type": "string",
+      "description": "Customer unique id linked to the account.",
+      "example": "0354678",
+      "payload_key": "CUSTOMER ID",
+      "key_confidence": 1.0,
+      "key": "customer_id"
+    },
+    {
+      "name": "ACCOUNT/CONTRACT NUMBER",
+      "type": "string",
+      "description": "Unique account identifier as assigned to customers' accounts by the reporting institution.",
+      "example": "01A002035467801",
+      "payload_key": "ACCOUNT/CONTRACT NUMBER",
+      "key_confidence": 1.0,
+      "key": "account_contract_number"
+    },
+    {
+      "name": "ACCOUNT NAME",
+      "type": "string",
+      "description": "Customer's First Name, Middle Name and Sir Name or registered company Name or Business/Trading Name.",
+      "example": "Fig Tree Enterprises Ltd",
+      "payload_key": "ACCOUNT NAME",
+      "key_confidence": 1.0,
+      "key": "account_name"
+    },
+    {
+      "name": "ACCOUNT OWNERSHIP TYPE",
+      "type": "string",
+      "description": "Individual, joint, sole proprietor, partnership, corporate, group owned or a trust",
+      "example": "AOC01",
+      "payload_key": "ACCOUNT OWNERSHIP TYPE",
+      "key_confidence": 1.0,
+      "key": "account_ownership_type"
+    },
+    {
+      "name": "BUSINESS ECONOMIC ACTIVITY CODE",
+      "type": "string",
+      "description": "As per ISIC with Agriculture being classified further into small and large scale enterprises, Agricultural boards and Cooperative Societies.",
+      "example": "A0111",
+      "payload_key": "BUSINESS ECONOMIC ACTIVITY CODE",
+      "key_confidence": 1.0,
+      "key": "business_economic_activity_code"
+    },
+    {
+      "name": "CURRENCY CODE",
+      "type": "string",
+      "description": "ISO currency codes as per ISO-4217. {e.g. USD, GPB, EUR, KES. etc.}",
+      "example": "GBP",
+      "payload_key": "CURRENCY CODE",
+      "key_confidence": 1.0,
+      "key": "currency_code"
+    },
+    {
+      "name": "TYPE OF ACCOUNT",
+      "type": "string",
+      "description": "e.g. Current A/c, Savings A/c, Transactional A/c, Loan A/c, Nostro A/c, Vostro A/c, etc.",
+      "example": "CAA",
+      "payload_key": "TYPE OF ACCOUNT",
+      "key_confidence": 1.0,
+      "key": "type_of_account"
+    },
+    {
+      "name": "PRODUCT TYPE",
+      "type": "string",
+      "description": "The type of product for the account.",
+      "example": "PRD04",
+      "payload_key": "PRODUCT TYPE",
+      "key_confidence": 1.0,
+      "key": "product_type"
+    },
+    {
+      "name": "CHART OF ACCOUNTS CORRESPONDING CODE",
+      "type": "string",
+      "description": "Corresponding chart of account class code for Assets, liabilities, capital, income, expense or off-Balance Sheet as per EDW chart of accounts.",
+      "example": "CA2",
+      "payload_key": "CHART OF ACCOUNTS CORRESPONDING CODE",
+      "key_confidence": 1.0,
+      "key": "chart_of_accounts_corresponding_code"
+    },
+    {
+      "name": "GL MAPPING CODE",
+      "type": "string",
+      "description": "A GL code corresponding to the reporting line in the GL Mapping code list.",
+      "example": "GL201022",
+      "payload_key": "GL MAPPING CODE",
+      "key_confidence": 1.0,
+      "key": "gl_mapping_code"
+    },
+    {
+      "name": "DATE ACCOUNT WAS OPENED",
+      "type": "date",
+      "description": "The date when the account was opened. Format {DD- MMM-YYYY} as per ISO 8601",
+      "example": "2019-11-23",
+      "payload_key": "DATE ACCOUNT WAS OPENED",
+      "key_confidence": 1.0,
+      "key": "date_account_was_opened"
+    },
+    {
+      "name": "DATE ACCOUNT WAS CLOSED",
+      "type": "date",
+      "description": "If applicable, else left blank. Format {DD-MMM-YYYY} as per ISO 8601",
+      "example": "",
+      "payload_key": "DATE ACCOUNT WAS CLOSED",
+      "key_confidence": 1.0,
+      "key": "date_account_was_closed"
+    },
+    {
+      "name": "DEBIT INTEREST RATE (DR)",
+      "type": "number",
+      "description": "Interest rate for debits. Zero if not applicable",
+      "example": "-13.5",
+      "payload_key": "DEBIT INTEREST RATE (DR)",
+      "key_confidence": 1.0,
+      "key": "debit_interest_rate_dr"
+    },
+    {
+      "name": "CREDIT INTEREST RATE (CR)",
+      "type": "number",
+      "description": "Interest rate for credits. Zero if not applicable",
+      "example": "2.5",
+      "payload_key": "CREDIT INTEREST RATE (CR)",
+      "key_confidence": 1.0,
+      "key": "credit_interest_rate_cr"
+    },
+    {
+      "name": "ANTICIPATED MATURITY PERIOD",
+      "type": "string",
+      "description": "The anticipated maturity period. E.g. Matured, 0-30 days, 31-60 days, 61-90 days, 91-180 days, 6-9 months, 10-12 months, 1-3 years, 3-5 years and over 5 years.",
+      "example": "AMTC09",
+      "payload_key": "ANTICIPATED MATURITY PERIOD",
+      "key_confidence": 1.0,
+      "key": "anticipated_maturity_period"
+    },
+    {
+      "name": "SANCTIONED ACCOUNT LIMIT IN FCY",
+      "type": "number",
+      "description": "The approved/sanctioned maximum account limit amount in foreign currency, either debit or credit. E.g. 1,000,000 for an overdfraft whose maximum limit is 1 million in debit.",
+      "example": "-3,000.00",
+      "payload_key": "SANCTIONED ACCOUNT LIMIT IN FCY",
+      "key_confidence": 1.0,
+      "key": "sanctioned_account_limit_in_fcy"
+    },
+    {
+      "name": "SANCTIONED ACCOUNT LIMIT IN LCY EQUIVALENT",
+      "type": "number",
+      "description": "The approved/sanctioned maximum account limit amount in local currency (LCY) equivalent, either debit or credit. E.g. 1,000,000 for an overdfraft whose maximum limit is 1 million in debit.",
+      "example": "-450,000.00",
+      "payload_key": "SANCTIONED ACCOUNT LIMIT IN LCY EQUIVALENT",
+      "key_confidence": 1.0,
+      "key": "sanctioned_account_limit_in_lcy_equivalent"
+    },
+    {
+      "name": "ACCOUNT STATUS",
+      "type": "string",
+      "description": "e.g. Active, Inactive, Dormant and Closed.",
+      "example": "ACT",
+      "payload_key": "ACCOUNT STATUS",
+      "key_confidence": 1.0,
+      "key": "account_status"
+    },
+    {
+      "name": "ACCOUNT STATUS CHANGE DATE",
+      "type": "date",
+      "description": "Date when account status was last modified.",
+      "example": "",
+      "payload_key": "ACCOUNT STATUS CHANGE DATE",
+      "key_confidence": 1.0,
+      "key": "account_status_change_date"
+    },
+    {
+      "name": "EXPIRY DATE",
+      "type": "date",
+      "description": "For overdraft facilities, else left blank.",
+      "example": "31-Aug-2020",
+      "payload_key": "EXPIRY DATE",
+      "key_confidence": 1.0,
+      "key": "expiry_date"
+    }
+  ],
+  "unmatched_sample_keys": [],
   "source_pages": [
     43,
     48
-  ],
-  "fields": [
-    {
-      "key": "row_id",
-      "name": "ROW ID",
-      "payload_key": "ROW ID",
-      "type": "number",
-      "required": true,
-      "description": "A unique sequential number, running from the first record to the last.",
-      "example": "1"
-    },
-    {
-      "key": "bank_code",
-      "name": "BANK CODE",
-      "payload_key": "BANK CODE",
-      "type": "string",
-      "required": false,
-      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA).",
-      "example": "0000001"
-    },
-    {
-      "key": "branch_id",
-      "name": "BRANCH ID",
-      "payload_key": "BRANCH ID",
-      "type": "string",
-      "required": false,
-      "description": "Branch code where the account was opened/operated from.",
-      "example": "003"
-    },
-    {
-      "key": "business_reporting_day_month_year",
-      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
-      "payload_key": "BUSINESS REPORTING DAY, MONTH & YEAR",
-      "type": "date",
-      "required": true,
-      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY} as per ISO 8601.",
-      "example": "03-May-2022"
-    },
-    {
-      "key": "customer_id",
-      "name": "CUSTOMER ID",
-      "payload_key": "CUSTOMER ID",
-      "type": "string",
-      "required": false,
-      "description": "Customer unique id linked to the account.",
-      "example": "0354678"
-    },
-    {
-      "key": "account_contract_number",
-      "name": "ACCOUNT/CONTRACT NUMBER",
-      "payload_key": "ACCOUNT/CONTRACT NUMBER",
-      "type": "string",
-      "required": false,
-      "description": "Unique account identifier as assigned to customers' accounts by the reporting institution.",
-      "example": "01A002035467801"
-    },
-    {
-      "key": "account_name",
-      "name": "ACCOUNT NAME",
-      "payload_key": "ACCOUNT NAME",
-      "type": "string",
-      "required": false,
-      "description": "Customer's First Name, Middle Name and Sir Name or registered company Name or Business/Trading Name.",
-      "example": "Fig Tree Enterprises Ltd"
-    },
-    {
-      "key": "account_ownership_type",
-      "name": "ACCOUNT OWNERSHIP TYPE",
-      "payload_key": "ACCOUNT OWNERSHIP TYPE",
-      "type": "string",
-      "required": false,
-      "description": "Individual, joint, sole proprietor, partnership, corporate, group owned or a trust",
-      "example": "AOC01"
-    },
-    {
-      "key": "business_economic_activity_code",
-      "name": "BUSINESS ECONOMIC ACTIVITY CODE",
-      "payload_key": "BUSINESS ECONOMIC ACTIVITY CODE",
-      "type": "string",
-      "required": false,
-      "description": "As per ISIC with Agriculture being classified further into small and large scale enterprises, Agricultural boards and Cooperative Societies.",
-      "example": "A0111"
-    },
-    {
-      "key": "currency_code",
-      "name": "CURRENCY CODE",
-      "payload_key": "CURRENCY CODE",
-      "type": "string",
-      "required": false,
-      "description": "ISO currency codes as per ISO-4217. {e.g. USD, GPB, EUR, KES. etc.}",
-      "example": "GBP"
-    },
-    {
-      "key": "type_of_account",
-      "name": "TYPE OF ACCOUNT",
-      "payload_key": "TYPE OF ACCOUNT",
-      "type": "string",
-      "required": false,
-      "description": "e.g. Current A/c, Savings A/c, Transactional A/c, Loan A/c, Nostro A/c, Vostro A/c, etc.",
-      "example": "CAA"
-    },
-    {
-      "key": "product_type",
-      "name": "PRODUCT TYPE",
-      "payload_key": "PRODUCT TYPE",
-      "type": "string",
-      "required": false,
-      "description": "The type of product for the account.",
-      "example": "PRD04"
-    },
-    {
-      "key": "chart_of_accounts_corresponding_code",
-      "name": "CHART OF ACCOUNTS CORRESPONDING CODE",
-      "payload_key": "CHART OF ACCOUNTS CORRESPONDING CODE",
-      "type": "string",
-      "required": false,
-      "description": "Corresponding chart of account class code for Assets, liabilities, capital, income, expense or off-Balance Sheet as per EDW chart of accounts.",
-      "example": "CA2"
-    },
-    {
-      "key": "gl_mapping_code",
-      "name": "GL MAPPING CODE",
-      "payload_key": "GL MAPPING CODE",
-      "type": "string",
-      "required": false,
-      "description": "A GL code corresponding to the reporting line in the GL Mapping code list.",
-      "example": "GL201022"
-    },
-    {
-      "key": "date_account_was_opened",
-      "name": "DATE ACCOUNT WAS OPENED",
-      "payload_key": "DATE ACCOUNT WAS OPENED",
-      "type": "date",
-      "required": false,
-      "description": "The date when the account was opened. Format {DD- MMM-YYYY} as per ISO 8601",
-      "example": "2019-11-23"
-    },
-    {
-      "key": "date_account_was_closed",
-      "name": "DATE ACCOUNT WAS CLOSED",
-      "payload_key": "DATE ACCOUNT WAS CLOSED",
-      "type": "date",
-      "required": false,
-      "description": "If applicable, else left blank. Format {DD-MMM-YYYY} as per ISO 8601",
-      "example": ""
-    },
-    {
-      "key": "debit_interest_rate_dr",
-      "name": "DEBIT INTEREST RATE (DR)",
-      "payload_key": "DEBIT INTEREST RATE (DR)",
-      "type": "number",
-      "required": false,
-      "description": "Interest rate for debits. Zero if not applicable",
-      "example": "-13.5"
-    },
-    {
-      "key": "credit_interest_rate_cr",
-      "name": "CREDIT INTEREST RATE (CR)",
-      "payload_key": "CREDIT INTEREST RATE (CR)",
-      "type": "number",
-      "required": false,
-      "description": "Interest rate for credits. Zero if not applicable",
-      "example": "2.5"
-    },
-    {
-      "key": "anticipated_maturity_period",
-      "name": "ANTICIPATED MATURITY PERIOD",
-      "payload_key": "ANTICIPATED MATURITY PERIOD",
-      "type": "string",
-      "required": false,
-      "description": "The anticipated maturity period. E.g. Matured, 0-30 days, 31-60 days, 61-90 days, 91-180 days, 6-9 months, 10-12 months, 1-3 years, 3-5 years and over 5 years.",
-      "example": "AMTC09"
-    },
-    {
-      "key": "sanctioned_account_limit_in_fcy",
-      "name": "SANCTIONED ACCOUNT LIMIT IN FCY",
-      "payload_key": "SANCTIONED ACCOUNT LIMIT IN FCY",
-      "type": "number",
-      "required": false,
-      "description": "The approved/sanctioned maximum account limit amount in foreign currency, either debit or credit. E.g. 1,000,000 for an overdfraft whose maximum limit is 1 million in debit.",
-      "example": "-3,000.00"
-    },
-    {
-      "key": "sanctioned_account_limit_in_lcy_equivalent",
-      "name": "SANCTIONED ACCOUNT LIMIT IN LCY EQUIVALENT",
-      "payload_key": "SANCTIONED ACCOUNT LIMIT IN LCY EQUIVALENT",
-      "type": "number",
-      "required": false,
-      "description": "The approved/sanctioned maximum account limit amount in local currency (LCY) equivalent, either debit or credit. E.g. 1,000,000 for an overdfraft whose maximum limit is 1 million in debit.",
-      "example": "-450,000.00"
-    },
-    {
-      "key": "account_status",
-      "name": "ACCOUNT STATUS",
-      "payload_key": "ACCOUNT STATUS",
-      "type": "string",
-      "required": false,
-      "description": "e.g. Active, Inactive, Dormant and Closed.",
-      "example": "ACT"
-    },
-    {
-      "key": "account_status_change_date",
-      "name": "ACCOUNT STATUS CHANGE DATE",
-      "payload_key": "ACCOUNT STATUS CHANGE DATE",
-      "type": "date",
-      "required": false,
-      "description": "Date when account status was last modified.",
-      "example": ""
-    },
-    {
-      "key": "expiry_date",
-      "name": "EXPIRY DATE",
-      "payload_key": "EXPIRY DATE",
-      "type": "date",
-      "required": false,
-      "description": "For overdraft facilities, else left blank.",
-      "example": "31-Aug-2020"
-    }
   ]
 }

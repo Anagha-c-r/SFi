@@ -2,78 +2,76 @@
   "number": 27,
   "code": "related_party_relationships_information",
   "title": "Related Party Relationships Information",
-  "group": "Customers & Counterparties",
-  "frequency": "periodic",
   "endpoint": "/api/v1/flows/rest/API_RELATEDPRTYRELTNSHIPSSYNC/1.0/submitRelatedPrtyReltnships",
   "array_key": "RELATED_PRTY_RELATNSHIPS_INFO",
-  "notes": "",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "string",
+      "description": "ROW ID",
+      "example": "1",
+      "payload_key": "ROW ID",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "BANK CODE",
+      "type": "string",
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
+      "example": "0000001",
+      "payload_key": "BANK CODE",
+      "key_confidence": 1.0,
+      "key": "bank_code"
+    },
+    {
+      "name": "BRANCH ID",
+      "type": "string",
+      "description": "Branch code where the account was opened/operated from.",
+      "example": "091",
+      "payload_key": "BRANCH ID",
+      "key_confidence": 1.0,
+      "key": "branch_id"
+    },
+    {
+      "name": "REPORTING DATE",
+      "type": "date",
+      "description": "The reporting date, Month & Year based on the frequency. Format {DD- MMM-YYYY}",
+      "example": "21-Jul-2022",
+      "payload_key": "REPORTING DATE",
+      "key_confidence": 1.0,
+      "key": "reporting_date"
+    },
+    {
+      "name": "CUSTOMER ID",
+      "type": "string",
+      "description": "Unique customer identifier as assigned to customers by the reporting institution.",
+      "example": "ECOBANK KENYA LTD",
+      "payload_key": "CUSTOMER ID",
+      "key_confidence": 1.0,
+      "key": "customer_id"
+    },
+    {
+      "name": "RELATED PARTY ID",
+      "type": "string",
+      "description": "The unique identifier for the related party.",
+      "example": "AF123",
+      "payload_key": "RELATED PARTY ID",
+      "key_confidence": 1.0,
+      "key": "related_party_id"
+    },
+    {
+      "name": "RELATIONSHIP TYPE",
+      "type": "string",
+      "description": "The relationship type between the customer and its related party. E.g. Director",
+      "example": "RTC01",
+      "payload_key": "RELATIONSHIP TYPE",
+      "key_confidence": 1.0,
+      "key": "relationship_type"
+    }
+  ],
+  "unmatched_sample_keys": [],
   "source_pages": [
     139,
     143
-  ],
-  "fields": [
-    {
-      "key": "row_id",
-      "name": "ROW ID",
-      "payload_key": "ROW ID",
-      "type": "string",
-      "required": true,
-      "description": "ROW ID",
-      "example": "1"
-    },
-    {
-      "key": "bank_code",
-      "name": "BANK CODE",
-      "payload_key": "BANK CODE",
-      "type": "string",
-      "required": false,
-      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
-      "example": "0000001"
-    },
-    {
-      "key": "branch_id",
-      "name": "BRANCH ID",
-      "payload_key": "BRANCH ID",
-      "type": "string",
-      "required": false,
-      "description": "Branch code where the account was opened/operated from.",
-      "example": "091"
-    },
-    {
-      "key": "reporting_date",
-      "name": "REPORTING DATE",
-      "payload_key": "REPORTING DATE",
-      "type": "date",
-      "required": true,
-      "description": "The reporting date, Month & Year based on the frequency. Format {DD- MMM-YYYY}",
-      "example": "21-Jul-2022"
-    },
-    {
-      "key": "customer_id",
-      "name": "CUSTOMER ID",
-      "payload_key": "CUSTOMER ID",
-      "type": "string",
-      "required": false,
-      "description": "Unique customer identifier as assigned to customers by the reporting institution.",
-      "example": "ECOBANK KENYA LTD"
-    },
-    {
-      "key": "related_party_id",
-      "name": "RELATED PARTY ID",
-      "payload_key": "RELATED PARTY ID",
-      "type": "string",
-      "required": false,
-      "description": "The unique identifier for the related party.",
-      "example": "AF123"
-    },
-    {
-      "key": "relationship_type",
-      "name": "RELATIONSHIP TYPE",
-      "payload_key": "RELATIONSHIP TYPE",
-      "type": "string",
-      "required": false,
-      "description": "The relationship type between the customer and its related party. E.g. Director",
-      "example": "RTC01"
-    }
   ]
 }

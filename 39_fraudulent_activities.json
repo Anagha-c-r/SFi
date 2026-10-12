@@ -2,96 +2,94 @@
   "number": 39,
   "code": "fraudulent_activities",
   "title": "Fraudulent Activities",
-  "group": "Fraud & Complaints",
-  "frequency": "periodic",
   "endpoint": "/api/v1/flows/rest/API_FRAUDULENTACTIVI/1.0/submitFraudulentActivities",
   "array_key": "FRAUD_ACTIVITY_INFO",
-  "notes": "",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "number",
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1",
+      "payload_key": "ROW ID",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "CREDIT REFERENCE BUREAU CODE",
+      "type": "string",
+      "description": "The code the reporting Credit Reference Bureau (E.g. XYZ = 060002)",
+      "example": "0600002",
+      "payload_key": "CREDIT REFERENCE BUREAU CODE",
+      "key_confidence": 1.0,
+      "key": "credit_reference_bureau_code"
+    },
+    {
+      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
+      "type": "date",
+      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY}",
+      "example": "3-Jun-2020",
+      "payload_key": "REPORTING DATE",
+      "key_confidence": 0.62,
+      "key": "business_reporting_day_month_year"
+    },
+    {
+      "name": "CATEGORY OF INSTITUTION",
+      "type": "string",
+      "description": "Category of instutition. E.g. Comercial Banks, Microfinance Banks, DBFB Banks, Regulated Saccos, Unregulated Saccos, etc",
+      "example": "CRBSBIC01",
+      "payload_key": "CATEGORY OF INSTITUTION",
+      "key_confidence": 1.0,
+      "key": "category_of_institution"
+    },
+    {
+      "name": "INSTITUTION'S CODE",
+      "type": "string",
+      "description": "The code of the institution submitting fraudulent activities E.g. {KCB = 01}",
+      "example": "0000003",
+      "payload_key": "INSTITUTION CODE",
+      "key_confidence": 0.97,
+      "key": "institution_s_code"
+    },
+    {
+      "name": "INSTITUTION'S NAME",
+      "type": "string",
+      "description": "The name of the institution submitting the fraudulet activities",
+      "example": "Absa Bank Kenya PLC",
+      "payload_key": "INSTITUTION NAME",
+      "key_confidence": 0.97,
+      "key": "institution_s_name"
+    },
+    {
+      "name": "NUMBER OF FRAUDULENT ACTIVITIES",
+      "type": "number",
+      "description": "The count on the number of fraudulent activities per institution",
+      "example": "8",
+      "payload_key": "NUMBER OF FRAUDULENT ACTIVITY",
+      "key_confidence": 1.0,
+      "key": "number_of_fraudulent_activities"
+    },
+    {
+      "name": "AMOUNT INVOLVED",
+      "type": "number",
+      "description": "The amount involved in the fraudulent activity",
+      "example": "4,153,547.57",
+      "payload_key": "AMOUNT INVOLVED",
+      "key_confidence": 1.0,
+      "key": "amount_involved"
+    },
+    {
+      "name": "AMOUNT OF LOSS",
+      "type": "number",
+      "description": "Actual loss amount to the institution in Local currency (Kshs')",
+      "example": "982,204.12",
+      "payload_key": "AMOUNT OF LOSS",
+      "key_confidence": 1.0,
+      "key": "amount_of_loss"
+    }
+  ],
+  "unmatched_sample_keys": [],
   "source_pages": [
     195,
     199
-  ],
-  "fields": [
-    {
-      "key": "row_id",
-      "name": "ROW ID",
-      "payload_key": "ROW ID",
-      "type": "number",
-      "required": true,
-      "description": "A unique sequential number, running from the first record to the last.",
-      "example": "1"
-    },
-    {
-      "key": "credit_reference_bureau_code",
-      "name": "CREDIT REFERENCE BUREAU CODE",
-      "payload_key": "CREDIT REFERENCE BUREAU CODE",
-      "type": "string",
-      "required": false,
-      "description": "The code the reporting Credit Reference Bureau (E.g. XYZ = 060002)",
-      "example": "0600002"
-    },
-    {
-      "key": "business_reporting_day_month_year",
-      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
-      "payload_key": "REPORTING DATE",
-      "type": "date",
-      "required": true,
-      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY}",
-      "example": "3-Jun-2020"
-    },
-    {
-      "key": "category_of_institution",
-      "name": "CATEGORY OF INSTITUTION",
-      "payload_key": "CATEGORY OF INSTITUTION",
-      "type": "string",
-      "required": false,
-      "description": "Category of instutition. E.g. Comercial Banks, Microfinance Banks, DBFB Banks, Regulated Saccos, Unregulated Saccos, etc",
-      "example": "CRBSBIC01"
-    },
-    {
-      "key": "institution_s_code",
-      "name": "INSTITUTION'S CODE",
-      "payload_key": "INSTITUTION CODE",
-      "type": "string",
-      "required": false,
-      "description": "The code of the institution submitting fraudulent activities E.g. {KCB = 01}",
-      "example": "0000003"
-    },
-    {
-      "key": "institution_s_name",
-      "name": "INSTITUTION'S NAME",
-      "payload_key": "INSTITUTION NAME",
-      "type": "string",
-      "required": false,
-      "description": "The name of the institution submitting the fraudulet activities",
-      "example": "Absa Bank Kenya PLC"
-    },
-    {
-      "key": "number_of_fraudulent_activities",
-      "name": "NUMBER OF FRAUDULENT ACTIVITIES",
-      "payload_key": "NUMBER OF FRAUDULENT ACTIVITY",
-      "type": "number",
-      "required": false,
-      "description": "The count on the number of fraudulent activities per institution",
-      "example": "8"
-    },
-    {
-      "key": "amount_involved",
-      "name": "AMOUNT INVOLVED",
-      "payload_key": "AMOUNT INVOLVED",
-      "type": "number",
-      "required": false,
-      "description": "The amount involved in the fraudulent activity",
-      "example": "4,153,547.57"
-    },
-    {
-      "key": "amount_of_loss",
-      "name": "AMOUNT OF LOSS",
-      "payload_key": "AMOUNT OF LOSS",
-      "type": "number",
-      "required": false,
-      "description": "Actual loss amount to the institution in Local currency (Kshs')",
-      "example": "982,204.12"
-    }
   ]
 }

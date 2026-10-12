@@ -2,105 +2,103 @@
   "number": 46,
   "code": "foreign_exchange_positions_information",
   "title": "Foreign Exchange Positions Information",
-  "group": "Forex & Remittances",
-  "frequency": "periodic",
   "endpoint": "/api/v1/flows/rest/API_FOREIGNEXCHANGEPOSITIONSSYNC/1.0/submitForeignExchangePositions",
   "array_key": "FOREIGN_EXCHANGE_POSITIONS",
-  "notes": "",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "number",
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1",
+      "payload_key": "ROW ID",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "REPORTING DATE",
+      "type": "date",
+      "description": "The code for the reporting Institution. (E.g. XYZ = 070002)",
+      "example": "5/23/2020",
+      "payload_key": "REPORTING DATE",
+      "key_confidence": 1.0,
+      "key": "reporting_date"
+    },
+    {
+      "name": "INSTITITUTION CODE",
+      "type": "number",
+      "description": "Institution code issued by CBK (e.g. Dahabshil = 0700001)",
+      "example": "0700011",
+      "payload_key": "INSTITUTION CODE",
+      "key_confidence": 1.0,
+      "key": "instititution_code"
+    },
+    {
+      "name": "CURRENCY TYPE CODE",
+      "type": "string",
+      "description": "ISO currency codes as per ISO-4217. {e.g. USD, GPB, EUR, KES. etc.}",
+      "example": "GBP",
+      "payload_key": "CURRENCY TYPE CODE",
+      "key_confidence": 1.0,
+      "key": "currency_type_code"
+    },
+    {
+      "name": "KES SPOT RATE",
+      "type": "number",
+      "description": "The Opening exchange rate for each type of currency.The values must have at least 5 decimal places.",
+      "example": "102.30987",
+      "payload_key": "KES SPOT RATE",
+      "key_confidence": 1.0,
+      "key": "kes_spot_rate"
+    },
+    {
+      "name": "OPENING POSITION AMOUNT",
+      "type": "number",
+      "description": "Remittance opening postion for each type of currency in item 4 above where the reporting institution is a Money Remittance Provider and Purchases opening position where the reporting institution is a Forex Bureau.",
+      "example": "8500.12345",
+      "payload_key": "OPENING POSITION AMOUNT",
+      "key_confidence": 1.0,
+      "key": "opening_position_amount"
+    },
+    {
+      "name": "TOTAL INFLOWS AMOUNT",
+      "type": "number",
+      "description": "Total remittance inflows for each type of currency in item 4 above for Money Remittance Providers or total purchases for Forex Bureaus.",
+      "example": "12320.12345",
+      "payload_key": "TOTAL INFLOWS AMOUNT",
+      "key_confidence": 1.0,
+      "key": "total_inflows_amount"
+    },
+    {
+      "name": "OTHER TOTAL INFLOWS AMOUNT",
+      "type": "number",
+      "description": "Other total inflows for each type of currency in item 4 above.",
+      "example": "657",
+      "payload_key": "OTHER TOTAL INFLOWS AMOUNT",
+      "key_confidence": 1.0,
+      "key": "other_total_inflows_amount"
+    },
+    {
+      "name": "TOTAL OUTFLOWS AMOUNT",
+      "type": "number",
+      "description": "Total remittance outflows for each type of currency in item 4 above for Money Remittance Providers or total sales for Forex Bureaus.",
+      "example": "889370.12345",
+      "payload_key": "TOTAL OUTFLOWS AMOUNT",
+      "key_confidence": 1.0,
+      "key": "total_outflows_amount"
+    },
+    {
+      "name": "OTHER TOTAL OUTFLOWS AMOUNT",
+      "type": "number",
+      "description": "Other total outflows for each type of currency in item 4 above.",
+      "example": "18500.12345",
+      "payload_key": "OTHER TOTAL OUTFLOWS AMOUNT",
+      "key_confidence": 1.0,
+      "key": "other_total_outflows_amount"
+    }
+  ],
+  "unmatched_sample_keys": [],
   "source_pages": [
     224,
     229
-  ],
-  "fields": [
-    {
-      "key": "row_id",
-      "name": "ROW ID",
-      "payload_key": "ROW ID",
-      "type": "number",
-      "required": true,
-      "description": "A unique sequential number, running from the first record to the last.",
-      "example": "1"
-    },
-    {
-      "key": "reporting_date",
-      "name": "REPORTING DATE",
-      "payload_key": "REPORTING DATE",
-      "type": "date",
-      "required": true,
-      "description": "The code for the reporting Institution. (E.g. XYZ = 070002)",
-      "example": "5/23/2020"
-    },
-    {
-      "key": "instititution_code",
-      "name": "INSTITITUTION CODE",
-      "payload_key": "INSTITUTION CODE",
-      "type": "string",
-      "required": false,
-      "description": "Institution code issued by CBK (e.g. Dahabshil = 0700001)",
-      "example": "0700011"
-    },
-    {
-      "key": "currency_type_code",
-      "name": "CURRENCY TYPE CODE",
-      "payload_key": "CURRENCY TYPE CODE",
-      "type": "string",
-      "required": false,
-      "description": "ISO currency codes as per ISO-4217. {e.g. USD, GPB, EUR, KES. etc.}",
-      "example": "GBP"
-    },
-    {
-      "key": "kes_spot_rate",
-      "name": "KES SPOT RATE",
-      "payload_key": "KES SPOT RATE",
-      "type": "number",
-      "required": false,
-      "description": "The Opening exchange rate for each type of currency.The values must have at least 5 decimal places.",
-      "example": "102.30987"
-    },
-    {
-      "key": "opening_position_amount",
-      "name": "OPENING POSITION AMOUNT",
-      "payload_key": "OPENING POSITION AMOUNT",
-      "type": "number",
-      "required": false,
-      "description": "Remittance opening postion for each type of currency in item 4 above where the reporting institution is a Money Remittance Provider and Purchases opening position where the reporting institution is a Forex Bureau.",
-      "example": "8500.12345"
-    },
-    {
-      "key": "total_inflows_amount",
-      "name": "TOTAL INFLOWS AMOUNT",
-      "payload_key": "TOTAL INFLOWS AMOUNT",
-      "type": "number",
-      "required": false,
-      "description": "Total remittance inflows for each type of currency in item 4 above for Money Remittance Providers or total purchases for Forex Bureaus.",
-      "example": "12320.12345"
-    },
-    {
-      "key": "other_total_inflows_amount",
-      "name": "OTHER TOTAL INFLOWS AMOUNT",
-      "payload_key": "OTHER TOTAL INFLOWS AMOUNT",
-      "type": "number",
-      "required": false,
-      "description": "Other total inflows for each type of currency in item 4 above.",
-      "example": "657"
-    },
-    {
-      "key": "total_outflows_amount",
-      "name": "TOTAL OUTFLOWS AMOUNT",
-      "payload_key": "TOTAL OUTFLOWS AMOUNT",
-      "type": "number",
-      "required": false,
-      "description": "Total remittance outflows for each type of currency in item 4 above for Money Remittance Providers or total sales for Forex Bureaus.",
-      "example": "889370.12345"
-    },
-    {
-      "key": "other_total_outflows_amount",
-      "name": "OTHER TOTAL OUTFLOWS AMOUNT",
-      "payload_key": "OTHER TOTAL OUTFLOWS AMOUNT",
-      "type": "number",
-      "required": false,
-      "description": "Other total outflows for each type of currency in item 4 above.",
-      "example": "18500.12345"
-    }
   ]
 }

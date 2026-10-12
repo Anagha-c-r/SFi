@@ -2,150 +2,148 @@
   "number": 26,
   "code": "terminals_information",
   "title": "Terminals Information",
-  "group": "Agents, Merchants & Outlets",
-  "frequency": "periodic",
   "endpoint": "/api/v1/flows/rest/API_TERMINALSINFORMA/1.0/submitTerminalsInfo",
   "array_key": "TERMINAL_INFO",
-  "notes": "",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "number",
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1",
+      "payload_key": "ROW ID",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "BANK CODE",
+      "type": "string",
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
+      "example": "0000022",
+      "payload_key": "BANK CODE",
+      "key_confidence": 1.0,
+      "key": "bank_code"
+    },
+    {
+      "name": "BRANCH ID",
+      "type": "string",
+      "description": "Branch code, where the Terminal is serviced/supported from",
+      "example": "023",
+      "payload_key": "BRANCH ID",
+      "key_confidence": 1.0,
+      "key": "branch_id"
+    },
+    {
+      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
+      "type": "date",
+      "description": "The reporting date, Month & Year based on the frequency. Format {DD- MMM-YYYY}",
+      "example": "2020-06-03",
+      "payload_key": "REPORTING DATE",
+      "key_confidence": 0.62,
+      "key": "business_reporting_day_month_year"
+    },
+    {
+      "name": "TERMINAL ID",
+      "type": "string",
+      "description": "Unique identifier for the terminal",
+      "example": "TID09868",
+      "payload_key": "TERMINAL ID",
+      "key_confidence": 1.0,
+      "key": "terminal_id"
+    },
+    {
+      "name": "MERCHANT ID",
+      "type": "string",
+      "description": "Unique identifier for the merchant",
+      "example": "ATMID086",
+      "payload_key": "MERCHANT ID",
+      "key_confidence": 1.0,
+      "key": "merchant_id"
+    },
+    {
+      "name": "TERMINAL NAME",
+      "type": "string",
+      "description": "Name of the Terminal",
+      "example": "Kilindini ATM",
+      "payload_key": "TERMINAL NAME",
+      "key_confidence": 1.0,
+      "key": "terminal_name"
+    },
+    {
+      "name": "TERMINAL TYPE",
+      "type": "string",
+      "description": "Type of terminal E.g. ATM, POS, etc",
+      "example": "CDCH01",
+      "payload_key": "TERMINAL TYPE",
+      "key_confidence": 1.0,
+      "key": "terminal_type"
+    },
+    {
+      "name": "TERMINAL LOCATION (ON-SITE OR OFF- SITE)",
+      "type": "string",
+      "description": "ATM located within the branch (on-site) or far from branch (Off-site)",
+      "example": "Off-site",
+      "payload_key": "TERMINAL LOCATION",
+      "key_confidence": 0.68,
+      "key": "terminal_location_on_site_or_off_site"
+    },
+    {
+      "name": "TERMINAL FUNCTIONALITY",
+      "type": "string",
+      "description": "Withdrawal, Deposit-taking or Both, etc",
+      "example": "TFC01",
+      "payload_key": "TERMINAL FUNCTIONALITY",
+      "key_confidence": 1.0,
+      "key": "terminal_functionality"
+    },
+    {
+      "name": "PHYSICAL LOCATION OF ATM/POS",
+      "type": "string",
+      "description": "Sub-county and county where the ATM/POS is physically located",
+      "example": "101",
+      "payload_key": "PHYSICAL LOCATION OF ATM POS",
+      "key_confidence": 1.0,
+      "key": "physical_location_of_atm_pos"
+    },
+    {
+      "name": "GPS COORDINATE: LATITUDE",
+      "type": "number",
+      "description": "GPS cordinates based on ISO 6709 standards representation of geographic point location by coordinates (Decimal degrees).",
+      "example": "-6.800137",
+      "payload_key": "GPS COORDINATE LATITUDE",
+      "key_confidence": 1.0,
+      "key": "gps_coordinate_latitude"
+    },
+    {
+      "name": "GPS COORDINATE: LONGITUDE",
+      "type": "number",
+      "description": "GPS cordinates based on ISO 6709 standards representation of geographic point location by coordinates (Decimal degrees).",
+      "example": "39.314576",
+      "payload_key": "GPS COORDINATE LONGITUDE",
+      "key_confidence": 1.0,
+      "key": "gps_coordinate_longitude"
+    },
+    {
+      "name": "TERMINAL OPENING DATE",
+      "type": "date",
+      "description": "Date when ATM/POS was installed. Format {DD- MMM-YYYY}",
+      "example": "29/18/2015",
+      "payload_key": "TERMINAL OPENING DATE",
+      "key_confidence": 1.0,
+      "key": "terminal_opening_date"
+    },
+    {
+      "name": "TERMINAL CLOSURE DATE",
+      "type": "date",
+      "description": "Date when ATM/POS was de-installed. Format {DD- MMM-YYYY}",
+      "example": "",
+      "payload_key": "TERMINAL CLOSURE DATE",
+      "key_confidence": 1.0,
+      "key": "terminal_closure_date"
+    }
+  ],
+  "unmatched_sample_keys": [],
   "source_pages": [
     134,
     139
-  ],
-  "fields": [
-    {
-      "key": "row_id",
-      "name": "ROW ID",
-      "payload_key": "ROW ID",
-      "type": "number",
-      "required": true,
-      "description": "A unique sequential number, running from the first record to the last.",
-      "example": "1"
-    },
-    {
-      "key": "bank_code",
-      "name": "BANK CODE",
-      "payload_key": "BANK CODE",
-      "type": "string",
-      "required": false,
-      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
-      "example": "0000022"
-    },
-    {
-      "key": "branch_id",
-      "name": "BRANCH ID",
-      "payload_key": "BRANCH ID",
-      "type": "string",
-      "required": false,
-      "description": "Branch code, where the Terminal is serviced/supported from",
-      "example": "023"
-    },
-    {
-      "key": "business_reporting_day_month_year",
-      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
-      "payload_key": "REPORTING DATE",
-      "type": "date",
-      "required": true,
-      "description": "The reporting date, Month & Year based on the frequency. Format {DD- MMM-YYYY}",
-      "example": "2020-06-03"
-    },
-    {
-      "key": "terminal_id",
-      "name": "TERMINAL ID",
-      "payload_key": "TERMINAL ID",
-      "type": "string",
-      "required": false,
-      "description": "Unique identifier for the terminal",
-      "example": "TID09868"
-    },
-    {
-      "key": "merchant_id",
-      "name": "MERCHANT ID",
-      "payload_key": "MERCHANT ID",
-      "type": "string",
-      "required": false,
-      "description": "Unique identifier for the merchant",
-      "example": "ATMID086"
-    },
-    {
-      "key": "terminal_name",
-      "name": "TERMINAL NAME",
-      "payload_key": "TERMINAL NAME",
-      "type": "string",
-      "required": false,
-      "description": "Name of the Terminal",
-      "example": "Kilindini ATM"
-    },
-    {
-      "key": "terminal_type",
-      "name": "TERMINAL TYPE",
-      "payload_key": "TERMINAL TYPE",
-      "type": "string",
-      "required": false,
-      "description": "Type of terminal E.g. ATM, POS, etc",
-      "example": "CDCH01"
-    },
-    {
-      "key": "terminal_location_on_site_or_off_site",
-      "name": "TERMINAL LOCATION (ON-SITE OR OFF- SITE)",
-      "payload_key": "TERMINAL LOCATION",
-      "type": "string",
-      "required": false,
-      "description": "ATM located within the branch (on-site) or far from branch (Off-site)",
-      "example": "Off-site"
-    },
-    {
-      "key": "terminal_functionality",
-      "name": "TERMINAL FUNCTIONALITY",
-      "payload_key": "TERMINAL FUNCTIONALITY",
-      "type": "string",
-      "required": false,
-      "description": "Withdrawal, Deposit-taking or Both, etc",
-      "example": "TFC01"
-    },
-    {
-      "key": "physical_location_of_atm_pos",
-      "name": "PHYSICAL LOCATION OF ATM/POS",
-      "payload_key": "PHYSICAL LOCATION OF ATM POS",
-      "type": "string",
-      "required": false,
-      "description": "Sub-county and county where the ATM/POS is physically located",
-      "example": "101"
-    },
-    {
-      "key": "gps_coordinate_latitude",
-      "name": "GPS COORDINATE: LATITUDE",
-      "payload_key": "GPS COORDINATE LATITUDE",
-      "type": "number",
-      "required": false,
-      "description": "GPS cordinates based on ISO 6709 standards representation of geographic point location by coordinates (Decimal degrees).",
-      "example": "-6.800137"
-    },
-    {
-      "key": "gps_coordinate_longitude",
-      "name": "GPS COORDINATE: LONGITUDE",
-      "payload_key": "GPS COORDINATE LONGITUDE",
-      "type": "number",
-      "required": false,
-      "description": "GPS cordinates based on ISO 6709 standards representation of geographic point location by coordinates (Decimal degrees).",
-      "example": "39.314576"
-    },
-    {
-      "key": "terminal_opening_date",
-      "name": "TERMINAL OPENING DATE",
-      "payload_key": "TERMINAL OPENING DATE",
-      "type": "date",
-      "required": false,
-      "description": "Date when ATM/POS was installed. Format {DD- MMM-YYYY}",
-      "example": "29/18/2015"
-    },
-    {
-      "key": "terminal_closure_date",
-      "name": "TERMINAL CLOSURE DATE",
-      "payload_key": "TERMINAL CLOSURE DATE",
-      "type": "date",
-      "required": false,
-      "description": "Date when ATM/POS was de-installed. Format {DD- MMM-YYYY}",
-      "example": ""
-    }
   ]
 }

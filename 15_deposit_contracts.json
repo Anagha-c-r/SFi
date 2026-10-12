@@ -2,222 +2,220 @@
   "number": 15,
   "code": "deposit_contracts",
   "title": "Deposit Contracts",
-  "group": "Accounts & Deposits",
-  "frequency": "periodic",
   "endpoint": "/api/v1/flows/rest/API_DEPOSITCONTRACTSINFOSYNC/1.0/submitDepositContractsData",
   "array_key": "DEPOSIT_CONTRACTS_DATA",
-  "notes": "",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "number",
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1",
+      "payload_key": "ROW ID",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "BANK CODE",
+      "type": "string",
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
+      "example": "0700011",
+      "payload_key": "BANK CODE",
+      "key_confidence": 1.0,
+      "key": "bank_code"
+    },
+    {
+      "name": "BRANCH ID",
+      "type": "string",
+      "description": "Branch code where the account was opened/operated from.",
+      "example": "003",
+      "payload_key": "BRANCH ID",
+      "key_confidence": 1.0,
+      "key": "branch_id"
+    },
+    {
+      "name": "BUSINESS REPORTING DATE",
+      "type": "date",
+      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY}",
+      "example": "7-May-2022",
+      "payload_key": "BUSINESS REPORTING DATE",
+      "key_confidence": 1.0,
+      "key": "business_reporting_date"
+    },
+    {
+      "name": "CONTRACT ID",
+      "type": "string",
+      "description": "Unique number assigned to lndividual deposit contracts",
+      "example": "LID0A678686",
+      "payload_key": "CONTRACT ID",
+      "key_confidence": 1.0,
+      "key": "contract_id"
+    },
+    {
+      "name": "CUSTOMER ID",
+      "type": "string",
+      "description": "Customer unique id linked to the deposit contract",
+      "example": "0354678",
+      "payload_key": "CUSTOMER ID",
+      "key_confidence": 1.0,
+      "key": "customer_id"
+    },
+    {
+      "name": "COUNTERPARTY ID",
+      "type": "string",
+      "description": "A unique identifer for the counterparty where deposits are held. E.g. SWIFT Code",
+      "example": "AETCUS55 790",
+      "payload_key": "COUNTERPARTY ID",
+      "key_confidence": 1.0,
+      "key": "counterparty_id"
+    },
+    {
+      "name": "CONTRACT COMMENCEMENT DATE",
+      "type": "date",
+      "description": "The date when the contract was commenced. Format {DD-MMM-YYYY}.",
+      "example": "3-May-2022",
+      "payload_key": "CONTRACT COMMENCEMENT DATE",
+      "key_confidence": 1.0,
+      "key": "contract_commencement_date"
+    },
+    {
+      "name": "CONTRACT MATURITY DATE",
+      "type": "date",
+      "description": "The date when the contract will mature, otherwise left blank for demand deposits. Format {DD-MMM- YYYY}.",
+      "example": "3-May-2022",
+      "payload_key": "CONTRACT MATURITY DATE",
+      "key_confidence": 1.0,
+      "key": "contract_maturity_date"
+    },
+    {
+      "name": "SETTLEMENT DATE",
+      "type": "date",
+      "description": "Date on which the obligation of the contract is due for payment or honor. (Date when the contract was settled). Format {DD-MMM-YYYY}.",
+      "example": "3-May-2022",
+      "payload_key": "SETTLEMENT DATE",
+      "key_confidence": 1.0,
+      "key": "settlement_date"
+    },
+    {
+      "name": "ACCOUNT TYPE",
+      "type": "string",
+      "description": "Type of deposit account {e.g. Demand deposits, Savings Deposits, Call Deposits, Fixed Deposits, Mobile Phone Deposits, etc.}",
+      "example": "TDA",
+      "payload_key": "ACCOUNT TYPE",
+      "key_confidence": 1.0,
+      "key": "account_type"
+    },
+    {
+      "name": "TENURE",
+      "type": "number",
+      "description": "The term period for the deposit contract in days.",
+      "example": "1",
+      "payload_key": "TENURE",
+      "key_confidence": 1.0,
+      "key": "tenure"
+    },
+    {
+      "name": "DEPOSIT INTEREST RATE",
+      "type": "string",
+      "description": "The rate of interest rate marked on the deposit contract",
+      "example": "1",
+      "payload_key": "DEPOSIT INTEREST RATE",
+      "key_confidence": 1.0,
+      "key": "deposit_interest_rate"
+    },
+    {
+      "name": "BASE RATE",
+      "type": "string",
+      "description": "The reporting institution's reference rate.",
+      "example": "1",
+      "payload_key": "BASE RATE",
+      "key_confidence": 1.0,
+      "key": "base_rate"
+    },
+    {
+      "name": "ANTICIPATED MATURITY PERIOD",
+      "type": "string",
+      "description": "The anticipated maturity period. E.g. Matured, 0-30 days, 31-60 days, 61-90 days, 91-180 days, 6-9 months, 10-12 months, 1-3 years, 3-5 years and over 5 years",
+      "example": "AMTC04",
+      "payload_key": "ANTICIPATED MATURITY PERIOD",
+      "key_confidence": 1.0,
+      "key": "anticipated_maturity_period"
+    },
+    {
+      "name": "ISO CURRENCY CODE",
+      "type": "string",
+      "description": "ISO currency codes as per ISO-4217. {e.g. USD, GPB, EUR, KES. etc.}",
+      "example": "GBP",
+      "payload_key": "ISO CURRENCY CODE",
+      "key_confidence": 1.0,
+      "key": "iso_currency_code"
+    },
+    {
+      "name": "PRINCIPAL OUTSTANDING AMOUNT FCY",
+      "type": "number",
+      "description": "Pricipal outstanding amount of deposit in foreign currency.",
+      "example": "100",
+      "payload_key": "PRINCIPAL OUTSTANDING AMOUNT FCY",
+      "key_confidence": 1.0,
+      "key": "principal_outstanding_amount_fcy"
+    },
+    {
+      "name": "PRINCIPAL OUTSTANDING AMOUNT LCY",
+      "type": "number",
+      "description": "Pricipal outstanding amount of deposit in the local currency equivalent (KES).",
+      "example": "100",
+      "payload_key": "PRINCIPAL OUTSTANDING AMOUNT LCY",
+      "key_confidence": 1.0,
+      "key": "principal_outstanding_amount_lcy"
+    },
+    {
+      "name": "INTEREST AMOUNT FCY",
+      "type": "number",
+      "description": "Interest amount earned by the customer in foreign currency.",
+      "example": "100",
+      "payload_key": "INTEREST AMOUNT FCY",
+      "key_confidence": 1.0,
+      "key": "interest_amount_fcy"
+    },
+    {
+      "name": "INTEREST AMOUNT LCY",
+      "type": "number",
+      "description": "Interest amount earned by the customer in the local currency equivalent (KES).",
+      "example": "100",
+      "payload_key": "INTEREST AMOUNT LCY",
+      "key_confidence": 1.0,
+      "key": "interest_amount_lcy"
+    },
+    {
+      "name": "ACCRUED INTEREST FCY",
+      "type": "number",
+      "description": "Interest amount accrued but not yet applied. Owing to the customer in foreign currency.",
+      "example": "356",
+      "payload_key": "ACCRUED INTEREST FCY",
+      "key_confidence": 1.0,
+      "key": "accrued_interest_fcy"
+    },
+    {
+      "name": "ACCRUED INTEREST LCY",
+      "type": "number",
+      "description": "Interest amount accrued but not yet applied. Owing to the customer in the local currency equivalent (KES).",
+      "example": "356",
+      "payload_key": "ACCRUED INTEREST LCY",
+      "key_confidence": 1.0,
+      "key": "accrued_interest_lcy"
+    },
+    {
+      "name": "CONTRACT STATUS",
+      "type": "string",
+      "description": "E.g. Active, Pre-Matured and Matured.",
+      "example": "CSTC01",
+      "payload_key": "CONTRACT STATUS",
+      "key_confidence": 1.0,
+      "key": "contract_status"
+    }
+  ],
+  "unmatched_sample_keys": [],
   "source_pages": [
     76,
     82
-  ],
-  "fields": [
-    {
-      "key": "row_id",
-      "name": "ROW ID",
-      "payload_key": "ROW ID",
-      "type": "number",
-      "required": true,
-      "description": "A unique sequential number, running from the first record to the last.",
-      "example": "1"
-    },
-    {
-      "key": "bank_code",
-      "name": "BANK CODE",
-      "payload_key": "BANK CODE",
-      "type": "string",
-      "required": false,
-      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
-      "example": "0700011"
-    },
-    {
-      "key": "branch_id",
-      "name": "BRANCH ID",
-      "payload_key": "BRANCH ID",
-      "type": "string",
-      "required": false,
-      "description": "Branch code where the account was opened/operated from.",
-      "example": "003"
-    },
-    {
-      "key": "business_reporting_date",
-      "name": "BUSINESS REPORTING DATE",
-      "payload_key": "BUSINESS REPORTING DATE",
-      "type": "date",
-      "required": true,
-      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY}",
-      "example": "7-May-2022"
-    },
-    {
-      "key": "contract_id",
-      "name": "CONTRACT ID",
-      "payload_key": "CONTRACT ID",
-      "type": "string",
-      "required": false,
-      "description": "Unique number assigned to lndividual deposit contracts",
-      "example": "LID0A678686"
-    },
-    {
-      "key": "customer_id",
-      "name": "CUSTOMER ID",
-      "payload_key": "CUSTOMER ID",
-      "type": "string",
-      "required": false,
-      "description": "Customer unique id linked to the deposit contract",
-      "example": "0354678"
-    },
-    {
-      "key": "counterparty_id",
-      "name": "COUNTERPARTY ID",
-      "payload_key": "COUNTERPARTY ID",
-      "type": "string",
-      "required": false,
-      "description": "A unique identifer for the counterparty where deposits are held. E.g. SWIFT Code",
-      "example": "AETCUS55 790"
-    },
-    {
-      "key": "contract_commencement_date",
-      "name": "CONTRACT COMMENCEMENT DATE",
-      "payload_key": "CONTRACT COMMENCEMENT DATE",
-      "type": "date",
-      "required": false,
-      "description": "The date when the contract was commenced. Format {DD-MMM-YYYY}.",
-      "example": "3-May-2022"
-    },
-    {
-      "key": "contract_maturity_date",
-      "name": "CONTRACT MATURITY DATE",
-      "payload_key": "CONTRACT MATURITY DATE",
-      "type": "date",
-      "required": false,
-      "description": "The date when the contract will mature, otherwise left blank for demand deposits. Format {DD-MMM- YYYY}.",
-      "example": "3-May-2022"
-    },
-    {
-      "key": "settlement_date",
-      "name": "SETTLEMENT DATE",
-      "payload_key": "SETTLEMENT DATE",
-      "type": "date",
-      "required": false,
-      "description": "Date on which the obligation of the contract is due for payment or honor. (Date when the contract was settled). Format {DD-MMM-YYYY}.",
-      "example": "3-May-2022"
-    },
-    {
-      "key": "account_type",
-      "name": "ACCOUNT TYPE",
-      "payload_key": "ACCOUNT TYPE",
-      "type": "string",
-      "required": false,
-      "description": "Type of deposit account {e.g. Demand deposits, Savings Deposits, Call Deposits, Fixed Deposits, Mobile Phone Deposits, etc.}",
-      "example": "TDA"
-    },
-    {
-      "key": "tenure",
-      "name": "TENURE",
-      "payload_key": "TENURE",
-      "type": "number",
-      "required": false,
-      "description": "The term period for the deposit contract in days.",
-      "example": "1"
-    },
-    {
-      "key": "deposit_interest_rate",
-      "name": "DEPOSIT INTEREST RATE",
-      "payload_key": "DEPOSIT INTEREST RATE",
-      "type": "string",
-      "required": false,
-      "description": "The rate of interest rate marked on the deposit contract",
-      "example": "1"
-    },
-    {
-      "key": "base_rate",
-      "name": "BASE RATE",
-      "payload_key": "BASE RATE",
-      "type": "string",
-      "required": false,
-      "description": "The reporting institution's reference rate.",
-      "example": "1"
-    },
-    {
-      "key": "anticipated_maturity_period",
-      "name": "ANTICIPATED MATURITY PERIOD",
-      "payload_key": "ANTICIPATED MATURITY PERIOD",
-      "type": "string",
-      "required": false,
-      "description": "The anticipated maturity period. E.g. Matured, 0-30 days, 31-60 days, 61-90 days, 91-180 days, 6-9 months, 10-12 months, 1-3 years, 3-5 years and over 5 years",
-      "example": "AMTC04"
-    },
-    {
-      "key": "iso_currency_code",
-      "name": "ISO CURRENCY CODE",
-      "payload_key": "ISO CURRENCY CODE",
-      "type": "string",
-      "required": false,
-      "description": "ISO currency codes as per ISO-4217. {e.g. USD, GPB, EUR, KES. etc.}",
-      "example": "GBP"
-    },
-    {
-      "key": "principal_outstanding_amount_fcy",
-      "name": "PRINCIPAL OUTSTANDING AMOUNT FCY",
-      "payload_key": "PRINCIPAL OUTSTANDING AMOUNT FCY",
-      "type": "number",
-      "required": false,
-      "description": "Pricipal outstanding amount of deposit in foreign currency.",
-      "example": "100"
-    },
-    {
-      "key": "principal_outstanding_amount_lcy",
-      "name": "PRINCIPAL OUTSTANDING AMOUNT LCY",
-      "payload_key": "PRINCIPAL OUTSTANDING AMOUNT LCY",
-      "type": "number",
-      "required": false,
-      "description": "Pricipal outstanding amount of deposit in the local currency equivalent (KES).",
-      "example": "100"
-    },
-    {
-      "key": "interest_amount_fcy",
-      "name": "INTEREST AMOUNT FCY",
-      "payload_key": "INTEREST AMOUNT FCY",
-      "type": "number",
-      "required": false,
-      "description": "Interest amount earned by the customer in foreign currency.",
-      "example": "100"
-    },
-    {
-      "key": "interest_amount_lcy",
-      "name": "INTEREST AMOUNT LCY",
-      "payload_key": "INTEREST AMOUNT LCY",
-      "type": "number",
-      "required": false,
-      "description": "Interest amount earned by the customer in the local currency equivalent (KES).",
-      "example": "100"
-    },
-    {
-      "key": "accrued_interest_fcy",
-      "name": "ACCRUED INTEREST FCY",
-      "payload_key": "ACCRUED INTEREST FCY",
-      "type": "number",
-      "required": false,
-      "description": "Interest amount accrued but not yet applied. Owing to the customer in foreign currency.",
-      "example": "356"
-    },
-    {
-      "key": "accrued_interest_lcy",
-      "name": "ACCRUED INTEREST LCY",
-      "payload_key": "ACCRUED INTEREST LCY",
-      "type": "number",
-      "required": false,
-      "description": "Interest amount accrued but not yet applied. Owing to the customer in the local currency equivalent (KES).",
-      "example": "356"
-    },
-    {
-      "key": "contract_status",
-      "name": "CONTRACT STATUS",
-      "payload_key": "CONTRACT STATUS",
-      "type": "string",
-      "required": false,
-      "description": "E.g. Active, Pre-Matured and Matured.",
-      "example": "CSTC01"
-    }
   ]
 }

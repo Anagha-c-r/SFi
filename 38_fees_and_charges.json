@@ -2,60 +2,58 @@
   "number": 38,
   "code": "fees_and_charges",
   "title": "Fees and Charges",
-  "group": "Credit Reference Bureau",
-  "frequency": "periodic",
   "endpoint": "/api/v1/flows/rest/API_FEESANDCHARGESSY/1.0/submitFeesAndChargesInfo",
   "array_key": "FEE_CHARGE_INFO",
-  "notes": "",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "number",
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1",
+      "payload_key": "ROW ID",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "CREDIT REFERENCE BUREAU CODE",
+      "type": "string",
+      "description": "The code the reporting Credit Reference Bureau (E.g. XYZ = 060002)",
+      "example": "0600003",
+      "payload_key": "CREDIT REFERENCE BUREAU CODE",
+      "key_confidence": 1.0,
+      "key": "credit_reference_bureau_code"
+    },
+    {
+      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
+      "type": "date",
+      "description": "The reporting date, Month & Year based on the frequency.",
+      "example": "3-Jun-2020",
+      "payload_key": "REPORTING DATE",
+      "key_confidence": 0.62,
+      "key": "business_reporting_day_month_year"
+    },
+    {
+      "name": "PRODUCT/SERVICE TYPE",
+      "type": "string",
+      "description": "Product/service type E.g. {Bank scan-Financial sector derived credit information, All sector scan- All sector derived credit information, Auto alert- Automated credit monitorig alert, Consumer Locate-skip trace on absconded borrowers, Comprehensive Business report-Corporate registry search, current operations, financials, references, Corporate registry report-corporate registry search only, Credit Application verification-financial & commercial credit application verification, Collateral Check-Reported details and liens on collaterals/securities, Staff check- employee credit history background check, etc}",
+      "example": "CRBFCT13",
+      "payload_key": "PRODUCT SERVICE TYPE",
+      "key_confidence": 1.0,
+      "key": "product_service_type"
+    },
+    {
+      "name": "FEES AND CHARGES AMOUNT",
+      "type": "number",
+      "description": "Amount of fees and other charges per product/service",
+      "example": "150.12345",
+      "payload_key": "FEES AND CHARGES AMOUNT",
+      "key_confidence": 1.0,
+      "key": "fees_and_charges_amount"
+    }
+  ],
+  "unmatched_sample_keys": [],
   "source_pages": [
     191,
     195
-  ],
-  "fields": [
-    {
-      "key": "row_id",
-      "name": "ROW ID",
-      "payload_key": "ROW ID",
-      "type": "number",
-      "required": true,
-      "description": "A unique sequential number, running from the first record to the last.",
-      "example": "1"
-    },
-    {
-      "key": "credit_reference_bureau_code",
-      "name": "CREDIT REFERENCE BUREAU CODE",
-      "payload_key": "CREDIT REFERENCE BUREAU CODE",
-      "type": "string",
-      "required": false,
-      "description": "The code the reporting Credit Reference Bureau (E.g. XYZ = 060002)",
-      "example": "0600003"
-    },
-    {
-      "key": "business_reporting_day_month_year",
-      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
-      "payload_key": "REPORTING DATE",
-      "type": "date",
-      "required": true,
-      "description": "The reporting date, Month & Year based on the frequency.",
-      "example": "3-Jun-2020"
-    },
-    {
-      "key": "product_service_type",
-      "name": "PRODUCT/SERVICE TYPE",
-      "payload_key": "PRODUCT SERVICE TYPE",
-      "type": "string",
-      "required": false,
-      "description": "Product/service type E.g. {Bank scan-Financial sector derived credit information, All sector scan- All sector derived credit information, Auto alert- Automated credit monitorig alert, Consumer Locate-skip trace on absconded borrowers, Comprehensive Business report-Corporate registry search, current operations, financials, references, Corporate registry report-corporate registry search only, Credit Application verification-financial & commercial credit application verification, Collateral Check-Reported details and liens on collaterals/securities, Staff check- employee credit history background check, etc}",
-      "example": "CRBFCT13"
-    },
-    {
-      "key": "fees_and_charges_amount",
-      "name": "FEES AND CHARGES AMOUNT",
-      "payload_key": "FEES AND CHARGES AMOUNT",
-      "type": "number",
-      "required": false,
-      "description": "Amount of fees and other charges per product/service",
-      "example": "150.12345"
-    }
   ]
 }

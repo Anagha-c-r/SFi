@@ -2,96 +2,94 @@
   "number": 41,
   "code": "sources_of_information",
   "title": "Sources of Information",
-  "group": "Credit Reference Bureau",
-  "frequency": "periodic",
   "endpoint": "/api/v1/flows/rest/API_TERMINALSINFORMA/1.0/submitTerminalsInfo",
   "array_key": "SOURCES_OF_INFORMATION_INFO",
-  "notes": "The guide gives this dataset the Terminals Information endpoint (#26). Confirm the correct endpoint with CBK.",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "number",
+      "description": "ROW ID",
+      "example": "1",
+      "payload_key": "ROW_ID",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "CREDIT REFERENCE BUREAU CODE",
+      "type": "number",
+      "description": "The code the reporting Credit Reference Bureau (E.g. XYZ = 060002)",
+      "example": "0600001",
+      "payload_key": "CREDIT REFERENCE BUREAU CODE",
+      "key_confidence": 1.0,
+      "key": "credit_reference_bureau_code"
+    },
+    {
+      "name": "REPORTING DATE",
+      "type": "date",
+      "description": "The reporting date, Month & Year based on the frequency.",
+      "example": "6/3/2020",
+      "payload_key": "REPORTING DATE",
+      "key_confidence": 1.0,
+      "key": "reporting_date"
+    },
+    {
+      "name": "SOURCE REPORTING DATE",
+      "type": "date",
+      "description": "The date when the report was last submitted by the source to the Credit Reference Bureau",
+      "example": "1/9/2020",
+      "payload_key": "SOURCE REPORTING",
+      "key_confidence": 0.88,
+      "key": "source_reporting_date"
+    },
+    {
+      "name": "CBK APPROVAL DATE",
+      "type": "string",
+      "description": "The date when the data source was approved by CBK in the format {DD/MM/YYYY}",
+      "example": "11/19/2018",
+      "payload_key": "CBK APPROVAL DATE",
+      "key_confidence": 1.0,
+      "key": "cbk_approval_date"
+    },
+    {
+      "name": "SOURCE OF INFORMATION TYPE",
+      "type": "string",
+      "description": "The type of institution providing information to the Credit Reference Bureau. E.g. {Institutions Licensed Under Banking Act, Microfinance Act, Higher Education Loans Board, Public Domain, Individual SACCOs, etc}",
+      "example": "CRBSIT02",
+      "payload_key": "SOURCE OF INFORMATION TYPE",
+      "key_confidence": 1.0,
+      "key": "source_of_information_type"
+    },
+    {
+      "name": "COUNTY CODE",
+      "type": "string",
+      "description": "The county code of the where the source of information is located",
+      "example": "47",
+      "payload_key": "COUNTY CODE",
+      "key_confidence": 1.0,
+      "key": "county_code"
+    },
+    {
+      "name": "TOWN",
+      "type": "string",
+      "description": "The name of the town where the source of information is located",
+      "example": "Nairobi",
+      "payload_key": "TOWN",
+      "key_confidence": 1.0,
+      "key": "town"
+    },
+    {
+      "name": "NATURE OF INFORMATION",
+      "type": "string",
+      "description": "The nature of information submitted. E.g. {Prescribed customer information, Loan applicant's identification details, Company/Business Registration, Personal Identification Numbers, Winding up, Debt repayment information, etc}",
+      "example": "CRBNOINFT02",
+      "payload_key": "NATURE OF INFORMATION",
+      "key_confidence": 1.0,
+      "key": "nature_of_information"
+    }
+  ],
+  "unmatched_sample_keys": [],
   "source_pages": [
     203,
     207
-  ],
-  "fields": [
-    {
-      "key": "row_id",
-      "name": "ROW ID",
-      "payload_key": "ROW_ID",
-      "type": "number",
-      "required": true,
-      "description": "ROW ID",
-      "example": "1"
-    },
-    {
-      "key": "credit_reference_bureau_code",
-      "name": "CREDIT REFERENCE BUREAU CODE",
-      "payload_key": "CREDIT REFERENCE BUREAU CODE",
-      "type": "string",
-      "required": false,
-      "description": "The code the reporting Credit Reference Bureau (E.g. XYZ = 060002)",
-      "example": "0600001"
-    },
-    {
-      "key": "reporting_date",
-      "name": "REPORTING DATE",
-      "payload_key": "REPORTING DATE",
-      "type": "date",
-      "required": true,
-      "description": "The reporting date, Month & Year based on the frequency.",
-      "example": "6/3/2020"
-    },
-    {
-      "key": "source_reporting_date",
-      "name": "SOURCE REPORTING DATE",
-      "payload_key": "SOURCE REPORTING",
-      "type": "date",
-      "required": true,
-      "description": "The date when the report was last submitted by the source to the Credit Reference Bureau",
-      "example": "1/9/2020"
-    },
-    {
-      "key": "cbk_approval_date",
-      "name": "CBK APPROVAL DATE",
-      "payload_key": "CBK APPROVAL DATE",
-      "type": "date",
-      "required": false,
-      "description": "The date when the data source was approved by CBK in the format {DD/MM/YYYY}",
-      "example": "11/19/2018"
-    },
-    {
-      "key": "source_of_information_type",
-      "name": "SOURCE OF INFORMATION TYPE",
-      "payload_key": "SOURCE OF INFORMATION TYPE",
-      "type": "string",
-      "required": false,
-      "description": "The type of institution providing information to the Credit Reference Bureau. E.g. {Institutions Licensed Under Banking Act, Microfinance Act, Higher Education Loans Board, Public Domain, Individual SACCOs, etc}",
-      "example": "CRBSIT02"
-    },
-    {
-      "key": "county_code",
-      "name": "COUNTY CODE",
-      "payload_key": "COUNTY CODE",
-      "type": "string",
-      "required": false,
-      "description": "The county code of the where the source of information is located",
-      "example": "47"
-    },
-    {
-      "key": "town",
-      "name": "TOWN",
-      "payload_key": "TOWN",
-      "type": "string",
-      "required": false,
-      "description": "The name of the town where the source of information is located",
-      "example": "Nairobi"
-    },
-    {
-      "key": "nature_of_information",
-      "name": "NATURE OF INFORMATION",
-      "payload_key": "NATURE OF INFORMATION",
-      "type": "string",
-      "required": false,
-      "description": "The nature of information submitted. E.g. {Prescribed customer information, Loan applicant's identification details, Company/Business Registration, Personal Identification Numbers, Winding up, Debt repayment information, etc}",
-      "example": "CRBNOINFT02"
-    }
   ]
 }

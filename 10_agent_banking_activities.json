@@ -2,96 +2,96 @@
   "number": 10,
   "code": "agent_banking_activities",
   "title": "Agent Banking Activities",
-  "group": "Agents, Merchants & Outlets",
-  "frequency": "periodic",
   "endpoint": "/api/v1/flows/rest/API_AGENTBANKACTIVIT_SYNC/1.0/submitAgentBankActivties",
   "array_key": "AGENT_BANK_ACTIVITES",
-  "notes": "",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "number",
+      "description": "A unique sequential number, running from the first record to the last",
+      "example": "1",
+      "payload_key": "ROW ID",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "BANK CODE",
+      "type": "string",
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
+      "example": "0000001",
+      "payload_key": "BANK CODE",
+      "key_confidence": 1.0,
+      "key": "bank_code"
+    },
+    {
+      "name": "BRANCH ID",
+      "type": "string",
+      "description": "Branch code where the account was opened/operated from.",
+      "example": "003",
+      "payload_key": "BRANCH ID",
+      "key_confidence": 1.0,
+      "key": "branch_id"
+    },
+    {
+      "name": "BUSINESS DATE, MONTH & YEAR",
+      "type": "date",
+      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY}.",
+      "example": "23-Nov-2019",
+      "payload_key": "BUSINESS DATE, MONTH & YEAR",
+      "key_confidence": 0,
+      "key": "business_date_month_year"
+    },
+    {
+      "name": "AGENT UNIQUE ID",
+      "type": "string",
+      "description": "Unique identifier for the merchant/Agent",
+      "example": "0001",
+      "payload_key": "AGENT UNIQUE ID",
+      "key_confidence": 1.0,
+      "key": "agent_unique_id"
+    },
+    {
+      "name": "TERMINAL ID",
+      "type": "string",
+      "description": "Unique identifier for the terminal",
+      "example": "TID09868",
+      "payload_key": "TERMINAL ID",
+      "key_confidence": 1.0,
+      "key": "terminal_id"
+    },
+    {
+      "name": "TRANSACTION TYPE",
+      "type": "string",
+      "description": "Type of transaction done by the agent",
+      "example": "AGTXN02",
+      "payload_key": "TRANSACTION TYPE",
+      "key_confidence": 1.0,
+      "key": "transaction_type"
+    },
+    {
+      "name": "TOTAL COUNT OF TRANSACTIONS",
+      "type": "number",
+      "description": "Number of transactions",
+      "example": "3,432",
+      "payload_key": "TOTAL COUNT OF TRANSACTIONS",
+      "key_confidence": 1.0,
+      "key": "total_count_of_transactions"
+    },
+    {
+      "name": "TOTAL VALUE OF TRANSACTIONS IN LCY",
+      "type": "number",
+      "description": "Value of transactions",
+      "example": "35,045,500.25897",
+      "payload_key": "TOTAL VALUE OF TRANSACTION LCY",
+      "key_confidence": 0.95,
+      "key": "total_value_of_transactions_in_lcy"
+    }
+  ],
+  "unmatched_sample_keys": [
+    "REPORTING DATE"
+  ],
   "source_pages": [
     52,
     56
-  ],
-  "fields": [
-    {
-      "key": "row_id",
-      "name": "ROW ID",
-      "payload_key": "ROW ID",
-      "type": "number",
-      "required": true,
-      "description": "A unique sequential number, running from the first record to the last",
-      "example": "1"
-    },
-    {
-      "key": "bank_code",
-      "name": "BANK CODE",
-      "payload_key": "BANK CODE",
-      "type": "string",
-      "required": false,
-      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
-      "example": "0000001"
-    },
-    {
-      "key": "branch_id",
-      "name": "BRANCH ID",
-      "payload_key": "BRANCH ID",
-      "type": "string",
-      "required": false,
-      "description": "Branch code where the account was opened/operated from.",
-      "example": "003"
-    },
-    {
-      "key": "business_date_month_year",
-      "name": "BUSINESS DATE, MONTH & YEAR",
-      "payload_key": "REPORTING DATE",
-      "type": "date",
-      "required": false,
-      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY}.",
-      "example": "23-Nov-2019"
-    },
-    {
-      "key": "agent_unique_id",
-      "name": "AGENT UNIQUE ID",
-      "payload_key": "AGENT UNIQUE ID",
-      "type": "string",
-      "required": false,
-      "description": "Unique identifier for the merchant/Agent",
-      "example": "0001"
-    },
-    {
-      "key": "terminal_id",
-      "name": "TERMINAL ID",
-      "payload_key": "TERMINAL ID",
-      "type": "string",
-      "required": false,
-      "description": "Unique identifier for the terminal",
-      "example": "TID09868"
-    },
-    {
-      "key": "transaction_type",
-      "name": "TRANSACTION TYPE",
-      "payload_key": "TRANSACTION TYPE",
-      "type": "string",
-      "required": false,
-      "description": "Type of transaction done by the agent",
-      "example": "AGTXN02"
-    },
-    {
-      "key": "total_count_of_transactions",
-      "name": "TOTAL COUNT OF TRANSACTIONS",
-      "payload_key": "TOTAL COUNT OF TRANSACTIONS",
-      "type": "number",
-      "required": false,
-      "description": "Number of transactions",
-      "example": "3,432"
-    },
-    {
-      "key": "total_value_of_transactions_in_lcy",
-      "name": "TOTAL VALUE OF TRANSACTIONS IN LCY",
-      "payload_key": "TOTAL VALUE OF TRANSACTION LCY",
-      "type": "number",
-      "required": false,
-      "description": "Value of transactions",
-      "example": "35,045,500.25897"
-    }
   ]
 }

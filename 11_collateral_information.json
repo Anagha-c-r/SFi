@@ -2,222 +2,220 @@
   "number": 11,
   "code": "collateral_information",
   "title": "Collateral Information",
-  "group": "Credit & Loans",
-  "frequency": "periodic",
   "endpoint": "/api/v1/flows/rest/API_COLLATERALINFOSYNC/1.0/submitCollateralData",
   "array_key": "COLLATERAL_DATA",
-  "notes": "",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "number",
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1",
+      "payload_key": "ROW ID",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "BANK CODE",
+      "type": "string",
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
+      "example": "0000001",
+      "payload_key": "BANK CODE",
+      "key_confidence": 1.0,
+      "key": "bank_code"
+    },
+    {
+      "name": "BRANCH ID",
+      "type": "string",
+      "description": "Assigned code for the branch that onboards the customer (party).",
+      "example": "003",
+      "payload_key": "BRANCH ID",
+      "key_confidence": 1.0,
+      "key": "branch_id"
+    },
+    {
+      "name": "REPORTING DATE",
+      "type": "date",
+      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY}",
+      "example": "3-Jun-2020",
+      "payload_key": "REPORTING DATE",
+      "key_confidence": 1.0,
+      "key": "reporting_date"
+    },
+    {
+      "name": "COLLATERAL ID",
+      "type": "string",
+      "description": "Unique reference number for the collateral",
+      "example": "CL12678",
+      "payload_key": "COLLATERAL ID",
+      "key_confidence": 1.0,
+      "key": "collateral_id"
+    },
+    {
+      "name": "LOAN CONTRACT ID",
+      "type": "string",
+      "description": "Unique numbers assigned to lndividual loan contracts.",
+      "example": "016CA5667800",
+      "payload_key": "LOAN CONTRACT ID",
+      "key_confidence": 1.0,
+      "key": "loan_contract_id"
+    },
+    {
+      "name": "CUSTOMER ID",
+      "type": "string",
+      "description": "Customer unique id linked to the Loan contract",
+      "example": "0354678",
+      "payload_key": "CUSTOMER ID",
+      "key_confidence": 1.0,
+      "key": "customer_id"
+    },
+    {
+      "name": "COLLATERAL TYPE",
+      "type": "string",
+      "description": "Type of collateral pledged for credit facility.",
+      "example": "IMA3",
+      "payload_key": "COLLATERAL TYPE",
+      "key_confidence": 1.0,
+      "key": "collateral_type"
+    },
+    {
+      "name": "REGISTRATION NUMBER",
+      "type": "string",
+      "description": "e.g. LR Number, Motor vehicle registration number, etc.",
+      "example": "KAJIADO/LODARIAK/2789",
+      "payload_key": "REGISTRATION NUMBER",
+      "key_confidence": 1.0,
+      "key": "registration_number"
+    },
+    {
+      "name": "COUNTY CODE",
+      "type": "string",
+      "description": "County code for the county where the property is located",
+      "example": "034",
+      "payload_key": "COUNTY CODE",
+      "key_confidence": 1.0,
+      "key": "county_code"
+    },
+    {
+      "name": "COLLATERAL OMV LCY",
+      "type": "number",
+      "description": "The value of collateral. Open Market Value (OMV)",
+      "example": "15,000,000",
+      "payload_key": "COLLATERAL OMV LCY",
+      "key_confidence": 1.0,
+      "key": "collateral_omv_lcy"
+    },
+    {
+      "name": "COLLATERAL FSV LCY",
+      "type": "number",
+      "description": "Forced Sale Value (FSV) of property",
+      "example": "11,250,000",
+      "payload_key": "COLLATERAL FSV LCY",
+      "key_confidence": 1.0,
+      "key": "collateral_fsv_lcy"
+    },
+    {
+      "name": "COLLATERAL DISCOUNTED VALUE",
+      "type": "number",
+      "description": "Discounted value of collateral as per CBK Prudential Guidelines",
+      "example": "12,000,000",
+      "payload_key": "COLLATERAL DISCOUNTED VALUE",
+      "key_confidence": 1.0,
+      "key": "collateral_discounted_value"
+    },
+    {
+      "name": "AMOUNT CHARGED",
+      "type": "number",
+      "description": "The Legal Charge Amount as per the regstered charge documents.",
+      "example": "10,000,000",
+      "payload_key": "AMOUNT CHARGED",
+      "key_confidence": 1.0,
+      "key": "amount_charged"
+    },
+    {
+      "name": "COLLATERAL DISCOUNT RATE",
+      "type": "string",
+      "description": "Discounted rate of the collateral as per CBK Prudential Guidelines.",
+      "example": "20%",
+      "payload_key": "COLLATERAL DISCOUNT RATE",
+      "key_confidence": 1.0,
+      "key": "collateral_discount_rate"
+    },
+    {
+      "name": "LTV RATIO",
+      "type": "string",
+      "description": "% of collateral attached to the facility. Computed from the loan facility amount and the collateral value.",
+      "example": "67%",
+      "payload_key": "LTV RATIO",
+      "key_confidence": 1.0,
+      "key": "ltv_ratio"
+    },
+    {
+      "name": "PROPERTY VALUER NAME",
+      "type": "string",
+      "description": "Name of valuer",
+      "example": "Test Property Valuers Ltd",
+      "payload_key": "PROPERTY VALUER NAME",
+      "key_confidence": 1.0,
+      "key": "property_valuer_name"
+    },
+    {
+      "name": "COLLATERAL LAST VALUATION DATE",
+      "type": "date",
+      "description": "The date when the collateral was valued {e.g. Date captured on the latest valuation report}",
+      "example": "21-Sep-2017",
+      "payload_key": "COLLATERAL LAST VALUATION DATE",
+      "key_confidence": 1.0,
+      "key": "collateral_last_valuation_date"
+    },
+    {
+      "name": "INSURED FLAG",
+      "type": "string",
+      "description": "Is the collateral insured Y/N Flag",
+      "example": "Y",
+      "payload_key": "INSURED FLAG",
+      "key_confidence": 1.0,
+      "key": "insured_flag"
+    },
+    {
+      "name": "INSURER NAME",
+      "type": "string",
+      "description": "The name of the Insurance Company",
+      "example": "AON",
+      "payload_key": "INSURER NAME",
+      "key_confidence": 1.0,
+      "key": "insurer_name"
+    },
+    {
+      "name": "AMOUNT INSURED",
+      "type": "number",
+      "description": "The Principal amount insured in LCY",
+      "example": "15,000,000",
+      "payload_key": "AMOUNT INSURED",
+      "key_confidence": 1.0,
+      "key": "amount_insured"
+    },
+    {
+      "name": "INSURANCE EXPIRY DATE",
+      "type": "date",
+      "description": "Expiry date of the insured property",
+      "example": "28-Nov-2020",
+      "payload_key": "INSURANCE EXPIRY DATE",
+      "key_confidence": 1.0,
+      "key": "insurance_expiry_date"
+    },
+    {
+      "name": "GUARANTEE ISSUER",
+      "type": "string",
+      "description": "If collateral is a guarantee, the issuer names/details. The list is expandable upto 5 Number - Minium precision length",
+      "example": "A.N. Other",
+      "payload_key": "GUARANTEE ISSUER",
+      "key_confidence": 1.0,
+      "key": "guarantee_issuer"
+    }
+  ],
+  "unmatched_sample_keys": [],
   "source_pages": [
     56,
     61
-  ],
-  "fields": [
-    {
-      "key": "row_id",
-      "name": "ROW ID",
-      "payload_key": "ROW ID",
-      "type": "number",
-      "required": true,
-      "description": "A unique sequential number, running from the first record to the last.",
-      "example": "1"
-    },
-    {
-      "key": "bank_code",
-      "name": "BANK CODE",
-      "payload_key": "BANK CODE",
-      "type": "string",
-      "required": false,
-      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
-      "example": "0000001"
-    },
-    {
-      "key": "branch_id",
-      "name": "BRANCH ID",
-      "payload_key": "BRANCH ID",
-      "type": "string",
-      "required": false,
-      "description": "Assigned code for the branch that onboards the customer (party).",
-      "example": "003"
-    },
-    {
-      "key": "reporting_date",
-      "name": "REPORTING DATE",
-      "payload_key": "REPORTING DATE",
-      "type": "date",
-      "required": true,
-      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY}",
-      "example": "3-Jun-2020"
-    },
-    {
-      "key": "collateral_id",
-      "name": "COLLATERAL ID",
-      "payload_key": "COLLATERAL ID",
-      "type": "string",
-      "required": false,
-      "description": "Unique reference number for the collateral",
-      "example": "CL12678"
-    },
-    {
-      "key": "loan_contract_id",
-      "name": "LOAN CONTRACT ID",
-      "payload_key": "LOAN CONTRACT ID",
-      "type": "string",
-      "required": false,
-      "description": "Unique numbers assigned to lndividual loan contracts.",
-      "example": "016CA5667800"
-    },
-    {
-      "key": "customer_id",
-      "name": "CUSTOMER ID",
-      "payload_key": "CUSTOMER ID",
-      "type": "string",
-      "required": false,
-      "description": "Customer unique id linked to the Loan contract",
-      "example": "0354678"
-    },
-    {
-      "key": "collateral_type",
-      "name": "COLLATERAL TYPE",
-      "payload_key": "COLLATERAL TYPE",
-      "type": "string",
-      "required": false,
-      "description": "Type of collateral pledged for credit facility.",
-      "example": "IMA3"
-    },
-    {
-      "key": "registration_number",
-      "name": "REGISTRATION NUMBER",
-      "payload_key": "REGISTRATION NUMBER",
-      "type": "string",
-      "required": false,
-      "description": "e.g. LR Number, Motor vehicle registration number, etc.",
-      "example": "KAJIADO/LODARIAK/2789"
-    },
-    {
-      "key": "county_code",
-      "name": "COUNTY CODE",
-      "payload_key": "COUNTY CODE",
-      "type": "string",
-      "required": false,
-      "description": "County code for the county where the property is located",
-      "example": "034"
-    },
-    {
-      "key": "collateral_omv_lcy",
-      "name": "COLLATERAL OMV LCY",
-      "payload_key": "COLLATERAL OMV LCY",
-      "type": "number",
-      "required": false,
-      "description": "The value of collateral. Open Market Value (OMV)",
-      "example": "15,000,000"
-    },
-    {
-      "key": "collateral_fsv_lcy",
-      "name": "COLLATERAL FSV LCY",
-      "payload_key": "COLLATERAL FSV LCY",
-      "type": "number",
-      "required": false,
-      "description": "Forced Sale Value (FSV) of property",
-      "example": "11,250,000"
-    },
-    {
-      "key": "collateral_discounted_value",
-      "name": "COLLATERAL DISCOUNTED VALUE",
-      "payload_key": "COLLATERAL DISCOUNTED VALUE",
-      "type": "number",
-      "required": false,
-      "description": "Discounted value of collateral as per CBK Prudential Guidelines",
-      "example": "12,000,000"
-    },
-    {
-      "key": "amount_charged",
-      "name": "AMOUNT CHARGED",
-      "payload_key": "AMOUNT CHARGED",
-      "type": "number",
-      "required": false,
-      "description": "The Legal Charge Amount as per the regstered charge documents.",
-      "example": "10,000,000"
-    },
-    {
-      "key": "collateral_discount_rate",
-      "name": "COLLATERAL DISCOUNT RATE",
-      "payload_key": "COLLATERAL DISCOUNT RATE",
-      "type": "string",
-      "required": false,
-      "description": "Discounted rate of the collateral as per CBK Prudential Guidelines.",
-      "example": "20%"
-    },
-    {
-      "key": "ltv_ratio",
-      "name": "LTV RATIO",
-      "payload_key": "LTV RATIO",
-      "type": "string",
-      "required": false,
-      "description": "% of collateral attached to the facility. Computed from the loan facility amount and the collateral value.",
-      "example": "67%"
-    },
-    {
-      "key": "property_valuer_name",
-      "name": "PROPERTY VALUER NAME",
-      "payload_key": "PROPERTY VALUER NAME",
-      "type": "string",
-      "required": false,
-      "description": "Name of valuer",
-      "example": "Test Property Valuers Ltd"
-    },
-    {
-      "key": "collateral_last_valuation_date",
-      "name": "COLLATERAL LAST VALUATION DATE",
-      "payload_key": "COLLATERAL LAST VALUATION DATE",
-      "type": "date",
-      "required": false,
-      "description": "The date when the collateral was valued {e.g. Date captured on the latest valuation report}",
-      "example": "21-Sep-2017"
-    },
-    {
-      "key": "insured_flag",
-      "name": "INSURED FLAG",
-      "payload_key": "INSURED FLAG",
-      "type": "string",
-      "required": false,
-      "description": "Is the collateral insured Y/N Flag",
-      "example": "Y"
-    },
-    {
-      "key": "insurer_name",
-      "name": "INSURER NAME",
-      "payload_key": "INSURER NAME",
-      "type": "string",
-      "required": false,
-      "description": "The name of the Insurance Company",
-      "example": "AON"
-    },
-    {
-      "key": "amount_insured",
-      "name": "AMOUNT INSURED",
-      "payload_key": "AMOUNT INSURED",
-      "type": "number",
-      "required": false,
-      "description": "The Principal amount insured in LCY",
-      "example": "15,000,000"
-    },
-    {
-      "key": "insurance_expiry_date",
-      "name": "INSURANCE EXPIRY DATE",
-      "payload_key": "INSURANCE EXPIRY DATE",
-      "type": "date",
-      "required": false,
-      "description": "Expiry date of the insured property",
-      "example": "28-Nov-2020"
-    },
-    {
-      "key": "guarantee_issuer",
-      "name": "GUARANTEE ISSUER",
-      "payload_key": "GUARANTEE ISSUER",
-      "type": "string",
-      "required": false,
-      "description": "If collateral is a guarantee, the issuer names/details. The list is expandable upto 5 Number - Minium precision length",
-      "example": "A.N. Other"
-    }
   ]
 }

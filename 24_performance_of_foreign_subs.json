@@ -2,177 +2,175 @@
   "number": 24,
   "code": "performance_of_foreign_subs",
   "title": "Performance of Foreign Subs",
-  "group": "Foreign Subsidiaries",
-  "frequency": "periodic",
   "endpoint": "/api/v1/flows/rest/API_PERFOFFOREIGNSUBSSYNC/1.0/submitPerfForeignSubsInfo",
   "array_key": "PERF_FOREIGN_SUBS_INFO",
-  "notes": "",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "number",
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1",
+      "payload_key": "ROW ID ",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "BANK CODE",
+      "type": "string",
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
+      "example": "0000001",
+      "payload_key": "BANK CODE",
+      "key_confidence": 1.0,
+      "key": "bank_code"
+    },
+    {
+      "name": "SUBSIDIARY NAME",
+      "type": "string",
+      "description": "Name of subsidiary",
+      "example": "XYZ Bank Uganda",
+      "payload_key": "SUBSIDIARY NAME",
+      "key_confidence": 1.0,
+      "key": "subsidiary_name"
+    },
+    {
+      "name": "REPORTING DATE, MONTH & YEAR",
+      "type": "date",
+      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY}",
+      "example": "03-May-2022",
+      "payload_key": "REPORTING DATE",
+      "key_confidence": 0.74,
+      "key": "reporting_date_month_year"
+    },
+    {
+      "name": "SUBSIDIARY ID",
+      "type": "string",
+      "description": "A unique identifer for the subsidiary of which the data relates to.",
+      "example": "SUBID01",
+      "payload_key": "SUBSIDIARY ID",
+      "key_confidence": 1.0,
+      "key": "subsidiary_id"
+    },
+    {
+      "name": "SUBSIDIARY COUNTRY CODE",
+      "type": "string",
+      "description": "ISO country code of Staff's denoting the country where the subsidiary is located. {As per ISO-3166-1}",
+      "example": "UG",
+      "payload_key": "SUBSIDIARY COUNTRY CODE",
+      "key_confidence": 1.0,
+      "key": "subsidiary_country_code"
+    },
+    {
+      "name": "GROSS LOANS AMOUNTS",
+      "type": "number",
+      "description": "Gross Loans Amounts (including accrued interest) per Economic Activity as per ISIC",
+      "example": "6,872,919.17000",
+      "payload_key": "GROSS LOANS AMOUNT",
+      "key_confidence": 1.0,
+      "key": "gross_loans_amounts"
+    },
+    {
+      "name": "GROSS NON- PERFORMING LOAN AMOUNTS",
+      "type": "number",
+      "description": "Gross Non-Performing Loan Amounts per Economic Activity as per ISIC",
+      "example": "246,438.83000",
+      "payload_key": "GROSS NON PERFORMING LOAN AMT",
+      "key_confidence": 0.93,
+      "key": "gross_non_performing_loan_amounts"
+    },
+    {
+      "name": "GROSS ASSETS AMOUNT",
+      "type": "number",
+      "description": "Gross Asset amount (including accrued interest)",
+      "example": "19,947,517.42000",
+      "payload_key": "GROSS ASSETS AMOUNT",
+      "key_confidence": 1.0,
+      "key": "gross_assets_amount"
+    },
+    {
+      "name": "GROSS DEPOSITS AMOUNT",
+      "type": "number",
+      "description": "Gross deposit amount (Including accrued interest)",
+      "example": "14,446,585.11000",
+      "payload_key": "GROSS DEPOSITS AMOUNT",
+      "key_confidence": 1.0,
+      "key": "gross_deposits_amount"
+    },
+    {
+      "name": "PROFIT BEFORE TAX",
+      "type": "number",
+      "description": "Profit before taxation",
+      "example": "49,386.79000",
+      "payload_key": "PROFIT BEFORE TAX",
+      "key_confidence": 1.0,
+      "key": "profit_before_tax"
+    },
+    {
+      "name": "TOTAL CAPITAL ADEQUACY RATIO",
+      "type": "number",
+      "description": "Measurement of a bank's available capital expressed as a percentage of a bank's risk weighted credit exposurers. = {Tier One Capital + Tier Two Capital}/Risk Weighted Assets}",
+      "example": "0.20000",
+      "payload_key": "TOTAL CAPITAL ADEQUACY RATIO",
+      "key_confidence": 1.0,
+      "key": "total_capital_adequacy_ratio"
+    },
+    {
+      "name": "LIQUIDITY RATIO",
+      "type": "number",
+      "description": "{Cash equivalents + marketable securities + account receivables} divided by current liabilities.",
+      "example": "0.82000",
+      "payload_key": "LIQUIDITY RATIO",
+      "key_confidence": 1.0,
+      "key": "liquidity_ratio"
+    },
+    {
+      "name": "GENERAL PROVISIONS",
+      "type": "number",
+      "description": "General provisions held as per CBK guidelines",
+      "example": "65,188.18000",
+      "payload_key": "GENERAL PROVISIONS",
+      "key_confidence": 1.0,
+      "key": "general_provisions"
+    },
+    {
+      "name": "SPECIFIC PROVISIONS",
+      "type": "number",
+      "description": "Specific provisions held as per CBK guidelines",
+      "example": "95,521.06000",
+      "payload_key": "SPECIFIC PROVISIONS",
+      "key_confidence": 1.0,
+      "key": "specific_provisions"
+    },
+    {
+      "name": "INTEREST IN SUSPENSE AMOUNT",
+      "type": "number",
+      "description": "Amount of interest in suspense",
+      "example": "32,399.07000",
+      "payload_key": "INTEREST IN SUSPENSE AMOUNT",
+      "key_confidence": 1.0,
+      "key": "interest_in_suspense_amount"
+    },
+    {
+      "name": "TOTAL NUMBER OF STAFF",
+      "type": "number",
+      "description": "Total count of the number of staff",
+      "example": "288",
+      "payload_key": "TOTAL NUMBER OF STAFF",
+      "key_confidence": 1.0,
+      "key": "total_number_of_staff"
+    },
+    {
+      "name": "NUMBER OF BRANCHES",
+      "type": "number",
+      "description": "Total count of the number of branches",
+      "example": "16",
+      "payload_key": "NUMBER OF BRANCHES",
+      "key_confidence": 1.0,
+      "key": "number_of_branches"
+    }
+  ],
+  "unmatched_sample_keys": [],
   "source_pages": [
     126,
     131
-  ],
-  "fields": [
-    {
-      "key": "row_id",
-      "name": "ROW ID",
-      "payload_key": "ROW ID ",
-      "type": "number",
-      "required": true,
-      "description": "A unique sequential number, running from the first record to the last.",
-      "example": "1"
-    },
-    {
-      "key": "bank_code",
-      "name": "BANK CODE",
-      "payload_key": "BANK CODE",
-      "type": "string",
-      "required": false,
-      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
-      "example": "0000001"
-    },
-    {
-      "key": "subsidiary_name",
-      "name": "SUBSIDIARY NAME",
-      "payload_key": "SUBSIDIARY NAME",
-      "type": "string",
-      "required": false,
-      "description": "Name of subsidiary",
-      "example": "XYZ Bank Uganda"
-    },
-    {
-      "key": "reporting_date_month_year",
-      "name": "REPORTING DATE, MONTH & YEAR",
-      "payload_key": "REPORTING DATE",
-      "type": "date",
-      "required": true,
-      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY}",
-      "example": "03-May-2022"
-    },
-    {
-      "key": "subsidiary_id",
-      "name": "SUBSIDIARY ID",
-      "payload_key": "SUBSIDIARY ID",
-      "type": "string",
-      "required": false,
-      "description": "A unique identifer for the subsidiary of which the data relates to.",
-      "example": "SUBID01"
-    },
-    {
-      "key": "subsidiary_country_code",
-      "name": "SUBSIDIARY COUNTRY CODE",
-      "payload_key": "SUBSIDIARY COUNTRY CODE",
-      "type": "string",
-      "required": false,
-      "description": "ISO country code of Staff's denoting the country where the subsidiary is located. {As per ISO-3166-1}",
-      "example": "UG"
-    },
-    {
-      "key": "gross_loans_amounts",
-      "name": "GROSS LOANS AMOUNTS",
-      "payload_key": "GROSS LOANS AMOUNT",
-      "type": "number",
-      "required": false,
-      "description": "Gross Loans Amounts (including accrued interest) per Economic Activity as per ISIC",
-      "example": "6,872,919.17000"
-    },
-    {
-      "key": "gross_non_performing_loan_amounts",
-      "name": "GROSS NON- PERFORMING LOAN AMOUNTS",
-      "payload_key": "GROSS NON PERFORMING LOAN AMT",
-      "type": "number",
-      "required": false,
-      "description": "Gross Non-Performing Loan Amounts per Economic Activity as per ISIC",
-      "example": "246,438.83000"
-    },
-    {
-      "key": "gross_assets_amount",
-      "name": "GROSS ASSETS AMOUNT",
-      "payload_key": "GROSS ASSETS AMOUNT",
-      "type": "number",
-      "required": false,
-      "description": "Gross Asset amount (including accrued interest)",
-      "example": "19,947,517.42000"
-    },
-    {
-      "key": "gross_deposits_amount",
-      "name": "GROSS DEPOSITS AMOUNT",
-      "payload_key": "GROSS DEPOSITS AMOUNT",
-      "type": "number",
-      "required": false,
-      "description": "Gross deposit amount (Including accrued interest)",
-      "example": "14,446,585.11000"
-    },
-    {
-      "key": "profit_before_tax",
-      "name": "PROFIT BEFORE TAX",
-      "payload_key": "PROFIT BEFORE TAX",
-      "type": "number",
-      "required": false,
-      "description": "Profit before taxation",
-      "example": "49,386.79000"
-    },
-    {
-      "key": "total_capital_adequacy_ratio",
-      "name": "TOTAL CAPITAL ADEQUACY RATIO",
-      "payload_key": "TOTAL CAPITAL ADEQUACY RATIO",
-      "type": "number",
-      "required": false,
-      "description": "Measurement of a bank's available capital expressed as a percentage of a bank's risk weighted credit exposurers. = {Tier One Capital + Tier Two Capital}/Risk Weighted Assets}",
-      "example": "0.20000"
-    },
-    {
-      "key": "liquidity_ratio",
-      "name": "LIQUIDITY RATIO",
-      "payload_key": "LIQUIDITY RATIO",
-      "type": "number",
-      "required": false,
-      "description": "{Cash equivalents + marketable securities + account receivables} divided by current liabilities.",
-      "example": "0.82000"
-    },
-    {
-      "key": "general_provisions",
-      "name": "GENERAL PROVISIONS",
-      "payload_key": "GENERAL PROVISIONS",
-      "type": "number",
-      "required": false,
-      "description": "General provisions held as per CBK guidelines",
-      "example": "65,188.18000"
-    },
-    {
-      "key": "specific_provisions",
-      "name": "SPECIFIC PROVISIONS",
-      "payload_key": "SPECIFIC PROVISIONS",
-      "type": "number",
-      "required": false,
-      "description": "Specific provisions held as per CBK guidelines",
-      "example": "95,521.06000"
-    },
-    {
-      "key": "interest_in_suspense_amount",
-      "name": "INTEREST IN SUSPENSE AMOUNT",
-      "payload_key": "INTEREST IN SUSPENSE AMOUNT",
-      "type": "number",
-      "required": false,
-      "description": "Amount of interest in suspense",
-      "example": "32,399.07000"
-    },
-    {
-      "key": "total_number_of_staff",
-      "name": "TOTAL NUMBER OF STAFF",
-      "payload_key": "TOTAL NUMBER OF STAFF",
-      "type": "number",
-      "required": false,
-      "description": "Total count of the number of staff",
-      "example": "288"
-    },
-    {
-      "key": "number_of_branches",
-      "name": "NUMBER OF BRANCHES",
-      "payload_key": "NUMBER OF BRANCHES",
-      "type": "number",
-      "required": false,
-      "description": "Total count of the number of branches",
-      "example": "16"
-    }
   ]
 }

@@ -2,150 +2,148 @@
   "number": 47,
   "code": "foreign_exchange_transactions_information",
   "title": "Foreign Exchange Transactions Information",
-  "group": "Forex & Remittances",
-  "frequency": "periodic",
   "endpoint": "/api/v1/flows/rest/API_FOREIGNEXCHANGET/1.0/submitForeignExchangeTransactions",
   "array_key": "Foreign_Exchange_Transactions",
-  "notes": "",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "number",
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1",
+      "payload_key": "ROW ID",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "MRP FXB CODE",
+      "type": "string",
+      "description": "MRP/FB Code issued by CBK(e.g. Dahabshiil = 0700001)",
+      "example": "0700009",
+      "payload_key": "MRB FXB/CODE",
+      "key_confidence": 0.9,
+      "key": "mrp_fxb_code"
+    },
+    {
+      "name": "MRP FXB BRANCH NAME",
+      "type": "string",
+      "description": "",
+      "example": "",
+      "payload_key": "MRP FXB BRANCH NAME",
+      "key_confidence": 1.0,
+      "key": "mrp_fxb_branch_name"
+    },
+    {
+      "name": "REPORTING DATE",
+      "type": "date",
+      "description": "The date for which the entity is reporting. Format {DD-MMM-YYYY}",
+      "example": "11/23/2019",
+      "payload_key": "REPORTING DATE",
+      "key_confidence": 1.0,
+      "key": "reporting_date"
+    },
+    {
+      "name": "CUSTOMER ID DOCUMENT TYPE",
+      "type": "number",
+      "description": "The type of identification document used.",
+      "example": "CUSTID01",
+      "payload_key": "CUSTOMER IDENTIFICATION DOCUMENT TYPE",
+      "key_confidence": 1.0,
+      "key": "customer_id_document_type"
+    },
+    {
+      "name": "CUSTOMER ID PASSPORT NUMBER",
+      "type": "number",
+      "description": "The customer's national identity card number or passport number",
+      "example": "21345678",
+      "payload_key": "CUSTOMER ID/PASSPORT NUMBER",
+      "key_confidence": 1.0,
+      "key": "customer_id_passport_number"
+    },
+    {
+      "name": "CUSTOMER NAME",
+      "type": "number",
+      "description": "Names of the customer",
+      "example": "John Dow Smith",
+      "payload_key": "CUSTOMER NAME",
+      "key_confidence": 1.0,
+      "key": "customer_name"
+    },
+    {
+      "name": "SEQUENCE NUMBER",
+      "type": "number",
+      "description": "A unique sequential number for each transaction",
+      "example": "TXNRF9979490",
+      "payload_key": "SEQUENCE NUMBER",
+      "key_confidence": 1.0,
+      "key": "sequence_number"
+    },
+    {
+      "name": "CURRENCY CODE",
+      "type": "number",
+      "description": "ISO currency codes as per ISO-4217. {e.g. USD, GPB, EUR, KES. etc.}",
+      "example": "USD",
+      "payload_key": "CURRENCY CODE",
+      "key_confidence": 1.0,
+      "key": "currency_code"
+    },
+    {
+      "name": "TRANSACTION AMOUNT",
+      "type": "number",
+      "description": "The transaction amount in transacting currency (CCY)",
+      "example": "23525.79754",
+      "payload_key": "TRANSACTION AMOUNT",
+      "key_confidence": 1.0,
+      "key": "transaction_amount"
+    },
+    {
+      "name": "KES SPOT RATE",
+      "type": "string",
+      "description": "The KES spot exchange rate for the business day",
+      "example": "106.37876",
+      "payload_key": "KES SPOT RATE",
+      "key_confidence": 1.0,
+      "key": "kes_spot_rate"
+    },
+    {
+      "name": "TYPE OF FOREIGN EXCHANGE TXN",
+      "type": "string",
+      "description": "FX Purchase, FX Sale or Others",
+      "example": "FXTXNPS",
+      "payload_key": "TYPE OF FOREIGN EXCHANGE TRANSACTION",
+      "key_confidence": 0.82,
+      "key": "type_of_foreign_exchange_txn"
+    },
+    {
+      "name": "DESCRIPTION OF SOURCE OF FUND",
+      "type": "string",
+      "description": "Description of the specific source of funds",
+      "example": "SCFNDT04",
+      "payload_key": "DESCRIPTION OF SOURCE OF FUND",
+      "key_confidence": 0,
+      "key": "description_of_source_of_fund"
+    },
+    {
+      "name": "TRANSACTION PURPOSE",
+      "type": "string",
+      "description": "The purpose for which the funds are sent or received for.",
+      "example": "RMPT01",
+      "payload_key": "TRANSACTION PURPOSE",
+      "key_confidence": 0,
+      "key": "transaction_purpose"
+    },
+    {
+      "name": "SOURCE OF FUNDS OR REMITTANCE PURPOSE",
+      "type": "string",
+      "description": "Description of the specific source of funds or the purpose for which the funds are sent or received for.",
+      "example": "SCFNDT04",
+      "payload_key": "SOURCE OF FUNDS OR REMITTANCE PURPOSE",
+      "key_confidence": 1.0,
+      "key": "source_of_funds_or_remittance_purpose"
+    }
+  ],
+  "unmatched_sample_keys": [],
   "source_pages": [
     229,
     234
-  ],
-  "fields": [
-    {
-      "key": "row_id",
-      "name": "ROW ID",
-      "payload_key": "ROW ID",
-      "type": "number",
-      "required": true,
-      "description": "A unique sequential number, running from the first record to the last.",
-      "example": "1"
-    },
-    {
-      "key": "mrp_fxb_code",
-      "name": "MRP FXB CODE",
-      "payload_key": "MRB FXB/CODE",
-      "type": "string",
-      "required": false,
-      "description": "MRP/FB Code issued by CBK(e.g. Dahabshiil = 0700001)",
-      "example": "0700009"
-    },
-    {
-      "key": "mrp_fxb_branch_name",
-      "name": "MRP FXB BRANCH NAME",
-      "payload_key": "MRP FXB BRANCH NAME",
-      "type": "string",
-      "required": false,
-      "description": "",
-      "example": ""
-    },
-    {
-      "key": "reporting_date",
-      "name": "REPORTING DATE",
-      "payload_key": "REPORTING DATE",
-      "type": "date",
-      "required": true,
-      "description": "The date for which the entity is reporting. Format {DD-MMM-YYYY}",
-      "example": "11/23/2019"
-    },
-    {
-      "key": "customer_id_document_type",
-      "name": "CUSTOMER ID DOCUMENT TYPE",
-      "payload_key": "CUSTOMER IDENTIFICATION DOCUMENT TYPE",
-      "type": "string",
-      "required": false,
-      "description": "The type of identification document used.",
-      "example": "CUSTID01"
-    },
-    {
-      "key": "customer_id_passport_number",
-      "name": "CUSTOMER ID PASSPORT NUMBER",
-      "payload_key": "CUSTOMER ID/PASSPORT NUMBER",
-      "type": "string",
-      "required": false,
-      "description": "The customer's national identity card number or passport number",
-      "example": "21345678"
-    },
-    {
-      "key": "customer_name",
-      "name": "CUSTOMER NAME",
-      "payload_key": "CUSTOMER NAME",
-      "type": "string",
-      "required": false,
-      "description": "Names of the customer",
-      "example": "John Dow Smith"
-    },
-    {
-      "key": "sequence_number",
-      "name": "SEQUENCE NUMBER",
-      "payload_key": "SEQUENCE NUMBER",
-      "type": "string",
-      "required": false,
-      "description": "A unique sequential number for each transaction",
-      "example": "TXNRF9979490"
-    },
-    {
-      "key": "currency_code",
-      "name": "CURRENCY CODE",
-      "payload_key": "CURRENCY CODE",
-      "type": "string",
-      "required": false,
-      "description": "ISO currency codes as per ISO-4217. {e.g. USD, GPB, EUR, KES. etc.}",
-      "example": "USD"
-    },
-    {
-      "key": "transaction_amount",
-      "name": "TRANSACTION AMOUNT",
-      "payload_key": "TRANSACTION AMOUNT",
-      "type": "number",
-      "required": false,
-      "description": "The transaction amount in transacting currency (CCY)",
-      "example": "23525.79754"
-    },
-    {
-      "key": "kes_spot_rate",
-      "name": "KES SPOT RATE",
-      "payload_key": "KES SPOT RATE",
-      "type": "string",
-      "required": false,
-      "description": "The KES spot exchange rate for the business day",
-      "example": "106.37876"
-    },
-    {
-      "key": "type_of_foreign_exchange_txn",
-      "name": "TYPE OF FOREIGN EXCHANGE TXN",
-      "payload_key": "TYPE OF FOREIGN EXCHANGE TRANSACTION",
-      "type": "string",
-      "required": false,
-      "description": "FX Purchase, FX Sale or Others",
-      "example": "FXTXNPS"
-    },
-    {
-      "key": "description_of_source_of_fund",
-      "name": "DESCRIPTION OF SOURCE OF FUND",
-      "payload_key": "DESCRIPTION OF SOURCE OF FUND",
-      "type": "string",
-      "required": false,
-      "description": "Description of the specific source of funds",
-      "example": "SCFNDT04"
-    },
-    {
-      "key": "transaction_purpose",
-      "name": "TRANSACTION PURPOSE",
-      "payload_key": "TRANSACTION PURPOSE",
-      "type": "string",
-      "required": false,
-      "description": "The purpose for which the funds are sent or received for.",
-      "example": "RMPT01"
-    },
-    {
-      "key": "source_of_funds_or_remittance_purpose",
-      "name": "SOURCE OF FUNDS OR REMITTANCE PURPOSE",
-      "payload_key": "SOURCE OF FUNDS OR REMITTANCE PURPOSE",
-      "type": "string",
-      "required": false,
-      "description": "Description of the specific source of funds or the purpose for which the funds are sent or received for.",
-      "example": "SCFNDT04"
-    }
   ]
 }

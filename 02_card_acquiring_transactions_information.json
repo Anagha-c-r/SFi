@@ -2,105 +2,103 @@
   "number": 2,
   "code": "card_acquiring_transactions_information",
   "title": "Card Acquiring Transactions Information",
-  "group": "Cards",
-  "frequency": "periodic",
   "endpoint": "/api/v1/flows/rest/API_CARDACQUIRINGTRA/1.0/submitCardAcquiringTransInfo",
   "array_key": "CARDACQUIRINGTRANS_DATA",
-  "notes": "",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "number",
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1",
+      "payload_key": "ROW ID",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "BANK CODE",
+      "type": "string",
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
+      "example": "0000001",
+      "payload_key": "BANK CODE",
+      "key_confidence": 1.0,
+      "key": "bank_code"
+    },
+    {
+      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
+      "type": "date",
+      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY}",
+      "example": "03-Jun-2020",
+      "payload_key": "REPORTING DATE",
+      "key_confidence": 0.62,
+      "key": "business_reporting_day_month_year"
+    },
+    {
+      "name": "TERMINAL ID",
+      "type": "string",
+      "description": "Unique identifier of a terminal",
+      "example": "TID00089",
+      "payload_key": "TERMINAL ID",
+      "key_confidence": 1.0,
+      "key": "terminal_id"
+    },
+    {
+      "name": "CHANNEL TYPE (ATM, POS, MPOS OR QR)",
+      "type": "string",
+      "description": "Channel (Terminal) type with possible options as ATM, POS, MPOS or QR Codes",
+      "example": "CDCH07",
+      "payload_key": "CHANNEL TYPE",
+      "key_confidence": 0.61,
+      "key": "channel_type_atm_pos_mpos_or_qr"
+    },
+    {
+      "name": "CARD BRAND TYPE",
+      "type": "string",
+      "description": "E.g. VISA, MasterCard, American Express, Interswitch, Ken Switch, China Union Pay, Other acquiring brands.",
+      "example": "Visa",
+      "payload_key": "CARD BRAND TYPE",
+      "key_confidence": 1.0,
+      "key": "card_brand_type"
+    },
+    {
+      "name": "CURRENCY OF TRANSACTION",
+      "type": "string",
+      "description": "Currency of transaction either Local or Foreign {ISO currency codes as per ISO-4217. {e.g. USD, GPB, EUR, KES. etc.}",
+      "example": "EUR",
+      "payload_key": "CURRENCY OF TRANSACTION",
+      "key_confidence": 1.0,
+      "key": "currency_of_transaction"
+    },
+    {
+      "name": "CARD ISSUER CATEGORY",
+      "type": "string",
+      "description": "Local or foreign",
+      "example": "I",
+      "payload_key": "CARD ISSUER CATEGORY",
+      "key_confidence": 1.0,
+      "key": "card_issuer_category"
+    },
+    {
+      "name": "NUMBER OF TRANSACTIONS",
+      "type": "number",
+      "description": "Number of transactions done using foreign issued cards over the reporting period",
+      "example": "1,650",
+      "payload_key": "NUMBER OF TRANSACTIONS",
+      "key_confidence": 1.0,
+      "key": "number_of_transactions"
+    },
+    {
+      "name": "VALUE OF TRANSACTIONS",
+      "type": "number",
+      "description": "Value of transactions done using foreign issued cards over the reporting period in local currency equivalent",
+      "example": "365,000.00000",
+      "payload_key": "VALUE OF TRANSACTIONS",
+      "key_confidence": 1.0,
+      "key": "value_of_transactions"
+    }
+  ],
+  "unmatched_sample_keys": [],
   "source_pages": [
     19,
     22
-  ],
-  "fields": [
-    {
-      "key": "row_id",
-      "name": "ROW ID",
-      "payload_key": "ROW ID",
-      "type": "number",
-      "required": true,
-      "description": "A unique sequential number, running from the first record to the last.",
-      "example": "1"
-    },
-    {
-      "key": "bank_code",
-      "name": "BANK CODE",
-      "payload_key": "BANK CODE",
-      "type": "string",
-      "required": false,
-      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
-      "example": "0000001"
-    },
-    {
-      "key": "business_reporting_day_month_year",
-      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
-      "payload_key": "REPORTING DATE",
-      "type": "date",
-      "required": true,
-      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY}",
-      "example": "03-Jun-2020"
-    },
-    {
-      "key": "terminal_id",
-      "name": "TERMINAL ID",
-      "payload_key": "TERMINAL ID",
-      "type": "string",
-      "required": false,
-      "description": "Unique identifier of a terminal",
-      "example": "TID00089"
-    },
-    {
-      "key": "channel_type_atm_pos_mpos_or_qr",
-      "name": "CHANNEL TYPE (ATM, POS, MPOS OR QR)",
-      "payload_key": "CHANNEL TYPE",
-      "type": "string",
-      "required": false,
-      "description": "Channel (Terminal) type with possible options as ATM, POS, MPOS or QR Codes",
-      "example": "CDCH07"
-    },
-    {
-      "key": "card_brand_type",
-      "name": "CARD BRAND TYPE",
-      "payload_key": "CARD BRAND TYPE",
-      "type": "string",
-      "required": false,
-      "description": "E.g. VISA, MasterCard, American Express, Interswitch, Ken Switch, China Union Pay, Other acquiring brands.",
-      "example": "Visa"
-    },
-    {
-      "key": "currency_of_transaction",
-      "name": "CURRENCY OF TRANSACTION",
-      "payload_key": "CURRENCY OF TRANSACTION",
-      "type": "string",
-      "required": false,
-      "description": "Currency of transaction either Local or Foreign {ISO currency codes as per ISO-4217. {e.g. USD, GPB, EUR, KES. etc.}",
-      "example": "EUR"
-    },
-    {
-      "key": "card_issuer_category",
-      "name": "CARD ISSUER CATEGORY",
-      "payload_key": "CARD ISSUER CATEGORY",
-      "type": "string",
-      "required": false,
-      "description": "Local or foreign",
-      "example": "I"
-    },
-    {
-      "key": "number_of_transactions",
-      "name": "NUMBER OF TRANSACTIONS",
-      "payload_key": "NUMBER OF TRANSACTIONS",
-      "type": "number",
-      "required": false,
-      "description": "Number of transactions done using foreign issued cards over the reporting period",
-      "example": "1,650"
-    },
-    {
-      "key": "value_of_transactions",
-      "name": "VALUE OF TRANSACTIONS",
-      "payload_key": "VALUE OF TRANSACTIONS",
-      "type": "number",
-      "required": false,
-      "description": "Value of transactions done using foreign issued cards over the reporting period in local currency equivalent",
-      "example": "365,000.00000"
-    }
   ]
 }

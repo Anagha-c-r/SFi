@@ -2,87 +2,85 @@
   "number": 7,
   "code": "notices_issued",
   "title": "Notices Issued",
-  "group": "Credit Reference Bureau",
-  "frequency": "periodic",
   "endpoint": "/api/v1/flows/rest/API_CRPSNOTICESISSUEDSYNC/1.0/submitNoticesIssued",
   "array_key": "CRPS_NOTICES_ISSUED",
-  "notes": "",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "number",
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1",
+      "payload_key": "ROW ID",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "CRB CODE",
+      "type": "string",
+      "description": "The code the reporting Credit Reference Bureau (E.g. XYZ 060002)",
+      "example": "0600002",
+      "payload_key": "CRB CODE",
+      "key_confidence": 1.0,
+      "key": "crb_code"
+    },
+    {
+      "name": "BUSINESS REPORTING",
+      "type": "date",
+      "description": "Notices sent out to individual customers or others",
+      "example": "3-Jun-2020",
+      "payload_key": "BUSINESS REPORTING DAY, MONTH & YEAR",
+      "key_confidence": 0.74,
+      "key": "business_reporting"
+    },
+    {
+      "name": "DAY, MONTH & YEAR CATEGORY OF NOTICES ISSUED",
+      "type": "string",
+      "description": "Category of instutition. E.g. Comercial Banks, Microfinance Banks, DBFB Banks, Regulated Saccos, Unregulated Saccos, etc. Mandatory for 'Non-Individuals, otherwise left blank.",
+      "example": "CRBCUST01",
+      "payload_key": "CATEGORY OF NOTICES ISSUED",
+      "key_confidence": 0.79,
+      "key": "day_month_year_category_of_notices_issued"
+    },
+    {
+      "name": "CATEGORY OF INSTITUTION",
+      "type": "string",
+      "description": "The code of the institution making credit report requests, otherwise left blank for individuals. Mandatory for 'Non-Individuals, otherwise left blank.",
+      "example": "CRBSBIC02",
+      "payload_key": "CATEGORY OF INSTITUTION",
+      "key_confidence": 1.0,
+      "key": "category_of_institution"
+    },
+    {
+      "name": "INSTITUTIONS CODE",
+      "type": "string",
+      "description": "The total number of notices sent out to customers for revised records after investigations.",
+      "example": "0700011",
+      "payload_key": "INSTITUTIONS CODE",
+      "key_confidence": 1.0,
+      "key": "institutions_code"
+    },
+    {
+      "name": "NUMBER OF NOTICES TO CUSTOMERS ON REVISED RECORDS AFTER INVESTIGATIONS",
+      "type": "number",
+      "description": "The total number of notices provided to institutions on disputed customer information.",
+      "example": "12,345",
+      "payload_key": "NUMBER OF NOTICES TO CUSTOMERS ON REVISED RECORDS\nAFTER INVESTIGATIONS",
+      "key_confidence": 1.0,
+      "key": "number_of_notices_to_customers_on_revised_records_after_inve"
+    },
+    {
+      "name": "NUMBER OF NOTICES TO INSTITUTIONS ON DISPUTED CUSTOMER INFORMATION",
+      "type": "number",
+      "description": "Notices sent out to individual customers or others",
+      "example": "4,536",
+      "payload_key": "NUMBER OF NOTICES TO INSTITUTIONS ON DISPUTED\nCUSTOMER INFORMATION",
+      "key_confidence": 1.0,
+      "key": "number_of_notices_to_institutions_on_disputed_customer_infor"
+    }
+  ],
+  "unmatched_sample_keys": [],
   "source_pages": [
     39,
     43
-  ],
-  "fields": [
-    {
-      "key": "row_id",
-      "name": "ROW ID",
-      "payload_key": "ROW ID",
-      "type": "number",
-      "required": true,
-      "description": "A unique sequential number, running from the first record to the last.",
-      "example": "1"
-    },
-    {
-      "key": "crb_code",
-      "name": "CRB CODE",
-      "payload_key": "CRB CODE",
-      "type": "string",
-      "required": false,
-      "description": "The code the reporting Credit Reference Bureau (E.g. XYZ 060002)",
-      "example": "0600002"
-    },
-    {
-      "key": "business_reporting_day_month_year",
-      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
-      "payload_key": "BUSINESS REPORTING DAY, MONTH & YEAR",
-      "type": "date",
-      "required": true,
-      "description": "Notices sent out to individual customers or others",
-      "example": "3-Jun-2020"
-    },
-    {
-      "key": "category_of_notices_issued",
-      "name": "CATEGORY OF NOTICES ISSUED",
-      "payload_key": "CATEGORY OF NOTICES ISSUED",
-      "type": "string",
-      "required": false,
-      "description": "Category of instutition. E.g. Comercial Banks, Microfinance Banks, DBFB Banks, Regulated Saccos, Unregulated Saccos, etc. Mandatory for 'Non-Individuals, otherwise left blank.",
-      "example": "CRBCUST01"
-    },
-    {
-      "key": "category_of_institution",
-      "name": "CATEGORY OF INSTITUTION",
-      "payload_key": "CATEGORY OF INSTITUTION",
-      "type": "string",
-      "required": false,
-      "description": "The code of the institution making credit report requests, otherwise left blank for individuals. Mandatory for 'Non-Individuals, otherwise left blank.",
-      "example": "CRBSBIC02"
-    },
-    {
-      "key": "institutions_code",
-      "name": "INSTITUTIONS CODE",
-      "payload_key": "INSTITUTIONS CODE",
-      "type": "string",
-      "required": false,
-      "description": "The total number of notices sent out to customers for revised records after investigations.",
-      "example": "0700011"
-    },
-    {
-      "key": "number_of_notices_to_customers_on_revised_records_after_inve",
-      "name": "NUMBER OF NOTICES TO CUSTOMERS ON REVISED RECORDS AFTER INVESTIGATIONS",
-      "payload_key": "NUMBER OF NOTICES TO CUSTOMERS ON REVISED RECORDS\nAFTER INVESTIGATIONS",
-      "type": "number",
-      "required": false,
-      "description": "The total number of notices provided to institutions on disputed customer information.",
-      "example": "12,345"
-    },
-    {
-      "key": "number_of_notices_to_institutions_on_disputed_customer_infor",
-      "name": "NUMBER OF NOTICES TO INSTITUTIONS ON DISPUTED CUSTOMER INFORMATION",
-      "payload_key": "NUMBER OF NOTICES TO INSTITUTIONS ON DISPUTED\nCUSTOMER INFORMATION",
-      "type": "number",
-      "required": false,
-      "description": "Notices sent out to individual customers or others",
-      "example": "4,536"
-    }
   ]
 }

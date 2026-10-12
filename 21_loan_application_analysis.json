@@ -2,204 +2,202 @@
   "number": 21,
   "code": "loan_application_analysis",
   "title": "Loan Application Analysis",
-  "group": "Credit & Loans",
-  "frequency": "periodic",
   "endpoint": "/api/v1/flows/rest/API_LOANAPPANALYSISSYNC/1.0/submitLoanAppAnalysis",
   "array_key": "LOAN_APPLICATION_ANALYSIS_INFO",
-  "notes": "",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "number",
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1",
+      "payload_key": "ROW ID",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "BANK CODE",
+      "type": "string",
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
+      "example": "0000001",
+      "payload_key": "BANK CODE",
+      "key_confidence": 1.0,
+      "key": "bank_code"
+    },
+    {
+      "name": "BRANCH ID",
+      "type": "string",
+      "description": "The branch where the application took place",
+      "example": "003",
+      "payload_key": "BRANCH ID ",
+      "key_confidence": 1.0,
+      "key": "branch_id"
+    },
+    {
+      "name": "CUSTOMER ID",
+      "type": "string",
+      "description": "Unique number for existing customers, otherwise left blank",
+      "example": "0354678",
+      "payload_key": "CUSTOMER ID",
+      "key_confidence": 1.0,
+      "key": "customer_id"
+    },
+    {
+      "name": "GENDER",
+      "type": "string",
+      "description": "Customer's gender/sex with the possible options as {Male, Female, Corporate or Others}.",
+      "example": "M",
+      "payload_key": "GENDER",
+      "key_confidence": 1.0,
+      "key": "gender"
+    },
+    {
+      "name": "LOAN APPLICATION ID",
+      "type": "string",
+      "description": "Unique sequence number",
+      "example": "LAPPID0989786",
+      "payload_key": "LOAN APPLICATION ID",
+      "key_confidence": 1.0,
+      "key": "loan_application_id"
+    },
+    {
+      "name": "LOAN APPLICATION TYPE",
+      "type": "string",
+      "description": "Whether the application is new or for modification of an existing contract",
+      "example": "LNAPPT01",
+      "payload_key": "LOAN APPLICATION TYPE",
+      "key_confidence": 1.0,
+      "key": "loan_application_type"
+    },
+    {
+      "name": "LOAN PRODUCT TYPE",
+      "type": "string",
+      "description": "The type of loan product applied for.",
+      "example": "LNPRD08",
+      "payload_key": "LOAN PRODUCT TYPE",
+      "key_confidence": 1.0,
+      "key": "loan_product_type"
+    },
+    {
+      "name": "REPORTING BUSINESS DATE",
+      "type": "date",
+      "description": "Reporting Business Date. Format {DD-MMM- YYYY}",
+      "example": "5-Jun-22",
+      "payload_key": "REPORTING BUSINESS DATE",
+      "key_confidence": 1.0,
+      "key": "reporting_business_date"
+    },
+    {
+      "name": "DATE OF APPLICATION",
+      "type": "date",
+      "description": "Date that the loan application was done. Format {DD-MMM-YYYY}",
+      "example": "5-Jun-22",
+      "payload_key": "DATE OF APPLICATION",
+      "key_confidence": 1.0,
+      "key": "date_of_application"
+    },
+    {
+      "name": "LOAN APPLICATION STATUS",
+      "type": "string",
+      "description": "Status of application - (approved/declined/pending/withdrawn)",
+      "example": "LNAPPST01",
+      "payload_key": "LOAN APPLICATION STATUS",
+      "key_confidence": 1.0,
+      "key": "loan_application_status"
+    },
+    {
+      "name": "DATE OF APPROVAL/REJECTION DECISION",
+      "type": "date",
+      "description": "Date when a decision was made to approve or reject a loan application. Format {DD-MMM- YYYY}",
+      "example": "5-Jun-22",
+      "payload_key": "APROVAL REJECTION DEC DATE",
+      "key_confidence": 0.7,
+      "key": "date_of_approval_rejection_decision"
+    },
+    {
+      "name": "CUSTOMER\u2019S BUSINESS ECONOMIC SEGMENT",
+      "type": "string",
+      "description": "The broad business economic segment in which the customer is in {Individual, retail, corporate, SME, MSME, etc.}",
+      "example": "BSC02",
+      "payload_key": "ECONOMIC SEGMENT",
+      "key_confidence": 0.64,
+      "key": "customer_s_business_economic_segment"
+    },
+    {
+      "name": "ECONOMIC ACTIVITY CODE",
+      "type": "string",
+      "description": "The Loan applied is in which economic activity as per ISIC guidelines",
+      "example": "C2813",
+      "payload_key": "ECONOMIC ACTIVITY CODE",
+      "key_confidence": 1.0,
+      "key": "economic_activity_code"
+    },
+    {
+      "name": "CURRENCY OF APPLICATION",
+      "type": "string",
+      "description": "ISO currency code in which the loan is applied.",
+      "example": "KES",
+      "payload_key": "CURRENCY OF APPLICATION",
+      "key_confidence": 1.0,
+      "key": "currency_of_application"
+    },
+    {
+      "name": "LOAN TENURE",
+      "type": "string",
+      "description": "The loan repayment period for the facilityapplied.",
+      "example": "72",
+      "payload_key": "LOAN TENURE",
+      "key_confidence": 1.0,
+      "key": "loan_tenure"
+    },
+    {
+      "name": "APPLIED LOAN AMOUNT IN FCY",
+      "type": "number",
+      "description": "Loan applied amount in foreign currency",
+      "example": "10000000",
+      "payload_key": "APPLIED LOAN AMOUNT IN FCY",
+      "key_confidence": 1.0,
+      "key": "applied_loan_amount_in_fcy"
+    },
+    {
+      "name": "APPLIED LOAN AMOUNT IN LCY EQUIVALENT",
+      "type": "number",
+      "description": "Loan applied amount in local currency equivalent",
+      "example": "10000000",
+      "payload_key": "APPLIED LOAN AMT IN LCY EQUIV",
+      "key_confidence": 0.86,
+      "key": "applied_loan_amount_in_lcy_equivalent"
+    },
+    {
+      "name": "LOAN APPROVED AMOUNT IN FCY",
+      "type": "number",
+      "description": "Loan approved amount in foreign ccurrency",
+      "example": "8000000",
+      "payload_key": "LOAN APPROVED AMOUNT IN FCY",
+      "key_confidence": 1.0,
+      "key": "loan_approved_amount_in_fcy"
+    },
+    {
+      "name": "LOAN APPROVED AMOUNT IN LCY EQUIVALENT",
+      "type": "number",
+      "description": "Loan approved amount in local currency equivalent",
+      "example": "8000000",
+      "payload_key": "LOAN APPROVED AMT IN LCY EQUIV",
+      "key_confidence": 0.86,
+      "key": "loan_approved_amount_in_lcy_equivalent"
+    },
+    {
+      "name": "DECLINE REASON",
+      "type": "string",
+      "description": "Main reasons for rejection if the applicantion is rejected",
+      "example": "LNDRT01",
+      "payload_key": "DECLINE REASON",
+      "key_confidence": 1.0,
+      "key": "decline_reason"
+    }
+  ],
+  "unmatched_sample_keys": [],
   "source_pages": [
     108,
     113
-  ],
-  "fields": [
-    {
-      "key": "row_id",
-      "name": "ROW ID",
-      "payload_key": "ROW ID",
-      "type": "number",
-      "required": true,
-      "description": "A unique sequential number, running from the first record to the last.",
-      "example": "1"
-    },
-    {
-      "key": "bank_code",
-      "name": "BANK CODE",
-      "payload_key": "BANK CODE",
-      "type": "string",
-      "required": false,
-      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
-      "example": "0000001"
-    },
-    {
-      "key": "branch_id",
-      "name": "BRANCH ID",
-      "payload_key": "BRANCH ID ",
-      "type": "string",
-      "required": false,
-      "description": "The branch where the application took place",
-      "example": "003"
-    },
-    {
-      "key": "customer_id",
-      "name": "CUSTOMER ID",
-      "payload_key": "CUSTOMER ID",
-      "type": "string",
-      "required": false,
-      "description": "Unique number for existing customers, otherwise left blank",
-      "example": "0354678"
-    },
-    {
-      "key": "gender",
-      "name": "GENDER",
-      "payload_key": "GENDER",
-      "type": "string",
-      "required": false,
-      "description": "Customer's gender/sex with the possible options as {Male, Female, Corporate or Others}.",
-      "example": "M"
-    },
-    {
-      "key": "loan_application_id",
-      "name": "LOAN APPLICATION ID",
-      "payload_key": "LOAN APPLICATION ID",
-      "type": "string",
-      "required": false,
-      "description": "Unique sequence number",
-      "example": "LAPPID0989786"
-    },
-    {
-      "key": "loan_application_type",
-      "name": "LOAN APPLICATION TYPE",
-      "payload_key": "LOAN APPLICATION TYPE",
-      "type": "string",
-      "required": false,
-      "description": "Whether the application is new or for modification of an existing contract",
-      "example": "LNAPPT01"
-    },
-    {
-      "key": "loan_product_type",
-      "name": "LOAN PRODUCT TYPE",
-      "payload_key": "LOAN PRODUCT TYPE",
-      "type": "string",
-      "required": false,
-      "description": "The type of loan product applied for.",
-      "example": "LNPRD08"
-    },
-    {
-      "key": "reporting_business_date",
-      "name": "REPORTING BUSINESS DATE",
-      "payload_key": "REPORTING BUSINESS DATE",
-      "type": "date",
-      "required": true,
-      "description": "Reporting Business Date. Format {DD-MMM- YYYY}",
-      "example": "5-Jun-22"
-    },
-    {
-      "key": "date_of_application",
-      "name": "DATE OF APPLICATION",
-      "payload_key": "DATE OF APPLICATION",
-      "type": "date",
-      "required": false,
-      "description": "Date that the loan application was done. Format {DD-MMM-YYYY}",
-      "example": "5-Jun-22"
-    },
-    {
-      "key": "loan_application_status",
-      "name": "LOAN APPLICATION STATUS",
-      "payload_key": "LOAN APPLICATION STATUS",
-      "type": "string",
-      "required": false,
-      "description": "Status of application - (approved/declined/pending/withdrawn)",
-      "example": "LNAPPST01"
-    },
-    {
-      "key": "date_of_approval_rejection_decision",
-      "name": "DATE OF APPROVAL/REJECTION DECISION",
-      "payload_key": "APROVAL REJECTION DEC DATE",
-      "type": "date",
-      "required": false,
-      "description": "Date when a decision was made to approve or reject a loan application. Format {DD-MMM- YYYY}",
-      "example": "5-Jun-22"
-    },
-    {
-      "key": "customer_s_business_economic_segment",
-      "name": "CUSTOMER’S BUSINESS ECONOMIC SEGMENT",
-      "payload_key": "ECONOMIC SEGMENT",
-      "type": "string",
-      "required": false,
-      "description": "The broad business economic segment in which the customer is in {Individual, retail, corporate, SME, MSME, etc.}",
-      "example": "BSC02"
-    },
-    {
-      "key": "economic_activity_code",
-      "name": "ECONOMIC ACTIVITY CODE",
-      "payload_key": "ECONOMIC ACTIVITY CODE",
-      "type": "string",
-      "required": false,
-      "description": "The Loan applied is in which economic activity as per ISIC guidelines",
-      "example": "C2813"
-    },
-    {
-      "key": "currency_of_application",
-      "name": "CURRENCY OF APPLICATION",
-      "payload_key": "CURRENCY OF APPLICATION",
-      "type": "string",
-      "required": false,
-      "description": "ISO currency code in which the loan is applied.",
-      "example": "KES"
-    },
-    {
-      "key": "loan_tenure",
-      "name": "LOAN TENURE",
-      "payload_key": "LOAN TENURE",
-      "type": "string",
-      "required": false,
-      "description": "The loan repayment period for the facilityapplied.",
-      "example": "72"
-    },
-    {
-      "key": "applied_loan_amount_in_fcy",
-      "name": "APPLIED LOAN AMOUNT IN FCY",
-      "payload_key": "APPLIED LOAN AMOUNT IN FCY",
-      "type": "number",
-      "required": false,
-      "description": "Loan applied amount in foreign currency",
-      "example": "10000000"
-    },
-    {
-      "key": "applied_loan_amount_in_lcy_equivalent",
-      "name": "APPLIED LOAN AMOUNT IN LCY EQUIVALENT",
-      "payload_key": "APPLIED LOAN AMT IN LCY EQUIV",
-      "type": "number",
-      "required": false,
-      "description": "Loan applied amount in local currency equivalent",
-      "example": "10000000"
-    },
-    {
-      "key": "loan_approved_amount_in_fcy",
-      "name": "LOAN APPROVED AMOUNT IN FCY",
-      "payload_key": "LOAN APPROVED AMOUNT IN FCY",
-      "type": "number",
-      "required": false,
-      "description": "Loan approved amount in foreign ccurrency",
-      "example": "8000000"
-    },
-    {
-      "key": "loan_approved_amount_in_lcy_equivalent",
-      "name": "LOAN APPROVED AMOUNT IN LCY EQUIVALENT",
-      "payload_key": "LOAN APPROVED AMT IN LCY EQUIV",
-      "type": "number",
-      "required": false,
-      "description": "Loan approved amount in local currency equivalent",
-      "example": "8000000"
-    },
-    {
-      "key": "decline_reason",
-      "name": "DECLINE REASON",
-      "payload_key": "DECLINE REASON",
-      "type": "string",
-      "required": false,
-      "description": "Main reasons for rejection if the applicantion is rejected",
-      "example": "LNDRT01"
-    }
   ]
 }

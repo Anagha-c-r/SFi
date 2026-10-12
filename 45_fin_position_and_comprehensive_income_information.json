@@ -2,78 +2,76 @@
   "number": 45,
   "code": "fin_position_and_comprehensive_income_information",
   "title": "Fin Position And Comprehensive Income Information",
-  "group": "Forex & Remittances",
-  "frequency": "periodic",
   "endpoint": "/api/v1/flows/rest/API_FINPOSANDCOMPINCOMCESYNC/1.0/submitFinPosCompIncome",
   "array_key": "FIN_POS_COMP_INCOME",
-  "notes": "",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "number",
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "",
+      "payload_key": "ROW ID",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "CRB MRP FXB CODE",
+      "type": "number",
+      "description": "The code for the reporting Institution. (E.g. XYZ = 070002)",
+      "example": "700001",
+      "payload_key": "CRB/ MRP/ FXB CODE",
+      "key_confidence": 1.0,
+      "key": "crb_mrp_fxb_code"
+    },
+    {
+      "name": "REPORTING DATE",
+      "type": "date",
+      "description": "The reporting date, Month & Year based on the frequency.",
+      "example": "6/3/2020",
+      "payload_key": "REPORTING DATE",
+      "key_confidence": 1.0,
+      "key": "reporting_date"
+    },
+    {
+      "name": "GL MAPPING CODE",
+      "type": "string",
+      "description": "General Ledger mapping code as provided by CBK. E.g. GL Code 'GL100' to denote 'CASH'",
+      "example": "GL100",
+      "payload_key": "GL MAPPING CODE",
+      "key_confidence": 1.0,
+      "key": "gl_mapping_code"
+    },
+    {
+      "name": "AMOUNT",
+      "type": "number",
+      "description": "The amount associated with each of the GL Codes, GL Descriptions and GL Types. The values should have 5 decimal places. The values must have at least 5 decimal places.",
+      "example": "73108.87654",
+      "payload_key": "AMOUNT",
+      "key_confidence": 1.0,
+      "key": "amount"
+    },
+    {
+      "name": "NO OF EMPLOYEES",
+      "type": "number",
+      "description": "Total number of employees as at the reporting date.",
+      "example": "100",
+      "payload_key": "NUMBER OF EMPLOYEES",
+      "key_confidence": 0.8,
+      "key": "no_of_employees"
+    },
+    {
+      "name": "NO OF OUTLETS",
+      "type": "number",
+      "description": "Total number of outlets as at the reporting date.",
+      "example": "5",
+      "payload_key": "NUMBER OF OUTLETS",
+      "key_confidence": 0.77,
+      "key": "no_of_outlets"
+    }
+  ],
+  "unmatched_sample_keys": [],
   "source_pages": [
     220,
     224
-  ],
-  "fields": [
-    {
-      "key": "row_id",
-      "name": "ROW ID",
-      "payload_key": "ROW ID",
-      "type": "number",
-      "required": true,
-      "description": "A unique sequential number, running from the first record to the last.",
-      "example": ""
-    },
-    {
-      "key": "crb_mrp_fxb_code",
-      "name": "CRB MRP FXB CODE",
-      "payload_key": "CRB/ MRP/ FXB CODE",
-      "type": "string",
-      "required": false,
-      "description": "The code for the reporting Institution. (E.g. XYZ = 070002)",
-      "example": "700001"
-    },
-    {
-      "key": "reporting_date",
-      "name": "REPORTING DATE",
-      "payload_key": "REPORTING DATE",
-      "type": "date",
-      "required": true,
-      "description": "The reporting date, Month & Year based on the frequency.",
-      "example": "6/3/2020"
-    },
-    {
-      "key": "gl_mapping_code",
-      "name": "GL MAPPING CODE",
-      "payload_key": "GL MAPPING CODE",
-      "type": "string",
-      "required": false,
-      "description": "General Ledger mapping code as provided by CBK. E.g. GL Code 'GL100' to denote 'CASH'",
-      "example": "GL100"
-    },
-    {
-      "key": "amount",
-      "name": "AMOUNT",
-      "payload_key": "AMOUNT",
-      "type": "number",
-      "required": false,
-      "description": "The amount associated with each of the GL Codes, GL Descriptions and GL Types. The values should have 5 decimal places. The values must have at least 5 decimal places.",
-      "example": "73108.87654"
-    },
-    {
-      "key": "no_of_employees",
-      "name": "NO OF EMPLOYEES",
-      "payload_key": "NUMBER OF EMPLOYEES",
-      "type": "number",
-      "required": false,
-      "description": "Total number of employees as at the reporting date.",
-      "example": "100"
-    },
-    {
-      "key": "no_of_outlets",
-      "name": "NO OF OUTLETS",
-      "payload_key": "NUMBER OF OUTLETS",
-      "type": "number",
-      "required": false,
-      "description": "Total number of outlets as at the reporting date.",
-      "example": "5"
-    }
   ]
 }

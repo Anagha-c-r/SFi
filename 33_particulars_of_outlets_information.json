@@ -2,150 +2,148 @@
   "number": 33,
   "code": "particulars_of_outlets_information",
   "title": "Particulars Of Outlets Information",
-  "group": "Agents, Merchants & Outlets",
-  "frequency": "periodic",
   "endpoint": "/api/v1/flows/rest/API_PARTICULARSOFOUTLETSSYNC/1.0/submitParticularsOfOutlets",
   "array_key": "PARTICULARS_OF_OUTLETS_DATA",
-  "notes": "",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "number",
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1",
+      "payload_key": "ROW ID",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "BANK ID",
+      "type": "number",
+      "description": "Unique identifier for the reporting Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
+      "example": "0000001",
+      "payload_key": "BANK ID",
+      "key_confidence": 1.0,
+      "key": "bank_id"
+    },
+    {
+      "name": "OUTLET ID",
+      "type": "string",
+      "description": "The code that uniqely identifies an outlet",
+      "example": "003",
+      "payload_key": "OUTLET ID",
+      "key_confidence": 1.0,
+      "key": "outlet_id"
+    },
+    {
+      "name": "REPORTING DATE",
+      "type": "date",
+      "description": "The reporting date, Month & Year based on the frequency.",
+      "example": "5-Jun-22",
+      "payload_key": "REPORTING DATE",
+      "key_confidence": 1.0,
+      "key": "reporting_date"
+    },
+    {
+      "name": "OUTLET TYPE",
+      "type": "string",
+      "description": "Branch, Sub-branch, Satellite-branch, Prestige-Centre, Mobile Unit, Pay-Point, Agent or Other outlets.",
+      "example": "OT02",
+      "payload_key": "OUTLET TYPE",
+      "key_confidence": 1.0,
+      "key": "outlet_type"
+    },
+    {
+      "name": "OUTLET NAME",
+      "type": "string",
+      "description": "The name of the outlet",
+      "example": "Kiongozi Branch",
+      "payload_key": "OUTLET NAME",
+      "key_confidence": 1.0,
+      "key": "outlet_name"
+    },
+    {
+      "name": "TOWN",
+      "type": "string",
+      "description": "Name of town where the branch/outlet is located",
+      "example": "Westlands",
+      "payload_key": "TOWN",
+      "key_confidence": 1.0,
+      "key": "town"
+    },
+    {
+      "name": "SUB COUNTY CODE",
+      "type": "string",
+      "description": "Sub-county code where the branch/outlet is located",
+      "example": "4711",
+      "payload_key": "SUB COUNTY CODE",
+      "key_confidence": 1.0,
+      "key": "sub_county_code"
+    },
+    {
+      "name": "GPS LAT",
+      "type": "number",
+      "description": "GPS cordinates based on ISO 6709 standards representation of geographic point location by coordinates (Decimal degrees).",
+      "example": "-6.80014",
+      "payload_key": "GPS LAT",
+      "key_confidence": 1.0,
+      "key": "gps_lat"
+    },
+    {
+      "name": "GPS LONG",
+      "type": "number",
+      "description": "GPS cordinates based on ISO 6709 standards representation of geographic point location by coordinates (Decimal degrees).",
+      "example": "39.31458",
+      "payload_key": "GPS LONG",
+      "key_confidence": 1.0,
+      "key": "gps_long"
+    },
+    {
+      "name": "CBK APPROVAL DATE",
+      "type": "date",
+      "description": "Date when approval to open branch was obtained from CBK Format {DD-MMM-YYYY}",
+      "example": "5-Jun-22",
+      "payload_key": "CBK APPROVAL DATE",
+      "key_confidence": 1.0,
+      "key": "cbk_approval_date"
+    },
+    {
+      "name": "OUTLET STATUS",
+      "type": "string",
+      "description": "Current status of branch (Active, In-active or closed).",
+      "example": "01",
+      "payload_key": "OUTLET STATUS",
+      "key_confidence": 1.0,
+      "key": "outlet_status"
+    },
+    {
+      "name": "OUTLET OPENING DATE",
+      "type": "date",
+      "description": "Date when the branch/outlet was opened. Format {DD- MMM-YYYY",
+      "example": "5-Jun-22",
+      "payload_key": "OUTLET OPENING DATE",
+      "key_confidence": 1.0,
+      "key": "outlet_opening_date"
+    },
+    {
+      "name": "OUTLET CLOSURE DATE",
+      "type": "date",
+      "description": "Date when branch was closed else left blank. Format {DD-MMM-YYYY}",
+      "example": "5-Jun-22",
+      "payload_key": "OUTLET CLOSURE DATE",
+      "key_confidence": 1.0,
+      "key": "outlet_closure_date"
+    },
+    {
+      "name": "LICENSE FEE PAYABLE",
+      "type": "string",
+      "description": "Amount of annual license fee payable",
+      "example": "100000",
+      "payload_key": "LICENSE FEE PAYABLE",
+      "key_confidence": 1.0,
+      "key": "license_fee_payable"
+    }
+  ],
+  "unmatched_sample_keys": [],
   "source_pages": [
     165,
     170
-  ],
-  "fields": [
-    {
-      "key": "row_id",
-      "name": "ROW ID",
-      "payload_key": "ROW ID",
-      "type": "number",
-      "required": true,
-      "description": "A unique sequential number, running from the first record to the last.",
-      "example": "1"
-    },
-    {
-      "key": "bank_id",
-      "name": "BANK ID",
-      "payload_key": "BANK ID",
-      "type": "number",
-      "required": false,
-      "description": "Unique identifier for the reporting Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
-      "example": "0000001"
-    },
-    {
-      "key": "outlet_id",
-      "name": "OUTLET ID",
-      "payload_key": "OUTLET ID",
-      "type": "string",
-      "required": false,
-      "description": "The code that uniqely identifies an outlet",
-      "example": "003"
-    },
-    {
-      "key": "reporting_date",
-      "name": "REPORTING DATE",
-      "payload_key": "REPORTING DATE",
-      "type": "date",
-      "required": true,
-      "description": "The reporting date, Month & Year based on the frequency.",
-      "example": "5-Jun-22"
-    },
-    {
-      "key": "outlet_type",
-      "name": "OUTLET TYPE",
-      "payload_key": "OUTLET TYPE",
-      "type": "string",
-      "required": false,
-      "description": "Branch, Sub-branch, Satellite-branch, Prestige-Centre, Mobile Unit, Pay-Point, Agent or Other outlets.",
-      "example": "OT02"
-    },
-    {
-      "key": "outlet_name",
-      "name": "OUTLET NAME",
-      "payload_key": "OUTLET NAME",
-      "type": "string",
-      "required": false,
-      "description": "The name of the outlet",
-      "example": "Kiongozi Branch"
-    },
-    {
-      "key": "town",
-      "name": "TOWN",
-      "payload_key": "TOWN",
-      "type": "string",
-      "required": false,
-      "description": "Name of town where the branch/outlet is located",
-      "example": "Westlands"
-    },
-    {
-      "key": "sub_county_code",
-      "name": "SUB COUNTY CODE",
-      "payload_key": "SUB COUNTY CODE",
-      "type": "string",
-      "required": false,
-      "description": "Sub-county code where the branch/outlet is located",
-      "example": "4711"
-    },
-    {
-      "key": "gps_lat",
-      "name": "GPS LAT",
-      "payload_key": "GPS LAT",
-      "type": "number",
-      "required": false,
-      "description": "GPS cordinates based on ISO 6709 standards representation of geographic point location by coordinates (Decimal degrees).",
-      "example": "-6.80014"
-    },
-    {
-      "key": "gps_long",
-      "name": "GPS LONG",
-      "payload_key": "GPS LONG",
-      "type": "number",
-      "required": false,
-      "description": "GPS cordinates based on ISO 6709 standards representation of geographic point location by coordinates (Decimal degrees).",
-      "example": "39.31458"
-    },
-    {
-      "key": "cbk_approval_date",
-      "name": "CBK APPROVAL DATE",
-      "payload_key": "CBK APPROVAL DATE",
-      "type": "date",
-      "required": false,
-      "description": "Date when approval to open branch was obtained from CBK Format {DD-MMM-YYYY}",
-      "example": "5-Jun-22"
-    },
-    {
-      "key": "outlet_status",
-      "name": "OUTLET STATUS",
-      "payload_key": "OUTLET STATUS",
-      "type": "string",
-      "required": false,
-      "description": "Current status of branch (Active, In-active or closed).",
-      "example": "01"
-    },
-    {
-      "key": "outlet_opening_date",
-      "name": "OUTLET OPENING DATE",
-      "payload_key": "OUTLET OPENING DATE",
-      "type": "date",
-      "required": false,
-      "description": "Date when the branch/outlet was opened. Format {DD- MMM-YYYY",
-      "example": "5-Jun-22"
-    },
-    {
-      "key": "outlet_closure_date",
-      "name": "OUTLET CLOSURE DATE",
-      "payload_key": "OUTLET CLOSURE DATE",
-      "type": "date",
-      "required": false,
-      "description": "Date when branch was closed else left blank. Format {DD-MMM-YYYY}",
-      "example": "5-Jun-22"
-    },
-    {
-      "key": "license_fee_payable",
-      "name": "LICENSE FEE PAYABLE",
-      "payload_key": "LICENSE FEE PAYABLE",
-      "type": "string",
-      "required": false,
-      "description": "Amount of annual license fee payable",
-      "example": "100000"
-    }
   ]
 }

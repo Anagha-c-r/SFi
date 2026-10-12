@@ -2,105 +2,103 @@
   "number": 32,
   "code": "exchange_rates_information",
   "title": "Exchange Rates Information",
-  "group": "Forex & Remittances",
-  "frequency": "periodic",
   "endpoint": "/api/v1/flows/rest/API_EXCHANGERATESSYN/1.0/submitExchangeRatesData",
   "array_key": "EXCHANGE_RATE_DATA",
-  "notes": "",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "string",
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "7",
+      "payload_key": "ROW ID",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "INSTITUTION CODE",
+      "type": "string",
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA).",
+      "example": "0000001",
+      "payload_key": "INSTITUTION CODE",
+      "key_confidence": 1.0,
+      "key": "institution_code"
+    },
+    {
+      "name": "REPORTING DATE",
+      "type": "date",
+      "description": "The reporting date, Month & Year based on the effective date for the exchange rates",
+      "example": "11/23/2019",
+      "payload_key": "REPORTING DATE",
+      "key_confidence": 1.0,
+      "key": "reporting_date"
+    },
+    {
+      "name": "CURRENCY CODE",
+      "type": "string",
+      "description": "ISO currency codes as per ISO-4217. {e.g. USD, GPB, EUR, KES. etc.}",
+      "example": "GBP",
+      "payload_key": "CURRENCY CODE",
+      "key_confidence": 1.0,
+      "key": "currency_code"
+    },
+    {
+      "name": "BUYING RATE",
+      "type": "string",
+      "description": "The indicative buying rate for each particular currency",
+      "example": "141.6750",
+      "payload_key": "BUYING RATE",
+      "key_confidence": 1.0,
+      "key": "buying_rate"
+    },
+    {
+      "name": "SELLING RATE",
+      "type": "string",
+      "description": "The indicative selling rate for each particular currency",
+      "example": "141.9983",
+      "payload_key": "SELLING RATE",
+      "key_confidence": 1.0,
+      "key": "selling_rate"
+    },
+    {
+      "name": "MEAN RATE",
+      "type": "string",
+      "description": "The mean rate for each particular currency",
+      "example": "141.8367",
+      "payload_key": "MEAN RATE",
+      "key_confidence": 1.0,
+      "key": "mean_rate"
+    },
+    {
+      "name": "CLOSING BID RATE",
+      "type": "string",
+      "description": "The closing buy rate for the reporting day",
+      "example": "GBP",
+      "payload_key": "CLOSING BID RATE",
+      "key_confidence": 1.0,
+      "key": "closing_bid_rate"
+    },
+    {
+      "name": "CLOSING OFFER RATE",
+      "type": "string",
+      "description": "The closing sell rate for the reporting day",
+      "example": "GBP",
+      "payload_key": "CLOSING OFFER RATE",
+      "key_confidence": 1.0,
+      "key": "closing_offer_rate"
+    },
+    {
+      "name": "USD CROSS RATE",
+      "type": "string",
+      "description": "The USD cross rate for each particular currency",
+      "example": "1.4056",
+      "payload_key": "USD CROSS RATE",
+      "key_confidence": 1.0,
+      "key": "usd_cross_rate"
+    }
+  ],
+  "unmatched_sample_keys": [],
   "source_pages": [
     161,
     165
-  ],
-  "fields": [
-    {
-      "key": "row_id",
-      "name": "ROW ID",
-      "payload_key": "ROW ID",
-      "type": "string",
-      "required": true,
-      "description": "A unique sequential number, running from the first record to the last.",
-      "example": "7"
-    },
-    {
-      "key": "institution_code",
-      "name": "INSTITUTION CODE",
-      "payload_key": "INSTITUTION CODE",
-      "type": "string",
-      "required": false,
-      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA).",
-      "example": "0000001"
-    },
-    {
-      "key": "reporting_date",
-      "name": "REPORTING DATE",
-      "payload_key": "REPORTING DATE",
-      "type": "date",
-      "required": true,
-      "description": "The reporting date, Month & Year based on the effective date for the exchange rates",
-      "example": "11/23/2019"
-    },
-    {
-      "key": "currency_code",
-      "name": "CURRENCY CODE",
-      "payload_key": "CURRENCY CODE",
-      "type": "string",
-      "required": false,
-      "description": "ISO currency codes as per ISO-4217. {e.g. USD, GPB, EUR, KES. etc.}",
-      "example": "GBP"
-    },
-    {
-      "key": "buying_rate",
-      "name": "BUYING RATE",
-      "payload_key": "BUYING RATE",
-      "type": "string",
-      "required": false,
-      "description": "The indicative buying rate for each particular currency",
-      "example": "141.6750"
-    },
-    {
-      "key": "selling_rate",
-      "name": "SELLING RATE",
-      "payload_key": "SELLING RATE",
-      "type": "string",
-      "required": false,
-      "description": "The indicative selling rate for each particular currency",
-      "example": "141.9983"
-    },
-    {
-      "key": "mean_rate",
-      "name": "MEAN RATE",
-      "payload_key": "MEAN RATE",
-      "type": "string",
-      "required": false,
-      "description": "The mean rate for each particular currency",
-      "example": "141.8367"
-    },
-    {
-      "key": "closing_bid_rate",
-      "name": "CLOSING BID RATE",
-      "payload_key": "CLOSING BID RATE",
-      "type": "string",
-      "required": false,
-      "description": "The closing buy rate for the reporting day",
-      "example": "GBP"
-    },
-    {
-      "key": "closing_offer_rate",
-      "name": "CLOSING OFFER RATE",
-      "payload_key": "CLOSING OFFER RATE",
-      "type": "string",
-      "required": false,
-      "description": "The closing sell rate for the reporting day",
-      "example": "GBP"
-    },
-    {
-      "key": "usd_cross_rate",
-      "name": "USD CROSS RATE",
-      "payload_key": "USD CROSS RATE",
-      "type": "string",
-      "required": false,
-      "description": "The USD cross rate for each particular currency",
-      "example": "1.4056"
-    }
   ]
 }

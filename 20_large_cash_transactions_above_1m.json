@@ -2,132 +2,130 @@
   "number": 20,
   "code": "large_cash_transactions_above_1m",
   "title": "Large Cash Transactions (Above 1M)",
-  "group": "Cash",
-  "frequency": "periodic",
   "endpoint": "/api/v1/flows/rest/API_LARGECASHTRANXSYNC/1.0/submitLargeCashTranxInfo",
   "array_key": "LARGE_CASH_TXN_INFO",
-  "notes": "",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "number",
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1",
+      "payload_key": "ROW ID ",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "BANK CODE",
+      "type": "string",
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
+      "example": "0000001",
+      "payload_key": "BANK CODE",
+      "key_confidence": 1.0,
+      "key": "bank_code"
+    },
+    {
+      "name": "BRANCH ID",
+      "type": "string",
+      "description": "Branch code where the account was opened/operated from.",
+      "example": "003",
+      "payload_key": "BRANCH ID",
+      "key_confidence": 1.0,
+      "key": "branch_id"
+    },
+    {
+      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
+      "type": "date",
+      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY}",
+      "example": "30-Jun-2020",
+      "payload_key": "REPORTING DATE",
+      "key_confidence": 0.62,
+      "key": "business_reporting_day_month_year"
+    },
+    {
+      "name": "ACCOUNT/CONTRACT NUMBER",
+      "type": "string",
+      "description": "Unique account identifier as assigned to customers' accounts by the reporting institution.",
+      "example": "01A002035467801",
+      "payload_key": "ACCOUNT CONTRACT NUMBER",
+      "key_confidence": 1.0,
+      "key": "account_contract_number"
+    },
+    {
+      "name": "CUSTOMER ID",
+      "type": "string",
+      "description": "Customer unique identifier linked to the account.",
+      "example": "0354678",
+      "payload_key": "CUSTOMER ID ",
+      "key_confidence": 1.0,
+      "key": "customer_id"
+    },
+    {
+      "name": "ID NUMBER/ PASSPORT NO/ REG NO.",
+      "type": "string",
+      "description": "Unique registration identification number, passport number or registration certificate number assigned to registered corporates by the Registrar of Companies.",
+      "example": "A7797999",
+      "payload_key": "ID NUMBER PASSPORT NO REG NO",
+      "key_confidence": 1.0,
+      "key": "id_number_passport_no_reg_no"
+    },
+    {
+      "name": "CUSTOMER NAME",
+      "type": "string",
+      "description": "Customer's name.",
+      "example": "Augustine Neto Other",
+      "payload_key": "CUSTOMER NAME",
+      "key_confidence": 1.0,
+      "key": "customer_name"
+    },
+    {
+      "name": "ACCOUNT NAME",
+      "type": "string",
+      "description": "The customer's account name.",
+      "example": "Neto Enterprises",
+      "payload_key": "ACCOUNT NAME",
+      "key_confidence": 1.0,
+      "key": "account_name"
+    },
+    {
+      "name": "TRANSACTION DATE",
+      "type": "date",
+      "description": "The date that the transaction took place.",
+      "example": "03-Jun-2020",
+      "payload_key": "TRANSACTION DATE",
+      "key_confidence": 1.0,
+      "key": "transaction_date"
+    },
+    {
+      "name": "TRANSACTION TYPE",
+      "type": "string",
+      "description": "The type of transaction undertaken.",
+      "example": "BKTXN02",
+      "payload_key": "TRANSACTION TYPE",
+      "key_confidence": 1.0,
+      "key": "transaction_type"
+    },
+    {
+      "name": "ISO CURRENCY CODE",
+      "type": "string",
+      "description": "ISO currency codes as per ISO-4217. {e.g. USD, GPB, EUR, KES. etc.}",
+      "example": "KES",
+      "payload_key": "ISO CURRENCY CODE",
+      "key_confidence": 1.0,
+      "key": "iso_currency_code"
+    },
+    {
+      "name": "AMOUNT",
+      "type": "number",
+      "description": "The amount transacted.",
+      "example": "3,500,000.00",
+      "payload_key": "AMOUNT",
+      "key_confidence": 1.0,
+      "key": "amount"
+    }
+  ],
+  "unmatched_sample_keys": [],
   "source_pages": [
     104,
     108
-  ],
-  "fields": [
-    {
-      "key": "row_id",
-      "name": "ROW ID",
-      "payload_key": "ROW ID ",
-      "type": "number",
-      "required": true,
-      "description": "A unique sequential number, running from the first record to the last.",
-      "example": "1"
-    },
-    {
-      "key": "bank_code",
-      "name": "BANK CODE",
-      "payload_key": "BANK CODE",
-      "type": "string",
-      "required": false,
-      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
-      "example": "0000001"
-    },
-    {
-      "key": "branch_id",
-      "name": "BRANCH ID",
-      "payload_key": "BRANCH ID",
-      "type": "string",
-      "required": false,
-      "description": "Branch code where the account was opened/operated from.",
-      "example": "003"
-    },
-    {
-      "key": "business_reporting_day_month_year",
-      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
-      "payload_key": "REPORTING DATE",
-      "type": "date",
-      "required": true,
-      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY}",
-      "example": "30-Jun-2020"
-    },
-    {
-      "key": "account_contract_number",
-      "name": "ACCOUNT/CONTRACT NUMBER",
-      "payload_key": "ACCOUNT CONTRACT NUMBER",
-      "type": "string",
-      "required": false,
-      "description": "Unique account identifier as assigned to customers' accounts by the reporting institution.",
-      "example": "01A002035467801"
-    },
-    {
-      "key": "customer_id",
-      "name": "CUSTOMER ID",
-      "payload_key": "CUSTOMER ID ",
-      "type": "string",
-      "required": false,
-      "description": "Customer unique identifier linked to the account.",
-      "example": "0354678"
-    },
-    {
-      "key": "id_number_passport_no_reg_no",
-      "name": "ID NUMBER/ PASSPORT NO/ REG NO.",
-      "payload_key": "ID NUMBER PASSPORT NO REG NO",
-      "type": "string",
-      "required": false,
-      "description": "Unique registration identification number, passport number or registration certificate number assigned to registered corporates by the Registrar of Companies.",
-      "example": "A7797999"
-    },
-    {
-      "key": "customer_name",
-      "name": "CUSTOMER NAME",
-      "payload_key": "CUSTOMER NAME",
-      "type": "string",
-      "required": false,
-      "description": "Customer's name.",
-      "example": "Augustine Neto Other"
-    },
-    {
-      "key": "account_name",
-      "name": "ACCOUNT NAME",
-      "payload_key": "ACCOUNT NAME",
-      "type": "string",
-      "required": false,
-      "description": "The customer's account name.",
-      "example": "Neto Enterprises"
-    },
-    {
-      "key": "transaction_date",
-      "name": "TRANSACTION DATE",
-      "payload_key": "TRANSACTION DATE",
-      "type": "date",
-      "required": false,
-      "description": "The date that the transaction took place.",
-      "example": "03-Jun-2020"
-    },
-    {
-      "key": "transaction_type",
-      "name": "TRANSACTION TYPE",
-      "payload_key": "TRANSACTION TYPE",
-      "type": "string",
-      "required": false,
-      "description": "The type of transaction undertaken.",
-      "example": "BKTXN02"
-    },
-    {
-      "key": "iso_currency_code",
-      "name": "ISO CURRENCY CODE",
-      "payload_key": "ISO CURRENCY CODE",
-      "type": "string",
-      "required": false,
-      "description": "ISO currency codes as per ISO-4217. {e.g. USD, GPB, EUR, KES. etc.}",
-      "example": "KES"
-    },
-    {
-      "key": "amount",
-      "name": "AMOUNT",
-      "payload_key": "AMOUNT",
-      "type": "number",
-      "required": false,
-      "description": "The amount transacted.",
-      "example": "3,500,000.00"
-    }
   ]
 }

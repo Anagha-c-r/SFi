@@ -2,69 +2,67 @@
   "number": 43,
   "code": "use_of_agents_information",
   "title": "Use of Agents Information",
-  "group": "Agents, Merchants & Outlets",
-  "frequency": "periodic",
   "endpoint": "/api/v1/flows/rest/API_USEOFAGENTSSYNC/1.0/submitUseofAgents",
   "array_key": "UseofAgents",
-  "notes": "",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "number",
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1",
+      "payload_key": "ROW ID",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "CRB CODE",
+      "type": "number",
+      "description": "The code the reporting Credit Reference Bureau (E.g. XYZ = 060002)",
+      "example": "0600002",
+      "payload_key": "CRB CODE",
+      "key_confidence": 1.0,
+      "key": "crb_code"
+    },
+    {
+      "name": "REPORTING DATE",
+      "type": "date",
+      "description": "The reporting date, Month & Year based on the frequency.",
+      "example": "6/3/2020",
+      "payload_key": "REPORTING DATE",
+      "key_confidence": 1.0,
+      "key": "reporting_date"
+    },
+    {
+      "name": "AGENT NAME",
+      "type": "string",
+      "description": "The name of the agent",
+      "example": "Gikomba Enterprises",
+      "payload_key": "AGENT NAME",
+      "key_confidence": 1.0,
+      "key": "agent_name"
+    },
+    {
+      "name": "TYPE OF SERVICES OFFERED",
+      "type": "string",
+      "description": "Type of Services offered by the Agent category. E.g. {Delivery of credit reports,certificates and scores to requesting customers; sensitize customers, institutions, and other credit information providers; receive and channel customer complaints}",
+      "example": "Delivery of credit reports",
+      "payload_key": "TYPE OF SERVICES OFFERED",
+      "key_confidence": 1.0,
+      "key": "type_of_services_offered"
+    },
+    {
+      "name": "NO OF SERVICES OFFERED",
+      "type": "string",
+      "description": "The count on the number of services offered per type of service",
+      "example": "2345",
+      "payload_key": "NUMBER OF SERVICES OFFERED",
+      "key_confidence": 0.86,
+      "key": "no_of_services_offered"
+    }
+  ],
+  "unmatched_sample_keys": [],
   "source_pages": [
     212,
     216
-  ],
-  "fields": [
-    {
-      "key": "row_id",
-      "name": "ROW ID",
-      "payload_key": "ROW ID",
-      "type": "number",
-      "required": true,
-      "description": "A unique sequential number, running from the first record to the last.",
-      "example": "1"
-    },
-    {
-      "key": "crb_code",
-      "name": "CRB CODE",
-      "payload_key": "CRB CODE",
-      "type": "string",
-      "required": false,
-      "description": "The code the reporting Credit Reference Bureau (E.g. XYZ = 060002)",
-      "example": "0600002"
-    },
-    {
-      "key": "reporting_date",
-      "name": "REPORTING DATE",
-      "payload_key": "REPORTING DATE",
-      "type": "date",
-      "required": true,
-      "description": "The reporting date, Month & Year based on the frequency.",
-      "example": "6/3/2020"
-    },
-    {
-      "key": "agent_name",
-      "name": "AGENT NAME",
-      "payload_key": "AGENT NAME",
-      "type": "string",
-      "required": false,
-      "description": "The name of the agent",
-      "example": "Gikomba Enterprises"
-    },
-    {
-      "key": "type_of_services_offered",
-      "name": "TYPE OF SERVICES OFFERED",
-      "payload_key": "TYPE OF SERVICES OFFERED",
-      "type": "string",
-      "required": false,
-      "description": "Type of Services offered by the Agent category. E.g. {Delivery of credit reports,certificates and scores to requesting customers; sensitize customers, institutions, and other credit information providers; receive and channel customer complaints}",
-      "example": "Delivery of credit reports"
-    },
-    {
-      "key": "no_of_services_offered",
-      "name": "NO OF SERVICES OFFERED",
-      "payload_key": "NUMBER OF SERVICES OFFERED",
-      "type": "string",
-      "required": false,
-      "description": "The count on the number of services offered per type of service",
-      "example": "2345"
-    }
   ]
 }

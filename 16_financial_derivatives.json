@@ -2,249 +2,247 @@
   "number": 16,
   "code": "financial_derivatives",
   "title": "Financial Derivatives",
-  "group": "Treasury & Securities",
-  "frequency": "periodic",
   "endpoint": "/api/v1/flows/rest/API_FINANCIALDERIVAT/1.0/submitFinancialDerivativesInfo",
   "array_key": "FINANCIAL_DERIVATIVES_DATA",
-  "notes": "",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "number",
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1",
+      "payload_key": "ROW ID",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "BANK CODE",
+      "type": "string",
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
+      "example": "0000001",
+      "payload_key": "BANK CODE",
+      "key_confidence": 1.0,
+      "key": "bank_code"
+    },
+    {
+      "name": "BRANCH ID",
+      "type": "string",
+      "description": "Branch code where the account was opened/operated from.",
+      "example": "003",
+      "payload_key": "BRANCH ID",
+      "key_confidence": 1.0,
+      "key": "branch_id"
+    },
+    {
+      "name": "REPORTING DATE",
+      "type": "date",
+      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY}",
+      "example": "2020-06-03",
+      "payload_key": "REPORTING DATE",
+      "key_confidence": 1.0,
+      "key": "reporting_date"
+    },
+    {
+      "name": "CUSTOMER ID",
+      "type": "string",
+      "description": "Customer unique id linked to the account.",
+      "example": "0354678",
+      "payload_key": "CUSTOMER ID",
+      "key_confidence": 1.0,
+      "key": "customer_id"
+    },
+    {
+      "name": "DERIVATIVE ID",
+      "type": "string",
+      "description": "A unique identifier for the financial derivative instruments",
+      "example": "DEV097886",
+      "payload_key": "DERIVATIVE ID",
+      "key_confidence": 1.0,
+      "key": "derivative_id"
+    },
+    {
+      "name": "COUNTERPARTY ID",
+      "type": "string",
+      "description": "Unique identifier for the counterparty",
+      "example": "0000026",
+      "payload_key": "COUNTERPARTY ID",
+      "key_confidence": 1.0,
+      "key": "counterparty_id"
+    },
+    {
+      "name": "UNDERLYING ASSET",
+      "type": "string",
+      "description": "A financial asset upon which a derivatives price is based. E.g. Oil, stock, commodities, etc.",
+      "example": "FDUA17",
+      "payload_key": "UNDERLYING ASSET",
+      "key_confidence": 1.0,
+      "key": "underlying_asset"
+    },
+    {
+      "name": "DERIVATIVE TYPE",
+      "type": "string",
+      "description": "A derivative is a security that derives its value from an underlying asset. Common derivatives include: Future contracts, options, swaps and forwards.",
+      "example": "FD02",
+      "payload_key": "DERIVATIVE TYPE",
+      "key_confidence": 1.0,
+      "key": "derivative_type"
+    },
+    {
+      "name": "DERIVATIVE SUB TYPE",
+      "type": "string",
+      "description": "Possible options for (1) Futures {Commodity futures: Energy, Metals and Agriculture, Financial Futures: Currency futures, Treasury futures and Equity futures}, (2) Forwards {Currency forwards, interest rate forwards and commodity forwards}, (3) Options {Call options and Put options} and (4) Swaps {Credit default swaps, Interest rate swaps, Currency swaps, Commodity swaps and Equity swaps}",
+      "example": "FDST15",
+      "payload_key": "DERIVATIVE SUB TYPE",
+      "key_confidence": 1.0,
+      "key": "derivative_sub_type"
+    },
+    {
+      "name": "INTER BANK SECTOR CODE",
+      "type": "string",
+      "description": "Code assigned to the particular trade. {e.g. FK1,FK2, FN1,FN2,SK1,SK2,SN1,SN2. etc}",
+      "example": "K1",
+      "payload_key": "INTER BANK SECTOR CODE",
+      "key_confidence": 1.0,
+      "key": "inter_bank_sector_code"
+    },
+    {
+      "name": "CONTRACT START DATE",
+      "type": "date",
+      "description": "The Derivative contract commencement date. Format {DD- MMM-YYYY}",
+      "example": "2017-06-22",
+      "payload_key": "CONTRACT START DATE",
+      "key_confidence": 1.0,
+      "key": "contract_start_date"
+    },
+    {
+      "name": "TRADE DATE",
+      "type": "date",
+      "description": "The date of the commitment to buy or sell the financial instrument (Near Date). Format {DD-MMM-YYYY}",
+      "example": "",
+      "payload_key": "TRADE DATE",
+      "key_confidence": 1.0,
+      "key": "trade_date"
+    },
+    {
+      "name": "SETTLEMENT DATE",
+      "type": "date",
+      "description": "The date of the delivery of the asset. Format {DD-MMM- YYYY}",
+      "example": "",
+      "payload_key": "SETTLEMENT DATE",
+      "key_confidence": 1.0,
+      "key": "settlement_date"
+    },
+    {
+      "name": "MATURITY DATE",
+      "type": "date",
+      "description": "The Derivative maturity date (Far Date). Format {DD-MMM- YYYY}",
+      "example": "2017-12-31",
+      "payload_key": "MATURITY DATE",
+      "key_confidence": 1.0,
+      "key": "maturity_date"
+    },
+    {
+      "name": "CURRENCY TRADED",
+      "type": "string",
+      "description": "ISO currency code of the currency traded as per ISO-4217. {e.g. USD, GPB, EUR, KES. etc.}",
+      "example": "EUR",
+      "payload_key": "CURRENCY TRADED",
+      "key_confidence": 1.0,
+      "key": "currency_traded"
+    },
+    {
+      "name": "NOTIONAL AMOUNT",
+      "type": "number",
+      "description": "Face value of the Financial Instrument",
+      "example": "",
+      "payload_key": "NOTIONAL AMOUNT",
+      "key_confidence": 1.0,
+      "key": "notional_amount"
+    },
+    {
+      "name": "AMT IN TRADED CURRENCY",
+      "type": "number",
+      "description": "Base Amount in transaction currency at commencement",
+      "example": "22-Sep-1979",
+      "payload_key": "AMT IN TRADED CURRENCY",
+      "key_confidence": 1.0,
+      "key": "amt_in_traded_currency"
+    },
+    {
+      "name": "AMT IN LCY EQUIVALENT",
+      "type": "number",
+      "description": "Amount in Kenyan currency (KES)",
+      "example": "3,395,840.00",
+      "payload_key": "AMT IN LCY EQUIVALENT",
+      "key_confidence": 1.0,
+      "key": "amt_in_lcy_equivalent"
+    },
+    {
+      "name": "MARKET VALUE",
+      "type": "number",
+      "description": "The value of the financial derivative in Kenyan currency",
+      "example": "35,000,000.00",
+      "payload_key": "MARKET VALUE",
+      "key_confidence": 1.0,
+      "key": "market_value"
+    },
+    {
+      "name": "POSITION LNG SHT",
+      "type": "string",
+      "description": "Buy or Sell",
+      "example": "FXTTC01",
+      "payload_key": "POSITION LNG SHT",
+      "key_confidence": 1.0,
+      "key": "position_lng_sht"
+    },
+    {
+      "name": "PRICE INTEREST RATE",
+      "type": "string",
+      "description": "Price/ Interest rate marked on the Financial Derivative.",
+      "example": "1.50%",
+      "payload_key": "PRICE INTEREST RATE",
+      "key_confidence": 1.0,
+      "key": "price_interest_rate"
+    },
+    {
+      "name": "SPOT EXCHANGE RATE",
+      "type": "string",
+      "description": "The spot exchange rate marked in the system (Near Rate).",
+      "example": "",
+      "payload_key": "SPOT EXCHANGE RATE",
+      "key_confidence": 1.0,
+      "key": "spot_exchange_rate"
+    },
+    {
+      "name": "FORWARD EXCHANGE RATE",
+      "type": "string",
+      "description": "The forward exchange rate marked in the system (Far Rate).",
+      "example": "2.50%",
+      "payload_key": "FORWARD EXCHANGE RATE",
+      "key_confidence": 1.0,
+      "key": "forward_exchange_rate"
+    },
+    {
+      "name": "FAR BASE VOLUME",
+      "type": "number",
+      "description": "Base amount at maturity",
+      "example": "2912000.00%",
+      "payload_key": "FAR BASE VOLUME",
+      "key_confidence": 1.0,
+      "key": "far_base_volume"
+    },
+    {
+      "name": "FAR AMOUNT IN LCY",
+      "type": "number",
+      "description": "Amount in Kenyan currency (KES) at maturity",
+      "example": "3395840",
+      "payload_key": "FAR AMOUNT IN LCY",
+      "key_confidence": 1.0,
+      "key": "far_amount_in_lcy"
+    }
+  ],
+  "unmatched_sample_keys": [],
   "source_pages": [
     82,
     87
-  ],
-  "fields": [
-    {
-      "key": "row_id",
-      "name": "ROW ID",
-      "payload_key": "ROW ID",
-      "type": "number",
-      "required": true,
-      "description": "A unique sequential number, running from the first record to the last.",
-      "example": "1"
-    },
-    {
-      "key": "bank_code",
-      "name": "BANK CODE",
-      "payload_key": "BANK CODE",
-      "type": "string",
-      "required": false,
-      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
-      "example": "0000001"
-    },
-    {
-      "key": "branch_id",
-      "name": "BRANCH ID",
-      "payload_key": "BRANCH ID",
-      "type": "string",
-      "required": false,
-      "description": "Branch code where the account was opened/operated from.",
-      "example": "003"
-    },
-    {
-      "key": "reporting_date",
-      "name": "REPORTING DATE",
-      "payload_key": "REPORTING DATE",
-      "type": "date",
-      "required": true,
-      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY}",
-      "example": "2020-06-03"
-    },
-    {
-      "key": "customer_id",
-      "name": "CUSTOMER ID",
-      "payload_key": "CUSTOMER ID",
-      "type": "string",
-      "required": false,
-      "description": "Customer unique id linked to the account.",
-      "example": "0354678"
-    },
-    {
-      "key": "derivative_id",
-      "name": "DERIVATIVE ID",
-      "payload_key": "DERIVATIVE ID",
-      "type": "string",
-      "required": false,
-      "description": "A unique identifier for the financial derivative instruments",
-      "example": "DEV097886"
-    },
-    {
-      "key": "counterparty_id",
-      "name": "COUNTERPARTY ID",
-      "payload_key": "COUNTERPARTY ID",
-      "type": "string",
-      "required": false,
-      "description": "Unique identifier for the counterparty",
-      "example": "0000026"
-    },
-    {
-      "key": "underlying_asset",
-      "name": "UNDERLYING ASSET",
-      "payload_key": "UNDERLYING ASSET",
-      "type": "string",
-      "required": false,
-      "description": "A financial asset upon which a derivatives price is based. E.g. Oil, stock, commodities, etc.",
-      "example": "FDUA17"
-    },
-    {
-      "key": "derivative_type",
-      "name": "DERIVATIVE TYPE",
-      "payload_key": "DERIVATIVE TYPE",
-      "type": "string",
-      "required": false,
-      "description": "A derivative is a security that derives its value from an underlying asset. Common derivatives include: Future contracts, options, swaps and forwards.",
-      "example": "FD02"
-    },
-    {
-      "key": "derivative_sub_type",
-      "name": "DERIVATIVE SUB TYPE",
-      "payload_key": "DERIVATIVE SUB TYPE",
-      "type": "string",
-      "required": false,
-      "description": "Possible options for (1) Futures {Commodity futures: Energy, Metals and Agriculture, Financial Futures: Currency futures, Treasury futures and Equity futures}, (2) Forwards {Currency forwards, interest rate forwards and commodity forwards}, (3) Options {Call options and Put options} and (4) Swaps {Credit default swaps, Interest rate swaps, Currency swaps, Commodity swaps and Equity swaps}",
-      "example": "FDST15"
-    },
-    {
-      "key": "inter_bank_sector_code",
-      "name": "INTER BANK SECTOR CODE",
-      "payload_key": "INTER BANK SECTOR CODE",
-      "type": "string",
-      "required": false,
-      "description": "Code assigned to the particular trade. {e.g. FK1,FK2, FN1,FN2,SK1,SK2,SN1,SN2. etc}",
-      "example": "K1"
-    },
-    {
-      "key": "contract_start_date",
-      "name": "CONTRACT START DATE",
-      "payload_key": "CONTRACT START DATE",
-      "type": "date",
-      "required": false,
-      "description": "The Derivative contract commencement date. Format {DD- MMM-YYYY}",
-      "example": "2017-06-22"
-    },
-    {
-      "key": "trade_date",
-      "name": "TRADE DATE",
-      "payload_key": "TRADE DATE",
-      "type": "date",
-      "required": false,
-      "description": "The date of the commitment to buy or sell the financial instrument (Near Date). Format {DD-MMM-YYYY}",
-      "example": ""
-    },
-    {
-      "key": "settlement_date",
-      "name": "SETTLEMENT DATE",
-      "payload_key": "SETTLEMENT DATE",
-      "type": "date",
-      "required": false,
-      "description": "The date of the delivery of the asset. Format {DD-MMM- YYYY}",
-      "example": ""
-    },
-    {
-      "key": "maturity_date",
-      "name": "MATURITY DATE",
-      "payload_key": "MATURITY DATE",
-      "type": "date",
-      "required": false,
-      "description": "The Derivative maturity date (Far Date). Format {DD-MMM- YYYY}",
-      "example": "2017-12-31"
-    },
-    {
-      "key": "currency_traded",
-      "name": "CURRENCY TRADED",
-      "payload_key": "CURRENCY TRADED",
-      "type": "string",
-      "required": false,
-      "description": "ISO currency code of the currency traded as per ISO-4217. {e.g. USD, GPB, EUR, KES. etc.}",
-      "example": "EUR"
-    },
-    {
-      "key": "notional_amount",
-      "name": "NOTIONAL AMOUNT",
-      "payload_key": "NOTIONAL AMOUNT",
-      "type": "number",
-      "required": false,
-      "description": "Face value of the Financial Instrument",
-      "example": ""
-    },
-    {
-      "key": "amt_in_traded_currency",
-      "name": "AMT IN TRADED CURRENCY",
-      "payload_key": "AMT IN TRADED CURRENCY",
-      "type": "number",
-      "required": false,
-      "description": "Base Amount in transaction currency at commencement",
-      "example": "22-Sep-1979"
-    },
-    {
-      "key": "amt_in_lcy_equivalent",
-      "name": "AMT IN LCY EQUIVALENT",
-      "payload_key": "AMT IN LCY EQUIVALENT",
-      "type": "number",
-      "required": false,
-      "description": "Amount in Kenyan currency (KES)",
-      "example": "3,395,840.00"
-    },
-    {
-      "key": "market_value",
-      "name": "MARKET VALUE",
-      "payload_key": "MARKET VALUE",
-      "type": "number",
-      "required": false,
-      "description": "The value of the financial derivative in Kenyan currency",
-      "example": "35,000,000.00"
-    },
-    {
-      "key": "position_lng_sht",
-      "name": "POSITION LNG SHT",
-      "payload_key": "POSITION LNG SHT",
-      "type": "string",
-      "required": false,
-      "description": "Buy or Sell",
-      "example": "FXTTC01"
-    },
-    {
-      "key": "price_interest_rate",
-      "name": "PRICE INTEREST RATE",
-      "payload_key": "PRICE INTEREST RATE",
-      "type": "string",
-      "required": false,
-      "description": "Price/ Interest rate marked on the Financial Derivative.",
-      "example": "1.50%"
-    },
-    {
-      "key": "spot_exchange_rate",
-      "name": "SPOT EXCHANGE RATE",
-      "payload_key": "SPOT EXCHANGE RATE",
-      "type": "string",
-      "required": false,
-      "description": "The spot exchange rate marked in the system (Near Rate).",
-      "example": ""
-    },
-    {
-      "key": "forward_exchange_rate",
-      "name": "FORWARD EXCHANGE RATE",
-      "payload_key": "FORWARD EXCHANGE RATE",
-      "type": "string",
-      "required": false,
-      "description": "The forward exchange rate marked in the system (Far Rate).",
-      "example": "2.50%"
-    },
-    {
-      "key": "far_base_volume",
-      "name": "FAR BASE VOLUME",
-      "payload_key": "FAR BASE VOLUME",
-      "type": "number",
-      "required": false,
-      "description": "Base amount at maturity",
-      "example": "2912000.00%"
-    },
-    {
-      "key": "far_amount_in_lcy",
-      "name": "FAR AMOUNT IN LCY",
-      "payload_key": "FAR AMOUNT IN LCY",
-      "type": "number",
-      "required": false,
-      "description": "Amount in Kenyan currency (KES) at maturity",
-      "example": "3395840"
-    }
   ]
 }

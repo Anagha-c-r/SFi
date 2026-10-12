@@ -2,105 +2,103 @@
   "number": 3,
   "code": "card_frauds_information",
   "title": "Card Frauds Information",
-  "group": "Cards",
-  "frequency": "periodic",
   "endpoint": "/api/v1/flows/rest/API_CARDFRAUDSINFOSY/1.0/submitCardFraudData",
   "array_key": "CARD_FRAUD_INFO",
-  "notes": "",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "number",
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1",
+      "payload_key": "ROW ID",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "BANK CODE",
+      "type": "string",
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
+      "example": "0000001",
+      "payload_key": "BANK CODE",
+      "key_confidence": 1.0,
+      "key": "bank_code"
+    },
+    {
+      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
+      "type": "date",
+      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY}",
+      "example": "03-May-2022",
+      "payload_key": "REPORTING DATE",
+      "key_confidence": 0.62,
+      "key": "business_reporting_day_month_year"
+    },
+    {
+      "name": "CARD ACQUIRING/ ISSUING FLAG",
+      "type": "string",
+      "description": "A flag to indicate whether the details being submitted are for Acquiring or Issuing transactions. [Acquiring = 'ACQ' and Issuing = 'ISS']",
+      "example": "ACQ",
+      "payload_key": "CARD ACQUIRING ISSUING FLAG",
+      "key_confidence": 1.0,
+      "key": "card_acquiring_issuing_flag"
+    },
+    {
+      "name": "FRAUD INCIDENT CATEGORY",
+      "type": "string",
+      "description": "Fraud categorization either \"By Instrument\" or \"By Channel\"",
+      "example": "CRDFICT03",
+      "payload_key": "FRAUD INCIDENT CATEGORY",
+      "key_confidence": 1.0,
+      "key": "fraud_incident_category"
+    },
+    {
+      "name": "CARD CLASS",
+      "type": "string",
+      "description": "E.g. gold, platinum, classic, other",
+      "example": "CDC02",
+      "payload_key": "CARD CLASS",
+      "key_confidence": 1.0,
+      "key": "card_class"
+    },
+    {
+      "name": "CARD CATEGORY",
+      "type": "string",
+      "description": "E.g. Local, international, etc.",
+      "example": "I",
+      "payload_key": "CARD CATEGORY",
+      "key_confidence": 1.0,
+      "key": "card_category"
+    },
+    {
+      "name": "FRAUD CATEGORY FLAG",
+      "type": "string",
+      "description": "Attempted or actual fraud. (\"Attempted\" or \"Actual\")",
+      "example": "N",
+      "payload_key": "FRAUD CATEGORY FLAG",
+      "key_confidence": 1.0,
+      "key": "fraud_category_flag"
+    },
+    {
+      "name": "TOTAL NUMBER OF FRAUD INCIDENTS",
+      "type": "number",
+      "description": "Count on the number of fraud incidents per fraud incident category, card class and category flag",
+      "example": "350",
+      "payload_key": "TOTAL NUMBER OF FRAUD INCIDENT",
+      "key_confidence": 1.0,
+      "key": "total_number_of_fraud_incidents"
+    },
+    {
+      "name": "VALUE OF FRAUD INCIDENTS IN LCY",
+      "type": "number",
+      "description": "Total value of fraud incidents per fraud incident category, card class and category flag",
+      "example": "36,865",
+      "payload_key": "VALUE OF FRAUD INCIDENT IN LCY",
+      "key_confidence": 1.0,
+      "key": "value_of_fraud_incidents_in_lcy"
+    }
+  ],
+  "unmatched_sample_keys": [],
   "source_pages": [
     22,
     26
-  ],
-  "fields": [
-    {
-      "key": "row_id",
-      "name": "ROW ID",
-      "payload_key": "ROW ID",
-      "type": "number",
-      "required": true,
-      "description": "A unique sequential number, running from the first record to the last.",
-      "example": "1"
-    },
-    {
-      "key": "bank_code",
-      "name": "BANK CODE",
-      "payload_key": "BANK CODE",
-      "type": "string",
-      "required": false,
-      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
-      "example": "0000001"
-    },
-    {
-      "key": "business_reporting_day_month_year",
-      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
-      "payload_key": "REPORTING DATE",
-      "type": "date",
-      "required": true,
-      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY}",
-      "example": "03-May-2022"
-    },
-    {
-      "key": "card_acquiring_issuing_flag",
-      "name": "CARD ACQUIRING/ ISSUING FLAG",
-      "payload_key": "CARD ACQUIRING ISSUING FLAG",
-      "type": "string",
-      "required": false,
-      "description": "A flag to indicate whether the details being submitted are for Acquiring or Issuing transactions. [Acquiring = 'ACQ' and Issuing = 'ISS']",
-      "example": "ACQ"
-    },
-    {
-      "key": "fraud_incident_category",
-      "name": "FRAUD INCIDENT CATEGORY",
-      "payload_key": "FRAUD INCIDENT CATEGORY",
-      "type": "string",
-      "required": false,
-      "description": "Fraud categorization either \"By Instrument\" or \"By Channel\"",
-      "example": "CRDFICT03"
-    },
-    {
-      "key": "card_class",
-      "name": "CARD CLASS",
-      "payload_key": "CARD CLASS",
-      "type": "string",
-      "required": false,
-      "description": "E.g. gold, platinum, classic, other",
-      "example": "CDC02"
-    },
-    {
-      "key": "card_category",
-      "name": "CARD CATEGORY",
-      "payload_key": "CARD CATEGORY",
-      "type": "string",
-      "required": false,
-      "description": "E.g. Local, international, etc.",
-      "example": "I"
-    },
-    {
-      "key": "fraud_category_flag",
-      "name": "FRAUD CATEGORY FLAG",
-      "payload_key": "FRAUD CATEGORY FLAG",
-      "type": "string",
-      "required": false,
-      "description": "Attempted or actual fraud. (\"Attempted\" or \"Actual\")",
-      "example": "N"
-    },
-    {
-      "key": "total_number_of_fraud_incidents",
-      "name": "TOTAL NUMBER OF FRAUD INCIDENTS",
-      "payload_key": "TOTAL NUMBER OF FRAUD INCIDENT",
-      "type": "number",
-      "required": false,
-      "description": "Count on the number of fraud incidents per fraud incident category, card class and category flag",
-      "example": "350"
-    },
-    {
-      "key": "value_of_fraud_incidents_in_lcy",
-      "name": "VALUE OF FRAUD INCIDENTS IN LCY",
-      "payload_key": "VALUE OF FRAUD INCIDENT IN LCY",
-      "type": "number",
-      "required": false,
-      "description": "Total value of fraud incidents per fraud incident category, card class and category flag",
-      "example": "36,865"
-    }
   ]
 }

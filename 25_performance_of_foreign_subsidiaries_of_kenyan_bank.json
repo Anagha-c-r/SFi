@@ -1,0 +1,95 @@
+{
+  "number": 25,
+  "code": "performance_of_foreign_subsidiaries_of_kenyan_bank",
+  "title": "Performance of Foreign Subsidiaries of Kenyan Banks By",
+  "endpoint": "/api/v1/flows/rest/API_PERFORMANCEOFFOR/1.0/SubmitPerformanceForeignSubsidiariesInfo",
+  "array_key": "PERF_FORN_SUB_ECON_ACT_INFO",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "number",
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1",
+      "payload_key": "ROW ID",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "BANK CODE",
+      "type": "string",
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
+      "example": "0000001",
+      "payload_key": "BANK CODE",
+      "key_confidence": 1.0,
+      "key": "bank_code"
+    },
+    {
+      "name": "REPORTING DATE, MONTH & YEAR",
+      "type": "date",
+      "description": "The date for which the data is for. Format {DD-MMM- YYYY}",
+      "example": "23-Jul-2019",
+      "payload_key": "REPORTING DATE",
+      "key_confidence": 0.74,
+      "key": "reporting_date_month_year"
+    },
+    {
+      "name": "SUBSIDIARY ID",
+      "type": "string",
+      "description": "A unique identifer for the subsidiary of which the data relates to.",
+      "example": "SUBID01",
+      "payload_key": "SUBSIDIARY ID",
+      "key_confidence": 1.0,
+      "key": "subsidiary_id"
+    },
+    {
+      "name": "SUBSIDIARY NAME",
+      "type": "string",
+      "description": "Name of subsidiary",
+      "example": "XYZ Bank Uganda",
+      "payload_key": "SUBSIDIARY NAME",
+      "key_confidence": 1.0,
+      "key": "subsidiary_name"
+    },
+    {
+      "name": "SUBSIDIARY COUNTRY CODE",
+      "type": "string",
+      "description": "ISO country code of Staff's denoting the country where the subsidiary is located. {As per ISO-3166-1}",
+      "example": "UG",
+      "payload_key": "SUBSIDIARY COUNTRY CODE",
+      "key_confidence": 1.0,
+      "key": "subsidiary_country_code"
+    },
+    {
+      "name": "ECONOMIC ACTIVITY",
+      "type": "string",
+      "description": "The economic activity associated with the lending, as per ISIC guidelines",
+      "example": "C1399",
+      "payload_key": "ECONOMIC ACTIVITY",
+      "key_confidence": 1.0,
+      "key": "economic_activity"
+    },
+    {
+      "name": "GROSS LOANS AMOUNTS",
+      "type": "number",
+      "description": "Gross Loans Amounts (including accrued interest) per ISIC Economic Activity code.",
+      "example": "6,872,919.19807",
+      "payload_key": "GROSS LOAN AMOUNT",
+      "key_confidence": 1.0,
+      "key": "gross_loans_amounts"
+    },
+    {
+      "name": "GROSS NON- PERFORMING LOAN AMOUNTS",
+      "type": "number",
+      "description": "Gross Non-Performing Loan Amounts per Economic Activity as per ISIC",
+      "example": "246,438.83000",
+      "payload_key": "GROSS NON PERFORMING LOAN AMT",
+      "key_confidence": 0.93,
+      "key": "gross_non_performing_loan_amounts"
+    }
+  ],
+  "unmatched_sample_keys": [],
+  "source_pages": [
+    131,
+    134
+  ]
+}

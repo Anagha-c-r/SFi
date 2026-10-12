@@ -2,267 +2,265 @@
   "number": 18,
   "code": "forex_purchases_and_sales_information",
   "title": "Forex Purchases and Sales Information",
-  "group": "Forex & Remittances",
-  "frequency": "periodic",
   "endpoint": "/api/v1/flows/rest/API_FOREXPURCHASESSA/1.0/submitForexPurchasesSalesInfo",
   "array_key": "FOREX_PURCHASE_DATA",
-  "notes": "",
+  "fields": [
+    {
+      "name": "ROW ID",
+      "type": "number",
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "7",
+      "payload_key": "ROW ID",
+      "key_confidence": 1.0,
+      "key": "row_id"
+    },
+    {
+      "name": "BANK CODE",
+      "type": "string",
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA).",
+      "example": "0000001",
+      "payload_key": "BANK CODE",
+      "key_confidence": 1.0,
+      "key": "bank_code"
+    },
+    {
+      "name": "BRANCH ID",
+      "type": "string",
+      "description": "Branch code where the transaction took place",
+      "example": "091",
+      "payload_key": "BRANCH ID",
+      "key_confidence": 1.0,
+      "key": "branch_id"
+    },
+    {
+      "name": "CUSTOMER CATEGORY",
+      "type": "string",
+      "description": "Whether the customer is a regular bank client or a 'walk-in' customer",
+      "example": "CUSTTD02",
+      "payload_key": "CUSTOMER CATEGORY",
+      "key_confidence": 1.0,
+      "key": "customer_category"
+    },
+    {
+      "name": "CUSTOMER PTY ID",
+      "type": "string",
+      "description": "Unique customer identifier as assigned to customers by the reporting institution.",
+      "example": "R3342528S",
+      "payload_key": "CUSTOMER PTY ID",
+      "key_confidence": 1.0,
+      "key": "customer_pty_id"
+    },
+    {
+      "name": "IDENTIFICATION DOCUMENT NUMBER",
+      "type": "string",
+      "description": "Customer identification number such as National ID,Passport or alien number",
+      "example": "1234567",
+      "payload_key": "IDENTIFICATION DOCUMENT NUMBER",
+      "key_confidence": 1.0,
+      "key": "identification_document_number"
+    },
+    {
+      "name": "CUSTOMER NAME",
+      "type": "string",
+      "description": "Transacting customer names as per the identification documents",
+      "example": "John Paul",
+      "payload_key": "CUSTOMER NAME",
+      "key_confidence": 1.0,
+      "key": "customer_name"
+    },
+    {
+      "name": "TIME AND DATE OF TRADING",
+      "type": "string",
+      "description": "Date and time of trading: Format {YYYYMMDD HH:MM:SS} as per ISO 8601.",
+      "example": "20-JUN-2021",
+      "payload_key": "TIME AND DATE OF TRADING",
+      "key_confidence": 1.0,
+      "key": "time_and_date_of_trading"
+    },
+    {
+      "name": "START DATE",
+      "type": "date",
+      "description": "Date and time of trading: Format {DD-MON-YYYY HH:MM:SS} as per ISO 8601.",
+      "example": "20-May-2020:16:25:56",
+      "payload_key": "START DATE",
+      "key_confidence": 1.0,
+      "key": "start_date"
+    },
+    {
+      "name": "MATURITY DATE",
+      "type": "date",
+      "description": "Date and time of trading: Format {DD-MON-YYYY HH:MM:SS} as per ISO 8601.",
+      "example": "20-May-2020:16:25:56",
+      "payload_key": "MATURITY DATE",
+      "key_confidence": 1.0,
+      "key": "maturity_date"
+    },
+    {
+      "name": "TRANSACTION REFERENCE NO",
+      "type": "string",
+      "description": "Unique number reference for the transaction",
+      "example": "5675490",
+      "payload_key": "TRANSACTION REFERENCE NO",
+      "key_confidence": 1.0,
+      "key": "transaction_reference_no"
+    },
+    {
+      "name": "TRANSACTION TYPE",
+      "type": "string",
+      "description": "The type of forex transaction",
+      "example": "FXTTC01",
+      "payload_key": "TRANSACTION TYPE",
+      "key_confidence": 1.0,
+      "key": "transaction_type"
+    },
+    {
+      "name": "CURRENCY QUOTED",
+      "type": "string",
+      "description": "ISO currency code of the currency Quoted as per ISO- 4217. {e.g. USD, GPB, EUR, KES. etc.}",
+      "example": "GBP",
+      "payload_key": "CURRENCY QUOTED",
+      "key_confidence": 1.0,
+      "key": "currency_quoted"
+    },
+    {
+      "name": "CURRENCY TRADED",
+      "type": "string",
+      "description": "ISO currency code of the currency traded as per ISO- 4217. {e.g. USD, GPB, EUR, KES. etc.}",
+      "example": "GBP",
+      "payload_key": "CURRENCY TRADED",
+      "key_confidence": 1.0,
+      "key": "currency_traded"
+    },
+    {
+      "name": "EXCHANGE RATE TYPE",
+      "type": "string",
+      "description": "The exchange rate category marked in the system. E.g. SPOT, FORWARD, SWAP, etc",
+      "example": "FXT01",
+      "payload_key": "EXCHANGE RATE TYPE",
+      "key_confidence": 1.0,
+      "key": "exchange_rate_type"
+    },
+    {
+      "name": "SPOT RATE",
+      "type": "number",
+      "description": "The exchange rate for the transaction.",
+      "example": "0.91000",
+      "payload_key": "SPOT RATE",
+      "key_confidence": 1.0,
+      "key": "spot_rate"
+    },
+    {
+      "name": "NEAR LEG RATE",
+      "type": "number",
+      "description": "The near exchange rate for the swap transaction",
+      "example": "0.91",
+      "payload_key": "NEAR LEG RATE",
+      "key_confidence": 1.0,
+      "key": "near_leg_rate"
+    },
+    {
+      "name": "FAR LEG RATE",
+      "type": "number",
+      "description": "The far or forward exchange rate for the swap / forward contract transaction",
+      "example": "0.91",
+      "payload_key": "FAR LEG RATE",
+      "key_confidence": 1.0,
+      "key": "far_leg_rate"
+    },
+    {
+      "name": "CROSS RATE APPLIED",
+      "type": "string",
+      "description": "The rate applied either a Buy or Sell",
+      "example": "1.388350139",
+      "payload_key": "CROSS RATE APPLIED",
+      "key_confidence": 1.0,
+      "key": "cross_rate_applied"
+    },
+    {
+      "name": "AMOUNT IN QUOTED CURRENCY",
+      "type": "string",
+      "description": "Amount in the currency quoted",
+      "example": "300000.12345",
+      "payload_key": "AMOUNT IN QUOTED CURRENCY",
+      "key_confidence": 1.0,
+      "key": "amount_in_quoted_currency"
+    },
+    {
+      "name": "AMOUNT IN TRADED CURRENCY",
+      "type": "string",
+      "description": "Amount in transaction currency",
+      "example": "300000.12345",
+      "payload_key": "AMOUNT IN TRADED CURRENCY",
+      "key_confidence": 1.0,
+      "key": "amount_in_traded_currency"
+    },
+    {
+      "name": "AMOUNT IN LOCAL CURRENCY EQUIV",
+      "type": "string",
+      "description": "Amount in Kenyan currency (KES)",
+      "example": "",
+      "payload_key": "AMOUNT IN LOCAL CURRENCY EQUIV",
+      "key_confidence": 1.0,
+      "key": "amount_in_local_currency_equiv"
+    },
+    {
+      "name": "USD EQUIVALENT",
+      "type": "string",
+      "description": "Amount in USD",
+      "example": "45075000.12345",
+      "payload_key": "USD EQUIVALENT",
+      "key_confidence": 1.0,
+      "key": "usd_equivalent"
+    },
+    {
+      "name": "SPECIFIC SOURCE OF FUNDS DESC",
+      "type": "string",
+      "description": "The purpose for the trade",
+      "example": "BUSINESS",
+      "payload_key": "SPECIFIC SOURCE OF FUNDS DESC",
+      "key_confidence": 1.0,
+      "key": "specific_source_of_funds_desc"
+    },
+    {
+      "name": "SECTOR CODE",
+      "type": "string",
+      "description": "Code assigned to the particular trade. {e.g. K1, N1, K2, N2. etc}",
+      "example": "K2",
+      "payload_key": "SECTOR CODE",
+      "key_confidence": 1.0,
+      "key": "sector_code"
+    },
+    {
+      "name": "ECONOMIC SECTOR CODE",
+      "type": "string",
+      "description": "The sector code as per the System of National Accounts (SNA) 2008.",
+      "example": "SC01",
+      "payload_key": "ECONOMIC SECTOR CODE",
+      "key_confidence": 1.0,
+      "key": "economic_sector_code"
+    },
+    {
+      "name": "BUSINESS ECONOMIC ACT CODE",
+      "type": "string",
+      "description": "The economic activity related to the transaction as per (International Standard Industrial Classification of Economic Activities (ISIC).",
+      "example": "BSC04",
+      "payload_key": "BUSINESS ECONOMIC ACT CODE",
+      "key_confidence": 1.0,
+      "key": "business_economic_act_code"
+    },
+    {
+      "name": "CUST BUSINESS ECONOMIC SEG",
+      "type": "string",
+      "description": "e.g. Corporate, Micro, Small and Medium Enterprises, Personal and Parastatal.",
+      "example": "BSC04",
+      "payload_key": "CUST BUSINESS ECONOMIC SEG",
+      "key_confidence": 1.0,
+      "key": "cust_business_economic_seg"
+    }
+  ],
+  "unmatched_sample_keys": [],
   "source_pages": [
     94,
     100
-  ],
-  "fields": [
-    {
-      "key": "row_id",
-      "name": "ROW ID",
-      "payload_key": "ROW ID",
-      "type": "number",
-      "required": true,
-      "description": "A unique sequential number, running from the first record to the last.",
-      "example": "7"
-    },
-    {
-      "key": "bank_code",
-      "name": "BANK CODE",
-      "payload_key": "BANK CODE",
-      "type": "string",
-      "required": false,
-      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA).",
-      "example": "0000001"
-    },
-    {
-      "key": "branch_id",
-      "name": "BRANCH ID",
-      "payload_key": "BRANCH ID",
-      "type": "string",
-      "required": false,
-      "description": "Branch code where the transaction took place",
-      "example": "091"
-    },
-    {
-      "key": "customer_category",
-      "name": "CUSTOMER CATEGORY",
-      "payload_key": "CUSTOMER CATEGORY",
-      "type": "string",
-      "required": false,
-      "description": "Whether the customer is a regular bank client or a 'walk-in' customer",
-      "example": "CUSTTD02"
-    },
-    {
-      "key": "customer_pty_id",
-      "name": "CUSTOMER PTY ID",
-      "payload_key": "CUSTOMER PTY ID",
-      "type": "string",
-      "required": false,
-      "description": "Unique customer identifier as assigned to customers by the reporting institution.",
-      "example": "R3342528S"
-    },
-    {
-      "key": "identification_document_number",
-      "name": "IDENTIFICATION DOCUMENT NUMBER",
-      "payload_key": "IDENTIFICATION DOCUMENT NUMBER",
-      "type": "string",
-      "required": false,
-      "description": "Customer identification number such as National ID,Passport or alien number",
-      "example": "1234567"
-    },
-    {
-      "key": "customer_name",
-      "name": "CUSTOMER NAME",
-      "payload_key": "CUSTOMER NAME",
-      "type": "string",
-      "required": false,
-      "description": "Transacting customer names as per the identification documents",
-      "example": "John Paul"
-    },
-    {
-      "key": "time_and_date_of_trading",
-      "name": "TIME AND DATE OF TRADING",
-      "payload_key": "TIME AND DATE OF TRADING",
-      "type": "date",
-      "required": false,
-      "description": "Date and time of trading: Format {YYYYMMDD HH:MM:SS} as per ISO 8601.",
-      "example": "20-JUN-2021"
-    },
-    {
-      "key": "start_date",
-      "name": "START DATE",
-      "payload_key": "START DATE",
-      "type": "date",
-      "required": false,
-      "description": "Date and time of trading: Format {DD-MON-YYYY HH:MM:SS} as per ISO 8601.",
-      "example": "20-May-2020:16:25:56"
-    },
-    {
-      "key": "maturity_date",
-      "name": "MATURITY DATE",
-      "payload_key": "MATURITY DATE",
-      "type": "date",
-      "required": false,
-      "description": "Date and time of trading: Format {DD-MON-YYYY HH:MM:SS} as per ISO 8601.",
-      "example": "20-May-2020:16:25:56"
-    },
-    {
-      "key": "transaction_reference_no",
-      "name": "TRANSACTION REFERENCE NO",
-      "payload_key": "TRANSACTION REFERENCE NO",
-      "type": "string",
-      "required": false,
-      "description": "Unique number reference for the transaction",
-      "example": "5675490"
-    },
-    {
-      "key": "transaction_type",
-      "name": "TRANSACTION TYPE",
-      "payload_key": "TRANSACTION TYPE",
-      "type": "string",
-      "required": false,
-      "description": "The type of forex transaction",
-      "example": "FXTTC01"
-    },
-    {
-      "key": "currency_quoted",
-      "name": "CURRENCY QUOTED",
-      "payload_key": "CURRENCY QUOTED",
-      "type": "string",
-      "required": false,
-      "description": "ISO currency code of the currency Quoted as per ISO- 4217. {e.g. USD, GPB, EUR, KES. etc.}",
-      "example": "GBP"
-    },
-    {
-      "key": "currency_traded",
-      "name": "CURRENCY TRADED",
-      "payload_key": "CURRENCY TRADED",
-      "type": "string",
-      "required": false,
-      "description": "ISO currency code of the currency traded as per ISO- 4217. {e.g. USD, GPB, EUR, KES. etc.}",
-      "example": "GBP"
-    },
-    {
-      "key": "exchange_rate_type",
-      "name": "EXCHANGE RATE TYPE",
-      "payload_key": "EXCHANGE RATE TYPE",
-      "type": "string",
-      "required": false,
-      "description": "The exchange rate category marked in the system. E.g. SPOT, FORWARD, SWAP, etc",
-      "example": "FXT01"
-    },
-    {
-      "key": "spot_rate",
-      "name": "SPOT RATE",
-      "payload_key": "SPOT RATE",
-      "type": "number",
-      "required": false,
-      "description": "The exchange rate for the transaction.",
-      "example": "0.91000"
-    },
-    {
-      "key": "near_leg_rate",
-      "name": "NEAR LEG RATE",
-      "payload_key": "NEAR LEG RATE",
-      "type": "number",
-      "required": false,
-      "description": "The near exchange rate for the swap transaction",
-      "example": "0.91"
-    },
-    {
-      "key": "far_leg_rate",
-      "name": "FAR LEG RATE",
-      "payload_key": "FAR LEG RATE",
-      "type": "number",
-      "required": false,
-      "description": "The far or forward exchange rate for the swap / forward contract transaction",
-      "example": "0.91"
-    },
-    {
-      "key": "cross_rate_applied",
-      "name": "CROSS RATE APPLIED",
-      "payload_key": "CROSS RATE APPLIED",
-      "type": "string",
-      "required": false,
-      "description": "The rate applied either a Buy or Sell",
-      "example": "1.388350139"
-    },
-    {
-      "key": "amount_in_quoted_currency",
-      "name": "AMOUNT IN QUOTED CURRENCY",
-      "payload_key": "AMOUNT IN QUOTED CURRENCY",
-      "type": "string",
-      "required": false,
-      "description": "Amount in the currency quoted",
-      "example": "300000.12345"
-    },
-    {
-      "key": "amount_in_traded_currency",
-      "name": "AMOUNT IN TRADED CURRENCY",
-      "payload_key": "AMOUNT IN TRADED CURRENCY",
-      "type": "string",
-      "required": false,
-      "description": "Amount in transaction currency",
-      "example": "300000.12345"
-    },
-    {
-      "key": "amount_in_local_currency_equiv",
-      "name": "AMOUNT IN LOCAL CURRENCY EQUIV",
-      "payload_key": "AMOUNT IN LOCAL CURRENCY EQUIV",
-      "type": "string",
-      "required": false,
-      "description": "Amount in Kenyan currency (KES)",
-      "example": ""
-    },
-    {
-      "key": "usd_equivalent",
-      "name": "USD EQUIVALENT",
-      "payload_key": "USD EQUIVALENT",
-      "type": "string",
-      "required": false,
-      "description": "Amount in USD",
-      "example": "45075000.12345"
-    },
-    {
-      "key": "specific_source_of_funds_desc",
-      "name": "SPECIFIC SOURCE OF FUNDS DESC",
-      "payload_key": "SPECIFIC SOURCE OF FUNDS DESC",
-      "type": "string",
-      "required": false,
-      "description": "The purpose for the trade",
-      "example": "BUSINESS"
-    },
-    {
-      "key": "sector_code",
-      "name": "SECTOR CODE",
-      "payload_key": "SECTOR CODE",
-      "type": "string",
-      "required": false,
-      "description": "Code assigned to the particular trade. {e.g. K1, N1, K2, N2. etc}",
-      "example": "K2"
-    },
-    {
-      "key": "economic_sector_code",
-      "name": "ECONOMIC SECTOR CODE",
-      "payload_key": "ECONOMIC SECTOR CODE",
-      "type": "string",
-      "required": false,
-      "description": "The sector code as per the System of National Accounts (SNA) 2008.",
-      "example": "SC01"
-    },
-    {
-      "key": "business_economic_act_code",
-      "name": "BUSINESS ECONOMIC ACT CODE",
-      "payload_key": "BUSINESS ECONOMIC ACT CODE",
-      "type": "string",
-      "required": false,
-      "description": "The economic activity related to the transaction as per (International Standard Industrial Classification of Economic Activities (ISIC).",
-      "example": "BSC04"
-    },
-    {
-      "key": "cust_business_economic_seg",
-      "name": "CUST BUSINESS ECONOMIC SEG",
-      "payload_key": "CUST BUSINESS ECONOMIC SEG",
-      "type": "string",
-      "required": false,
-      "description": "e.g. Corporate, Micro, Small and Medium Enterprises, Personal and Parastatal.",
-      "example": "BSC04"
-    }
   ]
 }
