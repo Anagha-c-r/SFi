@@ -1,0 +1,88 @@
+{
+  "number": 42,
+  "code": "subscribers_report_information",
+  "title": "Subscribers' Report Information",
+  "group": "Credit Reference Bureau",
+  "frequency": "periodic",
+  "endpoint": "/api/v1/flows/rest/API_SUBSCRIBERSREPORSYNC/1.0/submitSubscribersReport",
+  "array_key": "SubscribersReport",
+  "notes": "",
+  "source_pages": [
+    207,
+    212
+  ],
+  "fields": [
+    {
+      "key": "row_id",
+      "name": "ROW ID",
+      "payload_key": "ROW ID",
+      "type": "number",
+      "required": true,
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1"
+    },
+    {
+      "key": "credit_reference_bureau_code",
+      "name": "CREDIT REFERENCE BUREAU CODE",
+      "payload_key": "CREDIT REFERENCE BUREAU CODE",
+      "type": "string",
+      "required": false,
+      "description": "The code the reporting Credit Reference Bureau (E.g. XYZ = 060002)",
+      "example": "0600003"
+    },
+    {
+      "key": "reporting_date",
+      "name": "REPORTING DATE",
+      "payload_key": "REPORTING DATE",
+      "type": "date",
+      "required": true,
+      "description": "The reporting date, Month & Year based on the frequency.",
+      "example": "6/3/2020"
+    },
+    {
+      "key": "category_of_institution",
+      "name": "CATEGORY OF INSTITUTION",
+      "payload_key": "CATEGORY OF INSTITUTION",
+      "type": "string",
+      "required": false,
+      "description": "Category of instutition. E.g. Comercial Banks, Microfinance Banks, DBFB Banks, Regulated Saccos, Unregulated Saccos, etc",
+      "example": "CRBSBIC01"
+    },
+    {
+      "key": "submitting_institution_code",
+      "name": "SUBMITTING INSTITUTION CODE",
+      "payload_key": "SUBMITTING INSTITUTION CODE",
+      "type": "string",
+      "required": false,
+      "description": "Institution Code of the subscribing instutition. E.g. {Bank code issued by KBA (e.g. KCB = 01) for Commercial Banks} otherwise left blank for individuals",
+      "example": "0000015"
+    },
+    {
+      "key": "subscription_date",
+      "name": "SUBSCRIPTION DATE",
+      "payload_key": "DATE OF SUBSCRIBTION",
+      "type": "date",
+      "required": false,
+      "description": "The when the customer or institution subscribed to the bureau",
+      "example": "7/23/2017"
+    },
+    {
+      "key": "subscription_status",
+      "name": "SUBSCRIPTION STATUS",
+      "payload_key": "SUBSCRIBTION STATUS",
+      "type": "string",
+      "required": false,
+      "description": "The status of sbscription, whether Active or Dormant",
+      "example": "CRBSUBST01"
+    },
+    {
+      "key": "no_of_enquiries",
+      "name": "NO OF ENQUIRIES",
+      "payload_key": "NUMBER OF ENQUIRIES",
+      "type": "string",
+      "required": false,
+      "description": "The number of enquiries done in the reporting period",
+      "example": "24587"
+    }
+  ]
+}

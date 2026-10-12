@@ -1,0 +1,151 @@
+{
+  "number": 23,
+  "code": "merchants_and_payment_agents",
+  "title": "Merchants and Payment Agents",
+  "group": "Agents, Merchants & Outlets",
+  "frequency": "periodic",
+  "endpoint": "/api/v1/flows/rest/API_MERCHANTPAYMENTAGENTSYNC/1.0/submitMerchantPaymentAgentInfo",
+  "array_key": "MERCHANT_PAYMENT_AGENT_INFO",
+  "notes": "",
+  "source_pages": [
+    122,
+    126
+  ],
+  "fields": [
+    {
+      "key": "row_id",
+      "name": "ROW ID",
+      "payload_key": "ROW ID ",
+      "type": "number",
+      "required": true,
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1"
+    },
+    {
+      "key": "bank_code",
+      "name": "BANK CODE",
+      "payload_key": "BANK CODE",
+      "type": "string",
+      "required": false,
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
+      "example": "0000001"
+    },
+    {
+      "key": "branch_id",
+      "name": "BRANCH ID",
+      "payload_key": "BRANCH ID",
+      "type": "string",
+      "required": false,
+      "description": "Branch code where the account was opened/operated from.",
+      "example": "003"
+    },
+    {
+      "key": "business_reporting_day_month_year",
+      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
+      "payload_key": "REPORTING DATE",
+      "type": "date",
+      "required": true,
+      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM- YYYY}",
+      "example": "03-May-2022"
+    },
+    {
+      "key": "merchant_terminal_id",
+      "name": "MERCHANT TERMINAL ID",
+      "payload_key": "MERCHANT TERMINAL ID",
+      "type": "string",
+      "required": false,
+      "description": "Unique number assigned to lndividual deposit contracts",
+      "example": "MTID000096"
+    },
+    {
+      "key": "merchant_agent_type",
+      "name": "MERCHANT/AGENT TYPE",
+      "payload_key": "MERCHANT AGENT TYPE ",
+      "type": "string",
+      "required": false,
+      "description": "Unique identifier for the merchant/Agent. Terminal ID",
+      "example": "MTC02"
+    },
+    {
+      "key": "merchant_agent_name",
+      "name": "MERCHANT/AGENT NAME",
+      "payload_key": "MERCHANT AGENT NAME",
+      "type": "string",
+      "required": false,
+      "description": "Agent or Merchant",
+      "example": "Korogocho Holdings"
+    },
+    {
+      "key": "business_segment",
+      "name": "BUSINESS SEGMENT",
+      "payload_key": "BUSINESS SEGMENT",
+      "type": "string",
+      "required": false,
+      "description": "Name of Agent/Merchant",
+      "example": "BSC01"
+    },
+    {
+      "key": "agent_merchant_opened_ddate",
+      "name": "AGENT/MERCHANT OPENED DDATE",
+      "payload_key": "AGENT MERCHANT OPENED DATE",
+      "type": "date",
+      "required": false,
+      "description": "The Merchants/Agents business segment. e.g. Corporate, Small Medium Enterprises (SMEs), Micro Small and Medium Enterprises (MSMEs) and Personal.",
+      "example": "03-May-2022"
+    },
+    {
+      "key": "physical_location_of_agent_merchant_sub_county_code",
+      "name": "PHYSICAL LOCATION OF AGENT/MERCHANT (SUB-COUNTY CODE)",
+      "payload_key": "SUB COUNTY CODE",
+      "type": "string",
+      "required": false,
+      "description": "Date when the merchant/agent was opened. Format {DD-MMM-YYYY}.",
+      "example": "3206"
+    },
+    {
+      "key": "gps_coordinate_latitude",
+      "name": "GPS COORDINATE: LATITUDE",
+      "payload_key": "GPS COORDINATE LATITUDE",
+      "type": "number",
+      "required": false,
+      "description": "Sub-County and County where the merchant is located.",
+      "example": "-6.800137"
+    },
+    {
+      "key": "gps_coordinate_longitude",
+      "name": "GPS COORDINATE: LONGITUDE",
+      "payload_key": "GPS COORDINATE LONGITUDE",
+      "type": "number",
+      "required": false,
+      "description": "GPS cordinates based on ISO 6709 standards representation of geographic point location by coordinates (Decimal degrees).",
+      "example": "39.314576"
+    },
+    {
+      "key": "email_id_of_agent_merchant",
+      "name": "EMAIL ID OF AGENT/MERCHANT",
+      "payload_key": "EMAIL ID OF AGENT MERCHANT",
+      "type": "string",
+      "required": false,
+      "description": "GPS cordinates based on ISO 6709 standards representation of geographic point location by coordinates (Decimal degrees).",
+      "example": "korogochoholdings@gmail.com"
+    },
+    {
+      "key": "agent_merchant_contact_number",
+      "name": "AGENT/MERCHANT CONTACT NUMBER",
+      "payload_key": "AGENT MERCHANT CONTACT NUMBER",
+      "type": "string",
+      "required": false,
+      "description": "The Agent's/merchants email",
+      "example": "P.O. Box 346726, Nairobi, +254788098876"
+    },
+    {
+      "key": "agent_merchant_status",
+      "name": "AGENT/MERCHANT STATUS",
+      "payload_key": "AGENT MERCHANT STATUS",
+      "type": "string",
+      "required": false,
+      "description": "Agent's/merchants contact details",
+      "example": "01"
+    }
+  ]
+}

@@ -1,0 +1,43 @@
+# Local development stack: Postgres, the API, a mock CBK server and the web app.
+# Start:  docker compose up --build    then open http://localhost:8080
+services:
+  db:
+    image: postgres:16-alpine
+    environment:
+      POSTGRES_DB: gdi
+      POSTGRES_USER: gdi
+      POSTGRES_PASSWORD: gdi
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U gdi"]
+      interval: 5s
+      retries: 10
+
+  mock-cbk:
+    build: ./backend
+    command: uvicorn app.mock_cbk.app:app --host 0.0.0.0 --port 9000
+
+  backend:
+    build: ./backend
+    env_file: .env
+    environment:
+      DATABASE_URL: postgresql+psycopg://gdi:gdi@db:5432/gdi
+      CBK_TOKEN_URL: ${CBK_TOKEN_URL:-http://mock-cbk:9000/oauth2/v1/token}
+      CBK_UAT_BASE: ${CBK_UAT_BASE:-http://mock-cbk:9000/preprod}
+      CORS_ORIGINS: http://localhost:8080,http://localhost:5173
+    depends_on:
+      db:
+        condition: service_healthy
+    ports:
+      - "8000:8000"
+
+  frontend:
+    build: ./frontend
+    depends_on:
+      - backend
+    ports:
+      - "8080:80"
+
+volumes:
+  pgdata:

@@ -1,0 +1,124 @@
+{
+  "number": 31,
+  "code": "weekly_counterfeit_holdings_information",
+  "title": "Weekly Counterfeit Holdings Information",
+  "group": "Cash",
+  "frequency": "weekly",
+  "endpoint": "/api/v1/flows/rest/API_WEEKLYCOUNTERFEI/1.0/submitWeeklyCounterfeitHoldings",
+  "array_key": "COUNTERFEITHOLDINGS_DATA",
+  "notes": "",
+  "source_pages": [
+    157,
+    161
+  ],
+  "fields": [
+    {
+      "key": "row_id",
+      "name": "ROW ID",
+      "payload_key": "ROW ID",
+      "type": "string",
+      "required": true,
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1"
+    },
+    {
+      "key": "bank_code",
+      "name": "BANK CODE",
+      "payload_key": "BANK CODE",
+      "type": "string",
+      "required": false,
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA).",
+      "example": "0000001"
+    },
+    {
+      "key": "branch_id",
+      "name": "BRANCH ID",
+      "payload_key": "BRANCH ID",
+      "type": "date",
+      "required": false,
+      "description": "Branch id of the reporting branch",
+      "example": "015"
+    },
+    {
+      "key": "reporting_date",
+      "name": "REPORTING DATE",
+      "payload_key": "REPORTING DATE",
+      "type": "date",
+      "required": true,
+      "description": "The reporting date, Month & Year based on the frequency. Format {DD- MMM-YYYY}",
+      "example": "6/3/2020"
+    },
+    {
+      "key": "sub_county_id",
+      "name": "SUB_COUNTY ID",
+      "payload_key": "SUB COUNTY ID",
+      "type": "string",
+      "required": false,
+      "description": "SUB County code of the county where the reporting branch is located he indicative buying rate for each particular currency",
+      "example": "2"
+    },
+    {
+      "key": "denomination",
+      "name": "DENOMINATION",
+      "payload_key": "DENOMINATION",
+      "type": "string",
+      "required": false,
+      "description": "Notes and coins per the denominations of Kenyan currency.",
+      "example": "KESB1000"
+    },
+    {
+      "key": "date_confiscated",
+      "name": "DATE CONFISCATED",
+      "payload_key": "DATE CONFISCATED",
+      "type": "date",
+      "required": false,
+      "description": "Date when the counterfeits were confiscated. Format {DD-MMM-YYYY}",
+      "example": "3/13/2014"
+    },
+    {
+      "key": "serial_number",
+      "name": "SERIAL NUMBER",
+      "payload_key": "SERIAL NUMBER",
+      "type": "string",
+      "required": false,
+      "description": "The unique serial number identified on the counterfeit note",
+      "example": "AA0000000"
+    },
+    {
+      "key": "depositors_names",
+      "name": "DEPOSITORS NAMES",
+      "payload_key": "DEPOSITORS NAMES",
+      "type": "string",
+      "required": false,
+      "description": "The names of the person making the deposit",
+      "example": "David Luganda Obo"
+    },
+    {
+      "key": "tellersnames",
+      "name": "TELLERSNAMES",
+      "payload_key": "TELLERSNAMES",
+      "type": "string",
+      "required": false,
+      "description": "The name of the teller receiving the counterfeit note",
+      "example": "Karisa Dzao Charo"
+    },
+    {
+      "key": "date_submitted_to_cbk",
+      "name": "DATE SUBMITTED TO CBK",
+      "payload_key": "DATE SUBMITTED TO CBK",
+      "type": "date",
+      "required": false,
+      "description": "The date when the note was submitted to CBK. Format {DD-MMM-YYYY}",
+      "example": "9/5/2019"
+    },
+    {
+      "key": "remarks",
+      "name": "REMARKS",
+      "payload_key": "REMARKS",
+      "type": "string",
+      "required": false,
+      "description": "Detailed remarks on the transaction",
+      "example": "Customer deposited a counterfeit note"
+    }
+  ]
+}

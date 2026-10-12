@@ -1,0 +1,133 @@
+{
+  "number": 12,
+  "code": "counterparty_information",
+  "title": "CounterParty Information",
+  "group": "Customers & Counterparties",
+  "frequency": "periodic",
+  "endpoint": "/api/v1/flows/rest/API_COUNTERPARTYSYNC/1.0/submitCounterPartyData",
+  "array_key": "COUNTERPARTY_DATA",
+  "notes": "",
+  "source_pages": [
+    61,
+    65
+  ],
+  "fields": [
+    {
+      "key": "request_id",
+      "name": "REQUEST ID",
+      "payload_key": "REQUEST ID",
+      "type": "number",
+      "required": false,
+      "description": "Instance Id",
+      "example": "1243"
+    },
+    {
+      "key": "row_id",
+      "name": "ROW ID",
+      "payload_key": "ROW ID",
+      "type": "string",
+      "required": true,
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1"
+    },
+    {
+      "key": "bank_code",
+      "name": "BANK CODE",
+      "payload_key": "BANK CODE",
+      "type": "string",
+      "required": false,
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA).",
+      "example": "0000001"
+    },
+    {
+      "key": "reporting_date",
+      "name": "REPORTING DATE",
+      "payload_key": "REPORTING DATE",
+      "type": "date",
+      "required": true,
+      "description": "The reporting date, Month & Year based on the frequency. Format {DD- MMM-YYYY}",
+      "example": "1-Jun-2021"
+    },
+    {
+      "key": "transaction_identifier",
+      "name": "TRANSACTION IDENTIFIER",
+      "payload_key": "TRANSACTION IDENTIFIER",
+      "type": "string",
+      "required": false,
+      "description": "Unique transaction identifiers associated with individual transactions.",
+      "example": "011230938A01"
+    },
+    {
+      "key": "deal_type",
+      "name": "DEAL TYPE",
+      "payload_key": "DEAL TYPE",
+      "type": "string",
+      "required": false,
+      "description": "Whether the deal (transaction) is a placement or a borrowing.",
+      "example": "DLTYP01"
+    },
+    {
+      "key": "currency_code",
+      "name": "CURRENCY CODE",
+      "payload_key": "CURRENCY CODE",
+      "type": "string",
+      "required": false,
+      "description": "ISO currency codes as per ISO-4217. {e.g. USD, GPB, EUR, KES. etc.}",
+      "example": "GBP"
+    },
+    {
+      "key": "amount_in_transaction_currency_ccy",
+      "name": "AMOUNT IN TRANSACTION CURRENCY (CCY)",
+      "payload_key": "AMOUNT IN TRANSACTION CURRENCY (CCY)",
+      "type": "number",
+      "required": false,
+      "description": "The counterparty balance amount as at close of business for the reporting date in the transacting currency.",
+      "example": "1904-02-08"
+    },
+    {
+      "key": "amount_in_local_currency_equivalent_lcy",
+      "name": "AMOUNT IN LOCAL CURRENCY EQUIVALENT (LCY)",
+      "payload_key": "AMOUNT IN LOCAL CURRENCY EQUIVALENT (LCY)",
+      "type": "number",
+      "required": false,
+      "description": "The counterparty balance amount as at close of business for the reporting date in the equivalent local currency (KES).",
+      "example": "225,000.00000"
+    },
+    {
+      "key": "counterparty_id",
+      "name": "COUNTERPARTY ID",
+      "payload_key": "COUNTERPARTY ID",
+      "type": "string",
+      "required": false,
+      "description": "Unique identifier for the counterparty, such as the SWIFT CODE for the counterparty banks.",
+      "example": "ABCLKENA"
+    },
+    {
+      "key": "counterparty_name",
+      "name": "COUNTERPARTY NAME",
+      "payload_key": "COUNTERPARTY NAME",
+      "type": "string",
+      "required": false,
+      "description": "The name of the counterparty.",
+      "example": "AFRICAN BANKING CORPORATION LTD"
+    },
+    {
+      "key": "counterparty_category",
+      "name": "COUNTERPARTY CATEGORY",
+      "payload_key": "COUNTERPARTY CATEGORY",
+      "type": "string",
+      "required": false,
+      "description": "Category of counterparty. Either 'Local' or 'Foreign'.",
+      "example": "CPCAT01"
+    },
+    {
+      "key": "counterparty_type",
+      "name": "COUNTERPARTY TYPE",
+      "payload_key": "COUNTERPARTY TYPE",
+      "type": "string",
+      "required": false,
+      "description": "Type of counterparty. Either 'Commercial Bank', 'Microfinace Bank', and 'Mortgage Finance Company'",
+      "example": "CPTYP01"
+    }
+  ]
+}

@@ -1,0 +1,142 @@
+{
+  "number": 35,
+  "code": "consumer_protection_information",
+  "title": "Consumer Protection Information",
+  "group": "Fraud & Complaints",
+  "frequency": "periodic",
+  "endpoint": "/api/v1/flows/rest/API_CONSUMERPROTECTIONSYNC/1.0/submitConsumerProtectionInfo",
+  "array_key": "CONSUMER_PROTECTION_INFO",
+  "notes": "",
+  "source_pages": [
+    176,
+    182
+  ],
+  "fields": [
+    {
+      "key": "row_id",
+      "name": "ROW ID",
+      "payload_key": "ROW ID ",
+      "type": "number",
+      "required": true,
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1"
+    },
+    {
+      "key": "credit_reference_bureau_code",
+      "name": "CREDIT REFERENCE BUREAU CODE",
+      "payload_key": "CREDIT REFERENCE BUREAU CODE",
+      "type": "string",
+      "required": false,
+      "description": "The code the reporting Credit Reference Bureau (E.g. XYZ 060002)",
+      "example": "0600002"
+    },
+    {
+      "key": "reporting_date",
+      "name": "REPORTING DATE",
+      "payload_key": "REPORTING DATE",
+      "type": "date",
+      "required": true,
+      "description": "The reporting date, Month & Year based on the frequency.",
+      "example": "6/3/2020"
+    },
+    {
+      "key": "complaint_date",
+      "name": "COMPLAINT DATE",
+      "payload_key": "COMPLAINT DATE",
+      "type": "date",
+      "required": false,
+      "description": "Date when the complaint was lodged",
+      "example": "11/23/2019"
+    },
+    {
+      "key": "complainant_name",
+      "name": "COMPLAINANT NAME",
+      "payload_key": "COMPLAINANT NAME",
+      "type": "string",
+      "required": false,
+      "description": "The names of the complainant",
+      "example": "David Karisa Dsuma"
+    },
+    {
+      "key": "complainant_national_id",
+      "name": "COMPLAINANT NATIONAL ID",
+      "payload_key": "COMPLAINANT NATIONAL ID",
+      "type": "string",
+      "required": false,
+      "description": "Compalinant's unique identification number",
+      "example": "A2036232"
+    },
+    {
+      "key": "complainant_phone_number",
+      "name": "COMPLAINANT PHONE NUMBER",
+      "payload_key": "COMPLAINANT PHONE NUMBER",
+      "type": "string",
+      "required": false,
+      "description": "Complainant's phone number",
+      "example": "+254733987654"
+    },
+    {
+      "key": "complainant_postal_address",
+      "name": "COMPLAINANT POSTAL ADDRESS",
+      "payload_key": "COMPLAINANT POSTAL ADDRESS",
+      "type": "string",
+      "required": false,
+      "description": "Complainant's postal address",
+      "example": "P.O. Box 17887, 00200, City Squre, Nairobi"
+    },
+    {
+      "key": "complainant_email_address",
+      "name": "COMPLAINANT EMAIL ADDRESS",
+      "payload_key": "COMPLAINANT EMAIL\nADDRESS",
+      "type": "string",
+      "required": false,
+      "description": "Complainant's email address",
+      "example": "davidkarisadsuma@gmail.com"
+    },
+    {
+      "key": "complainant_occupation",
+      "name": "COMPLAINANT OCCUPATION",
+      "payload_key": "COMPLAINANT OCCUPATION",
+      "type": "string",
+      "required": false,
+      "description": "The occupation of the complainant e.g Farmer, Banker,",
+      "example": "Farmer"
+    },
+    {
+      "key": "nature_of_complaint",
+      "name": "NATURE OF COMPLAINT",
+      "payload_key": "NATURE OF COMPLAINT",
+      "type": "string",
+      "required": false,
+      "description": "Nature of complaint: Have a drop down for reasons e.g inaccurate data, incorrect listing, fraud etc",
+      "example": "CRBCMPT03"
+    },
+    {
+      "key": "category_of_complainant_inst",
+      "name": "CATEGORY OF COMPLAINANT INST",
+      "payload_key": "CATEGORY OF COMPLAINANT INST",
+      "type": "string",
+      "required": false,
+      "description": "Category of instutition. E.g. Comercial Banks, Microfinance Banks, Regulated Saccos, Unregulated Saccos, etc",
+      "example": "CRBSBIC01"
+    },
+    {
+      "key": "complained_institution_code",
+      "name": "COMPLAINED INSTITUTION CODE",
+      "payload_key": "COMPLAINED INSTITUTION CODE",
+      "type": "string",
+      "required": false,
+      "description": "The code of institution complained against",
+      "example": "0000003"
+    },
+    {
+      "key": "status_of_remedial_action",
+      "name": "STATUS OF REMEDIAL ACTION",
+      "payload_key": "STATUS OF REMEDIAL ACTION",
+      "type": "string",
+      "required": false,
+      "description": "Status of remedial action: Have a drop down for statis e.g resolved, disputed, under investigation etc",
+      "example": "CRBCSTC01"
+    }
+  ]
+}

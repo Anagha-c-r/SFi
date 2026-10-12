@@ -1,0 +1,178 @@
+{
+  "number": 14,
+  "code": "customer_complaints_and_remedial_actions",
+  "title": "Customer Complaints and Remedial Actions",
+  "group": "Fraud & Complaints",
+  "frequency": "periodic",
+  "endpoint": "/api/v1/flows/rest/API_GDI_CUSTOMERCO/1.0/submitCustomerComplaints",
+  "array_key": "CUSTOMER_COMPLAINT_INFO",
+  "notes": "",
+  "source_pages": [
+    71,
+    76
+  ],
+  "fields": [
+    {
+      "key": "row_id",
+      "name": "ROW ID",
+      "payload_key": "ROW ID",
+      "type": "number",
+      "required": true,
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1"
+    },
+    {
+      "key": "bank_code",
+      "name": "BANK CODE",
+      "payload_key": "BANK CODE",
+      "type": "string",
+      "required": false,
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
+      "example": "0000001"
+    },
+    {
+      "key": "branch_id",
+      "name": "BRANCH ID",
+      "payload_key": "BRANCH ID",
+      "type": "string",
+      "required": false,
+      "description": "Branch code where the complaint was reported.",
+      "example": "121"
+    },
+    {
+      "key": "business_reporting_day_month_year",
+      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
+      "payload_key": "REPORTING DATE",
+      "type": "date",
+      "required": true,
+      "description": "The reporting date, Month & Year based on the frequency. Format {YYYYMMDD} as per ISO 8601.",
+      "example": "17-May-2022"
+    },
+    {
+      "key": "complainant_names",
+      "name": "COMPLAINANT NAMES",
+      "payload_key": "COMPLAINANT NAME",
+      "type": "string",
+      "required": false,
+      "description": "Customer's First Name, Middle Name and Surname or Company Name",
+      "example": "A.N. OTHER"
+    },
+    {
+      "key": "customer_id",
+      "name": "CUSTOMER ID",
+      "payload_key": "CUSTOMER ID",
+      "type": "string",
+      "required": false,
+      "description": "The complainant customer id (Unique identification number issued to customers)",
+      "example": "0354678"
+    },
+    {
+      "key": "account_number",
+      "name": "ACCOUNT NUMBER",
+      "payload_key": "ACCOUNT NUMBER",
+      "type": "string",
+      "required": false,
+      "description": "The complainant account number (Unique number assigned to accounts by the reporting institution)",
+      "example": "01A002035467801"
+    },
+    {
+      "key": "complainant_s_phone_contact_details",
+      "name": "COMPLAINANT’S PHONE CONTACT DETAILS",
+      "payload_key": "COMPLAINANT PHONE CONTACT",
+      "type": "string",
+      "required": false,
+      "description": "Complainant's phone contact details such as mobile number, etc",
+      "example": "+254722123456"
+    },
+    {
+      "key": "complainant_s_physical_address_details",
+      "name": "COMPLAINANT’S PHYSICAL ADDRESS DETAILS",
+      "payload_key": "COMPLAINANT PHYSICAL ADDRESS",
+      "type": "string",
+      "required": false,
+      "description": "Complainant's physical address details such as address, street name and town.",
+      "example": "P.O. BOX 25643, NAMANGA"
+    },
+    {
+      "key": "agent_outlet_id",
+      "name": "AGENT/OUTLET ID",
+      "payload_key": "AGENT OUTLET ID",
+      "type": "string",
+      "required": false,
+      "description": "Agent or Outlet id of the agent/outlet complained against (Where the complaint made is about an agent or outlet)",
+      "example": "Agnt095"
+    },
+    {
+      "key": "name_of_agent_outlet_complained_against",
+      "name": "NAME OF AGENT/OUTLET COMPLAINED AGAINST",
+      "payload_key": "AGENT OUTLET COMPLAIN AGAINST",
+      "type": "string",
+      "required": false,
+      "description": "Name of Agent or Outlet at which the complain is against",
+      "example": "Kamwana Enterprises"
+    },
+    {
+      "key": "nature_of_complaint",
+      "name": "NATURE OF COMPLAINT",
+      "payload_key": "NATURE OF COMPLAINT",
+      "type": "string",
+      "required": false,
+      "description": "Details on the nature of the complaint:",
+      "example": "NOC03"
+    },
+    {
+      "key": "description_of_complaint",
+      "name": "DESCRIPTION OF COMPLAINT",
+      "payload_key": "DESCRIPTION OF COMPLAINT",
+      "type": "string",
+      "required": false,
+      "description": "Details on the nature of the complaint:",
+      "example": "Made a cash deposit that has not reflected in the account."
+    },
+    {
+      "key": "date_of_complaint",
+      "name": "DATE OF COMPLAINT",
+      "payload_key": "DATE OF COMPLAINT",
+      "type": "date",
+      "required": false,
+      "description": "The date when the complaint was lodged, in the format {YYYYMMDD} as per ISO 8601.",
+      "example": "17-May-2022"
+    },
+    {
+      "key": "unique_incidence_sequence_number",
+      "name": "UNIQUE INCIDENCE SEQUENCE NUMBER",
+      "payload_key": "UNIQUE INCIDENCE SEQ NUMBER",
+      "type": "string",
+      "required": false,
+      "description": "Unique incidence sequencial number",
+      "example": "CPL0188"
+    },
+    {
+      "key": "steps_taken_remedial_action",
+      "name": "STEPS TAKEN (REMEDIAL ACTION)",
+      "payload_key": "STEPS TAKEN REMEDIAL ACTION",
+      "type": "string",
+      "required": false,
+      "description": "Details of the remedial steps taken",
+      "example": "Request the agent to give a detailed explanation of the event."
+    },
+    {
+      "key": "current_status",
+      "name": "CURRENT STATUS",
+      "payload_key": "CURRENT STATUS",
+      "type": "string",
+      "required": false,
+      "description": "Closed, Open or Pending",
+      "example": "CUSTCST01"
+    },
+    {
+      "key": "date_of_closure_if_the_issue_is_closed_otherwise_left_blank",
+      "name": "DATE OF CLOSURE (IF THE ISSUE IS CLOSED, OTHERWISE LEFT BLANK)",
+      "payload_key": "CLOSURE DATE",
+      "type": "date",
+      "required": false,
+      "description": "The date when the complaint was closed, in the format {YYYYMMDD} as per ISO 8601.",
+      "example": "17-May-2022"
+    }
+  ]
+}

@@ -1,0 +1,133 @@
+{
+  "number": 19,
+  "code": "incidents_of_fraud_theft_or_robbery_information",
+  "title": "Incidents of Fraud-Theft or Robbery Information",
+  "group": "Fraud & Complaints",
+  "frequency": "periodic",
+  "endpoint": "/api/v1/flows/rest/API_INCIDENTSOFFRAUD/1.0/submitIncidentsofFraudInfo",
+  "array_key": "INCIDENT_FRAUD_INFO",
+  "notes": "",
+  "source_pages": [
+    100,
+    104
+  ],
+  "fields": [
+    {
+      "key": "row_id",
+      "name": "ROW ID",
+      "payload_key": "ROW ID",
+      "type": "number",
+      "required": true,
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1"
+    },
+    {
+      "key": "bank_code",
+      "name": "BANK CODE",
+      "payload_key": "BANK CODE",
+      "type": "string",
+      "required": false,
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
+      "example": "0000001"
+    },
+    {
+      "key": "business_reporting_day_month_year",
+      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
+      "payload_key": "REPORTING DATE",
+      "type": "date",
+      "required": true,
+      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY}",
+      "example": "03-May-2022"
+    },
+    {
+      "key": "unique_incidence_sequence_number",
+      "name": "UNIQUE INCIDENCE SEQUENCE NUMBER",
+      "payload_key": "UNIQUE INCIDENCE SEQ NUMBER",
+      "type": "string",
+      "required": false,
+      "description": "Unique incidence sequential number",
+      "example": "26576"
+    },
+    {
+      "key": "outlet_id",
+      "name": "OUTLET ID",
+      "payload_key": "OUTLET ID",
+      "type": "string",
+      "required": false,
+      "description": "Branch code or Agent Id where the fraud, theft or robbery took place.",
+      "example": "003"
+    },
+    {
+      "key": "type_of_fraud",
+      "name": "TYPE OF FRAUD",
+      "payload_key": "TYPE OF FRAUD",
+      "type": "string",
+      "required": false,
+      "description": "e.g. cheque frauds, over-the-counter - withdrawals, ATM frauds, Mobile banking frauds, etc.",
+      "example": "FRD06"
+    },
+    {
+      "key": "fraud_loss_category_flag",
+      "name": "FRAUD LOSS CATEGORY FLAG",
+      "payload_key": "FRAUD LOSS CATEGORY FLAG",
+      "type": "string",
+      "required": false,
+      "description": "Involved actual loss of funds (Y) or was an attempt (N)",
+      "example": ""
+    },
+    {
+      "key": "fraud_channel",
+      "name": "FRAUD CHANNEL",
+      "payload_key": "FRAUD CHANNEL",
+      "type": "string",
+      "required": false,
+      "description": "E.g. Pos, ATM, etc",
+      "example": "CDCH06"
+    },
+    {
+      "key": "nature_of_fraud_theft_or_robbery_including_attempts",
+      "name": "NATURE OF FRAUD, THEFT OR ROBBERY (INCLUDING ATTEMPTS)",
+      "payload_key": "NATURE OF FRAUD",
+      "type": "string",
+      "required": false,
+      "description": "Details on the nature of fraud",
+      "example": "Cash withdrawal using a fraudulent debit card"
+    },
+    {
+      "key": "date_of_occurrence",
+      "name": "DATE OF OCCURRENCE",
+      "payload_key": "OCCURRENCE DATE",
+      "type": "date",
+      "required": false,
+      "description": "Date when the fraud, theft or robbery occured. Format {DD-MMM-YYYY}",
+      "example": "2018-08-31"
+    },
+    {
+      "key": "amount_involved",
+      "name": "AMOUNT INVOLVED",
+      "payload_key": "AMOUNT INVOLVED",
+      "type": "number",
+      "required": false,
+      "description": "Amount involved in Kenyan currency (KES)",
+      "example": "10,000.00"
+    },
+    {
+      "key": "actual_amount_of_loss",
+      "name": "ACTUAL AMOUNT OF LOSS",
+      "payload_key": "ACTUAL AMOUNT OF LOSS",
+      "type": "number",
+      "required": false,
+      "description": "The actual amount lost",
+      "example": "0.00"
+    },
+    {
+      "key": "steps_taken_action",
+      "name": "STEPS TAKEN (ACTION)",
+      "payload_key": "STEPS TAKEN",
+      "type": "string",
+      "required": false,
+      "description": "Details of the actions taken.",
+      "example": "Report the incident to BFID for investigations"
+    }
+  ]
+}

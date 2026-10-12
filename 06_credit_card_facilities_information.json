@@ -1,0 +1,124 @@
+{
+  "number": 6,
+  "code": "credit_card_facilities_information",
+  "title": "Credit Card Facilities Information",
+  "group": "Cards",
+  "frequency": "periodic",
+  "endpoint": "/api/v1/flows/rest/API_CREDITCARDFACILI/1.0/submitCreditCardFacilitiesInfo",
+  "array_key": "CREDIT_CARD_FAC_INFO",
+  "notes": "",
+  "source_pages": [
+    34,
+    39
+  ],
+  "fields": [
+    {
+      "key": "row_id",
+      "name": "ROW ID",
+      "payload_key": "ROW ID",
+      "type": "number",
+      "required": true,
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1"
+    },
+    {
+      "key": "bank_code",
+      "name": "BANK CODE",
+      "payload_key": "BANK CODE",
+      "type": "string",
+      "required": false,
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
+      "example": "0000001"
+    },
+    {
+      "key": "business_reporting_day_month_year",
+      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
+      "payload_key": "REPORTING DATE",
+      "type": "date",
+      "required": true,
+      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM- YYYY}",
+      "example": "03-May-2022"
+    },
+    {
+      "key": "currency_code",
+      "name": "CURRENCY CODE",
+      "payload_key": "CURRENCY CODE",
+      "type": "string",
+      "required": false,
+      "description": "ISO currency codes as per ISO-4217. {e.g. USD, GPB, EUR, KES. etc.}",
+      "example": "GBP"
+    },
+    {
+      "key": "total_number_of_active_credit_card",
+      "name": "TOTAL NUMBER OF ACTIVE CREDIT CARD",
+      "payload_key": "TOTAL NO OF ACTIVE CREDIT CARD",
+      "type": "number",
+      "required": false,
+      "description": "Total count of the number of active credit cards.",
+      "example": "11,000,000.00"
+    },
+    {
+      "key": "total_credit_card_limits_in_fcy",
+      "name": "TOTAL CREDIT CARD LIMITS IN FCY",
+      "payload_key": "TOTAL CREDIT CARD LIMIT IN FCY",
+      "type": "number",
+      "required": false,
+      "description": "Total amount of credit card limits in foreign currency",
+      "example": "11,000,000.00"
+    },
+    {
+      "key": "total_credit_card_limits_in_lcy_equivalent",
+      "name": "TOTAL CREDIT CARD LIMITS IN LCY EQUIVALENT",
+      "payload_key": "TOTAL CREDIT CARD LIMIT IN LCY",
+      "type": "number",
+      "required": false,
+      "description": "Total amount of credit card limits in local currency equivalent",
+      "example": "1,463,000,000.00"
+    },
+    {
+      "key": "total_credit_card_amount_utilised_in_fcy",
+      "name": "TOTAL CREDIT CARD AMOUNT UTILISED IN FCY",
+      "payload_key": "TOTAL CREDIT CARD AMT UTIL FCY",
+      "type": "number",
+      "required": false,
+      "description": "Amount Utilised in foreign currency as at the reporting date",
+      "example": "6,575,000"
+    },
+    {
+      "key": "total_credit_card_amount_utilised_in_lcy_equivalent",
+      "name": "TOTAL CREDIT CARD AMOUNT UTILISED IN LCY EQUIVALENT",
+      "payload_key": "TOTAL CREDIT CARD AMT UTIL LCY",
+      "type": "number",
+      "required": false,
+      "description": "Amount Utilised in local currency equivalent as at the reporting date",
+      "example": "874,475,000"
+    },
+    {
+      "key": "total_non_performing_credit_card_amount_in_fcy",
+      "name": "TOTAL NON-PERFORMING CREDIT CARD AMOUNT IN FCY",
+      "payload_key": "TOTAL NP CREDIT CARD AMT FCY",
+      "type": "number",
+      "required": false,
+      "description": "Total amount in foreign currency of non- performing credit cards.",
+      "example": "11,000,000"
+    },
+    {
+      "key": "total_non_performing_credit_card_amount_in_lcy_equivqlent",
+      "name": "TOTAL NON-PERFORMING CREDIT CARD AMOUNT IN LCY EQUIVQLENT",
+      "payload_key": "TOTAL NP CREDIT CARD AMT LCY",
+      "type": "number",
+      "required": false,
+      "description": "Total amount in foreign currency of non- performing credit cards.",
+      "example": "1,463,000,000"
+    },
+    {
+      "key": "customer_category",
+      "name": "CUSTOMER CATEGORY",
+      "payload_key": "CUSTOMER CATEGORY",
+      "type": "string",
+      "required": false,
+      "description": "Appears in CBK's sample payload but not in the field table.",
+      "example": ""
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "number": 36,
+  "code": "credit_report_requests_information",
+  "title": "Credit Report Requests Information",
+  "group": "Credit Reference Bureau",
+  "frequency": "periodic",
+  "endpoint": "/api/v1/flows/rest/API_TERMINALSINFORMA/1.0/submitTerminalsInfo",
+  "array_key": "CREDIT_REPORT_REQ_INFO",
+  "notes": "The guide gives this dataset the Terminals Information endpoint (#26). Confirm the correct endpoint with CBK.",
+  "source_pages": [
+    182,
+    186
+  ],
+  "fields": [
+    {
+      "key": "row_id",
+      "name": "ROW ID",
+      "payload_key": "ROW ID ",
+      "type": "number",
+      "required": true,
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "2"
+    },
+    {
+      "key": "crbcode",
+      "name": "CRBCODE",
+      "payload_key": "CRB CODE",
+      "type": "string",
+      "required": false,
+      "description": "The code the reporting Credit Reference Bureau (E.g. XYZ 060002)",
+      "example": "0600002"
+    },
+    {
+      "key": "reporting_date",
+      "name": "REPORTING DATE",
+      "payload_key": "REPORTING DATE",
+      "type": "date",
+      "required": true,
+      "description": "The reporting date, Month & Year based on the frequency.",
+      "example": "6/3/2020"
+    },
+    {
+      "key": "credit_reference_request_cat",
+      "name": "CREDIT REFERENCE REQUEST CAT",
+      "payload_key": "CREDIT REFERENCE REQUEST CAT",
+      "type": "date",
+      "required": false,
+      "description": "Credit reports requested by individual customers or others",
+      "example": "CRBCUST01"
+    },
+    {
+      "key": "institution_category",
+      "name": "INSTITUTION CATEGORY",
+      "payload_key": "INSTITUTION CATEGORY",
+      "type": "string",
+      "required": false,
+      "description": "Category of instutition. E.g. Comercial Banks, Microfinance Banks, DBFB Banks, Regulated Saccos, Unregulated Saccos, etc. Madatory for 'Non-Individuals, otherwise left blank.",
+      "example": "CRBSBIC02"
+    },
+    {
+      "key": "institution_code",
+      "name": "INSTITUTION CODE",
+      "payload_key": "INSTITUTION CODE",
+      "type": "string",
+      "required": false,
+      "description": "The code of the institution making credit report requests, otherwise left blank for individuals. Madatory for 'Non-Individuals, otherwise left blank.",
+      "example": ""
+    },
+    {
+      "key": "no_of_credit_report_requested",
+      "name": "NO OF CREDIT REPORT REQUESTED",
+      "payload_key": "NO OF CREDIT REPORT REQUESTED",
+      "type": "string",
+      "required": false,
+      "description": "Total number of credit reports requested",
+      "example": "980"
+    },
+    {
+      "key": "cat_reason_credit_report_req",
+      "name": "CAT REASON CREDIT REPORT REQ",
+      "payload_key": "CAT REASON CREDIT REPORT REQ",
+      "type": "string",
+      "required": false,
+      "description": "Reason for credit report request e.g lending, due to adverse action etc",
+      "example": "CRBCRPT04"
+    },
+    {
+      "key": "no_free_cr_report_prov_to_cust",
+      "name": "NO FREE CR REPORT PROV TO CUST",
+      "payload_key": "NO FREE CR REPORT PROV TO CUST",
+      "type": "string",
+      "required": false,
+      "description": "Total number of credit reports provided to customers for free",
+      "example": "200"
+    }
+  ]
+}

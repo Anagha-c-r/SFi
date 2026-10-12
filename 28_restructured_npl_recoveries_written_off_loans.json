@@ -1,0 +1,241 @@
+{
+  "number": 28,
+  "code": "restructured_npl_recoveries_written_off_loans",
+  "title": "Restructured. NPL Recoveries & Written-off Loans",
+  "group": "Credit & Loans",
+  "frequency": "periodic",
+  "endpoint": "/api/v1/flows/rest/API_LOANSINFORMATIONSYNC/1.0/submitLoanInfo",
+  "array_key": "LOANS_INFO_DATA",
+  "notes": "",
+  "source_pages": [
+    143,
+    148
+  ],
+  "fields": [
+    {
+      "key": "row_id",
+      "name": "ROW ID",
+      "payload_key": "ROW ID",
+      "type": "number",
+      "required": true,
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1"
+    },
+    {
+      "key": "bank_code",
+      "name": "BANK CODE",
+      "payload_key": "BANK CODE",
+      "type": "string",
+      "required": false,
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
+      "example": "0000001"
+    },
+    {
+      "key": "branch_id",
+      "name": "BRANCH ID",
+      "payload_key": "BRANCH ID",
+      "type": "string",
+      "required": false,
+      "description": "Branch code where the account was opened/operated from.",
+      "example": "003"
+    },
+    {
+      "key": "business_reporting_day_month_year",
+      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
+      "payload_key": "REPORTING DATE",
+      "type": "date",
+      "required": true,
+      "description": "Date of report submission. Format {DD-MMM-YYYY}",
+      "example": "5-Jun-22"
+    },
+    {
+      "key": "customer_id",
+      "name": "CUSTOMER ID",
+      "payload_key": "CUSTOMER ID",
+      "type": "string",
+      "required": false,
+      "description": "Customer unique id linked to the restructured Loan",
+      "example": "354678"
+    },
+    {
+      "key": "account_number_loan_id",
+      "name": "ACCOUNT NUMBER/LOAN ID",
+      "payload_key": "ACCOUNT NUMBER",
+      "type": "string",
+      "required": false,
+      "description": "Loan account identifier number",
+      "example": "LID0007655"
+    },
+    {
+      "key": "loans_written_off_restructured_loans_npls_recovery_flag",
+      "name": "LOANS WRITTEN- OFF/RESTRUCTURED LOANS/NPLS RECOVERY FLAG",
+      "payload_key": "WRTN OFF RESTRD NPLS REC FLAG",
+      "type": "string",
+      "required": false,
+      "description": "A flag on whether the credit facility details being submitted are for a Write-Off, Restructure or the Recovery of Non- performing Loans",
+      "example": "LAC01"
+    },
+    {
+      "key": "description_of_reason_for_restructure",
+      "name": "DESCRIPTION OF REASON FOR RESTRUCTURE",
+      "payload_key": "RESTRUCTURE REASON",
+      "type": "string",
+      "required": false,
+      "description": "As per CBK Prudential Guidelines",
+      "example": "Business Performance Decline"
+    },
+    {
+      "key": "date_when_the_loan_was_restructured",
+      "name": "DATE WHEN THE LOAN WAS RESTRUCTURED",
+      "payload_key": "RESTRUCTURED DATE",
+      "type": "date",
+      "required": false,
+      "description": "Date when the loan facility was restructured. Format {DD- MMM-YYYY}",
+      "example": "5-Jun-22"
+    },
+    {
+      "key": "currency_code",
+      "name": "CURRENCY CODE",
+      "payload_key": "CURRENCY CODE",
+      "type": "string",
+      "required": false,
+      "description": "ISO currency codes as per ISO-4217. {e.g. USD, GPB, EUR, KES. etc.}",
+      "example": "GBP"
+    },
+    {
+      "key": "loan_restructured_amount_in_ccy_outstanding",
+      "name": "LOAN RESTRUCTURED AMOUNT IN CCY (OUTSTANDING)",
+      "payload_key": "LOAN RESTR AMOUNT IN CCY",
+      "type": "number",
+      "required": false,
+      "description": "Loan Restructured Amount in the transacting currency (Outstanding)",
+      "example": "8000"
+    },
+    {
+      "key": "loan_performance_classification",
+      "name": "LOAN PERFORMANCE CLASSIFICATION",
+      "payload_key": "LOAN PERFORMANCE CLASS",
+      "type": "string",
+      "required": false,
+      "description": "Normal, watch, substandard, doubtful and loss classification as CBK's prudential guidelines.",
+      "example": "LNPC02"
+    },
+    {
+      "key": "nature_of_restructure",
+      "name": "NATURE OF RESTRUCTURE",
+      "payload_key": "NATURE OF RESTRUCTURE",
+      "type": "string",
+      "required": false,
+      "description": "Specific element that was modified. E.g. {Principal Loan Amount, Loan Tenure/Maturity, Interest Rate, Fees, Moratorium on Principal, Moratorium on Interest, Interest Rate Freeze, Freeze on fees, etc}.",
+      "example": "LNRSTRIC01"
+    },
+    {
+      "key": "restructured_more_than_once_flag_y_n",
+      "name": "RESTRUCTURED MORE THAN ONCE FLAG (Y/N)",
+      "payload_key": "RESTRUCTURED MORE THAN ONCE",
+      "type": "string",
+      "required": false,
+      "description": "Flag for the frequency of restructure {Y if the facility is restured more than once and N if the facility is only restructured once}",
+      "example": "Y"
+    },
+    {
+      "key": "number_of_times_restructured",
+      "name": "NUMBER OF TIMES RESTRUCTURED",
+      "payload_key": "NUMBER OF TIMES RESTRUCTURED",
+      "type": "number",
+      "required": false,
+      "description": "Number of times that the credit facility has been retructured.",
+      "example": "1"
+    },
+    {
+      "key": "loan_written_off_or_written_down_amount_principal",
+      "name": "LOAN WRITTEN-OFF OR WRITTEN-DOWN AMOUNT (PRINCIPAL)",
+      "payload_key": "LOAN WRITTEN OFF DOWN AMOUNT",
+      "type": "number",
+      "required": false,
+      "description": "Loan amount written-down or written-off in local currency",
+      "example": "950000"
+    },
+    {
+      "key": "description_of_reason_for_write_off",
+      "name": "DESCRIPTION OF REASON FOR WRITE- OFF",
+      "payload_key": "WRITE OFF REASON",
+      "type": "string",
+      "required": false,
+      "description": "As per CBK Prudential Guidelines",
+      "example": "Unrecoverable outstanding amount"
+    },
+    {
+      "key": "date_when_the_loan_was_written_off_written_down",
+      "name": "DATE WHEN THE LOAN WAS WRITTEN- OFF/WRITTEN-DOWN",
+      "payload_key": "WRITTEN OFF DOWN DATE",
+      "type": "date",
+      "required": false,
+      "description": "Date of the transaction. Format {DD-MMM-YYYY}",
+      "example": "5-Jun-22"
+    },
+    {
+      "key": "total_exposure_principal",
+      "name": "TOTAL EXPOSURE - PRINCIPAL",
+      "payload_key": "TOTAL EXPOSURE PRINCIPAL",
+      "type": "number",
+      "required": false,
+      "description": "Total Exposures as at reporting date – Principal in local currency",
+      "example": "65000"
+    },
+    {
+      "key": "total_exposure_interest",
+      "name": "TOTAL EXPOSURE - INTEREST",
+      "payload_key": "TOTAL EXPOSURE INTEREST",
+      "type": "number",
+      "required": false,
+      "description": "Total Exposures as reporting date – Interest in local currency",
+      "example": "65000"
+    },
+    {
+      "key": "recovery_principal_amount",
+      "name": "RECOVERY PRINCIPAL AMOUNT",
+      "payload_key": "RECOVERY PRINCIPAL AMOUNT",
+      "type": "number",
+      "required": false,
+      "description": "Recovered Amounts current month – Principal in local currency",
+      "example": "65000"
+    },
+    {
+      "key": "recovery_interest_amount",
+      "name": "RECOVERY INTEREST AMOUNT",
+      "payload_key": "RECOVERY INTEREST AMOUNT",
+      "type": "number",
+      "required": false,
+      "description": "Recovered Amounts current month – Interest in local currency",
+      "example": "65000"
+    },
+    {
+      "key": "date_of_recovery",
+      "name": "DATE OF RECOVERY",
+      "payload_key": "RECOVERY DATE",
+      "type": "date",
+      "required": false,
+      "description": "Last date of loan recovery or paid-off",
+      "example": "5-Jun-22"
+    },
+    {
+      "key": "delinquency_reason",
+      "name": "DELINQUENCY REASON",
+      "payload_key": "DELINQUENCY REASON",
+      "type": "string",
+      "required": false,
+      "description": "Narration on the reason for defaulting",
+      "example": "Lost employment"
+    },
+    {
+      "key": "recovery_action",
+      "name": "RECOVERY ACTION",
+      "payload_key": "RECOVERY ACTION",
+      "type": "string",
+      "required": false,
+      "description": "Recovery action taken",
+      "example": "Interest acrrual suspended"
+    }
+  ]
+}

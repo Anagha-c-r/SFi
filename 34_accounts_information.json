@@ -1,0 +1,160 @@
+{
+  "number": 34,
+  "code": "accounts_information",
+  "title": "Accounts Information",
+  "group": "Accounts & Deposits",
+  "frequency": "periodic",
+  "endpoint": "/api/v1/flows/rest/API_CRPSACCOUNTSINFORMATIONSYNC/1.0/submitCRPsAccountsInformation",
+  "array_key": "CRPS_ACCOUNTS_INFORMATION",
+  "notes": "",
+  "source_pages": [
+    170,
+    176
+  ],
+  "fields": [
+    {
+      "key": "row_id",
+      "name": "ROW ID",
+      "payload_key": "ROW ID",
+      "type": "number",
+      "required": true,
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1"
+    },
+    {
+      "key": "credit_reference_bureau_code",
+      "name": "CREDIT REFERENCE BUREAU CODE",
+      "payload_key": "CREDIT REFERENCE BUREAU CODE",
+      "type": "string",
+      "required": false,
+      "description": "The code the reporting Credit Reference Bureau (E.g. XYZ 060002)",
+      "example": "0600002"
+    },
+    {
+      "key": "business_reporting_date",
+      "name": "BUSINESS REPORTING DATE",
+      "payload_key": "BUSINESS REPORTING DAY, MONTH & YEAR",
+      "type": "date",
+      "required": true,
+      "description": "The reporting date, Month & Year based on the frequency.",
+      "example": "6/3/2020"
+    },
+    {
+      "key": "category_of_institution",
+      "name": "CATEGORY OF INSTITUTION",
+      "payload_key": "CATEGORY OF INSTITUTION",
+      "type": "string",
+      "required": false,
+      "description": "Category of instutition. E.g. Comercial Banks, Microfinance Banks, DBFB Banks, Regulated Saccos, and Other 3rd Party Data Sources such as Unregulated Saccos, Insurance Companies, etc",
+      "example": "CRBSBIC01"
+    },
+    {
+      "key": "submitting_institution_code",
+      "name": "SUBMITTING INSTITUTION CODE",
+      "payload_key": "SUBMITTING INSTITUTION CODE",
+      "type": "string",
+      "required": false,
+      "description": "Institution Code of the submitting instutition. E.g. Bank code issued by KBA (e.g. KCB = 01) for Commercial Banks.",
+      "example": "11"
+    },
+    {
+      "key": "account_holder_category_type",
+      "name": "ACCOUNT HOLDER CATEGORY TYPE",
+      "payload_key": "ACCOUNT HOLDER CATEGORY TYPE",
+      "type": "string",
+      "required": false,
+      "description": "Category of account holder e.g Non- financial Corporations, Financial Corporations, General Government, Households and Non- Profit Institutions serving household.",
+      "example": "CRBAHC02"
+    },
+    {
+      "key": "adverse_listing_flag",
+      "name": "ADVERSE LISTING FLAG",
+      "payload_key": "ADVERSE LISTING FLAG",
+      "type": "string",
+      "required": false,
+      "description": "Whether a record has an adverse listing or not (Y/N)",
+      "example": "Y"
+    },
+    {
+      "key": "account_product_type",
+      "name": "ACCOUNT PRODUCT TYPE",
+      "payload_key": "ACCOUNT PRODUCT TYPE",
+      "type": "string",
+      "required": false,
+      "description": "Category of product e.g Overdraft, Credit Card, Mortgage, Asset Finance, Business Expansion, Business Working Capital, Trade Finance, Mobile Loan etc.",
+      "example": "LNPRD04"
+    },
+    {
+      "key": "loan_facility_status",
+      "name": "LOAN FACILITY STATUS",
+      "payload_key": "LOAN FACILITY STATUS",
+      "type": "string",
+      "required": false,
+      "description": "Status of account, whether closed, dormant, active, written-off, under litigation, under collection, early settlement, with extended terms, fully settled, revoked or suspended.",
+      "example": "CRBLFST02"
+    },
+    {
+      "key": "no_of_unique_borrowers",
+      "name": "NO OF UNIQUE BORROWERS",
+      "payload_key": "NO OF UNIQUE BORROWERS",
+      "type": "string",
+      "required": false,
+      "description": "Number of uniquely identifiable borrowers",
+      "example": "120"
+    },
+    {
+      "key": "no_of_unique_accounts",
+      "name": "NO OF UNIQUE ACCOUNTS",
+      "payload_key": "NO OF RECORDS (ACCOUNTS)",
+      "type": "string",
+      "required": false,
+      "description": "Number of account records held based on uniquely identifiable borrowers",
+      "example": "650"
+    },
+    {
+      "key": "report_view_flag",
+      "name": "REPORT VIEW FLAG",
+      "payload_key": "REPORT VIEW FLAG",
+      "type": "string",
+      "required": false,
+      "description": "The flag establishes the view for the records, either by 'Product Type', 'Sector', 'Amount Bands' or 'Aging Bands'",
+      "example": "RPTV01"
+    },
+    {
+      "key": "sector_code",
+      "name": "SECTOR CODE",
+      "payload_key": "SECTOR CODE",
+      "type": "string",
+      "required": false,
+      "description": "International Standard Classification of Economic Activies (ISIC) code for section. E.g 'A' to denote 'Agriculture, forestry and fishing'.",
+      "example": "A"
+    },
+    {
+      "key": "amount_band_category",
+      "name": "AMOUNT BAND CATEGORY",
+      "payload_key": "AMOUNT BAND CATEGORY",
+      "type": "string",
+      "required": false,
+      "description": "The loan principal amounts grouped into bands of {<= 1000, > 1000 <= 100,000, > 100,000 <= 1,000,0000, > 1,000,0000 <= 5,000,000 and > 5,000,000}",
+      "example": "CRBACBC03"
+    },
+    {
+      "key": "aging",
+      "name": "AGING",
+      "payload_key": "AGING",
+      "type": "string",
+      "required": false,
+      "description": "Aging band {0 >= 90, >90 and <=180, >180 and <=360 and Over 360 days.",
+      "example": "CRBAG03"
+    },
+    {
+      "key": "value_of_records",
+      "name": "VALUE OF RECORDS",
+      "payload_key": "VALUE OF RECORDS",
+      "type": "string",
+      "required": false,
+      "description": "Account balance aggregated based on the number of uniquely identifiable customers and the associated band.",
+      "example": "12653575.12345"
+    }
+  ]
+}

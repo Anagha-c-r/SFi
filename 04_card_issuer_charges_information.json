@@ -1,0 +1,88 @@
+{
+  "number": 4,
+  "code": "card_issuer_charges_information",
+  "title": "Card Issuer Charges Information",
+  "group": "Cards",
+  "frequency": "periodic",
+  "endpoint": "/api/v1/flows/rest/API_CARDISSUERCHARGESSYNC/1.0/submitCardIssuerChargesInfo",
+  "array_key": "CARD_ISSUER_CHARGES_INFO",
+  "notes": "",
+  "source_pages": [
+    26,
+    30
+  ],
+  "fields": [
+    {
+      "key": "row_id",
+      "name": "ROW ID",
+      "payload_key": "ROW ID",
+      "type": "number",
+      "required": true,
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1"
+    },
+    {
+      "key": "bank_code",
+      "name": "BANK CODE",
+      "payload_key": "BANK CODE",
+      "type": "string",
+      "required": false,
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
+      "example": "0000001"
+    },
+    {
+      "key": "business_reporting_day_month_year",
+      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
+      "payload_key": "REPORTING DATE",
+      "type": "date",
+      "required": true,
+      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY}",
+      "example": "03-May-2022"
+    },
+    {
+      "key": "card_category",
+      "name": "CARD CATEGORY",
+      "payload_key": "CARD CATEGORY",
+      "type": "string",
+      "required": false,
+      "description": "E.g. Local, international, etc.",
+      "example": "L"
+    },
+    {
+      "key": "card_type",
+      "name": "CARD TYPE",
+      "payload_key": "CARD TYPE",
+      "type": "string",
+      "required": false,
+      "description": "E.g. debit, credit, prepaid, charge, etc.",
+      "example": "CTC03"
+    },
+    {
+      "key": "card_class",
+      "name": "CARD CLASS",
+      "payload_key": "CARD CLASS",
+      "type": "string",
+      "required": false,
+      "description": "E.g. gold, platinum, classic, other",
+      "example": "CDC03"
+    },
+    {
+      "key": "card_charge_type",
+      "name": "CARD CHARGE TYPE",
+      "payload_key": "CARD CHARGE TYPE",
+      "type": "string",
+      "required": false,
+      "description": "The type of charge {e.g. Joining fee, ATM withdrawal fee, issuance fee, etc}",
+      "example": "CDCT08"
+    },
+    {
+      "key": "card_fee_charge_amount",
+      "name": "CARD FEE CHARGE AMOUNT",
+      "payload_key": "CARD FEE_CHARGE AMOUNT",
+      "type": "number",
+      "required": false,
+      "description": "The fee charge amount associated with the type of charge",
+      "example": "30"
+    }
+  ]
+}

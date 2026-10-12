@@ -1,0 +1,97 @@
+{
+  "number": 30,
+  "code": "weekly_cash_holdings",
+  "title": "Weekly Cash Holdings",
+  "group": "Cash",
+  "frequency": "weekly",
+  "endpoint": "/api/v1/flows/rest/API_WKLYCASHHOLDINSYNC/1.0/submitWklyCashHoldin",
+  "array_key": "WEEKLY_CASH_HOLDINGS_INFO",
+  "notes": "",
+  "source_pages": [
+    153,
+    157
+  ],
+  "fields": [
+    {
+      "key": "row_id",
+      "name": "ROW ID",
+      "payload_key": "ROW ID",
+      "type": "number",
+      "required": true,
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1"
+    },
+    {
+      "key": "bank_code",
+      "name": "BANK CODE",
+      "payload_key": "BANK CODE",
+      "type": "string",
+      "required": false,
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
+      "example": "0000001"
+    },
+    {
+      "key": "branch_id",
+      "name": "BRANCH ID",
+      "payload_key": "BRANCH ID",
+      "type": "string",
+      "required": false,
+      "description": "Branch id of the reporting branch",
+      "example": "003"
+    },
+    {
+      "key": "business_reporting_day_month_year",
+      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
+      "payload_key": "BUSINESS REPORTING DAY, MONTH & YEAR",
+      "type": "date",
+      "required": true,
+      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY}",
+      "example": "05-May-2022"
+    },
+    {
+      "key": "sub_county_id",
+      "name": "SUB COUNTY ID",
+      "payload_key": "SUB COUNTY ID",
+      "type": "string",
+      "required": false,
+      "description": "SUB County code of the county where the reporting branch is located",
+      "example": "101"
+    },
+    {
+      "key": "currency_code",
+      "name": "CURRENCY CODE",
+      "payload_key": "CURRENCY CODE",
+      "type": "string",
+      "required": false,
+      "description": "ISO currency codes as per ISO-4217. {e.g. USD, GPB, EUR, KES. etc.}",
+      "example": "KES"
+    },
+    {
+      "key": "denomination",
+      "name": "DENOMINATION",
+      "payload_key": "DENOMINATION",
+      "type": "string",
+      "required": false,
+      "description": "Notes and coins per the denominations of Kenyan currency {1,2,3,…….n}",
+      "example": "KESB1000"
+    },
+    {
+      "key": "fit_units",
+      "name": "FIT UNITS",
+      "payload_key": "FIT UNITS",
+      "type": "number",
+      "required": false,
+      "description": "No of pieces/ units held of fit currency. The default value is zero (0) in case of no value exists.",
+      "example": "100000"
+    },
+    {
+      "key": "unfit_units",
+      "name": "UNFIT UNITS",
+      "payload_key": "UNFIT UNITS",
+      "type": "number",
+      "required": false,
+      "description": "No of pieces/ units held of unfit currency.The default value is zero (0) in case of no value exists.",
+      "example": "25000000.00"
+    }
+  ]
+}

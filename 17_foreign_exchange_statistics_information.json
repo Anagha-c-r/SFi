@@ -1,0 +1,259 @@
+{
+  "number": 17,
+  "code": "foreign_exchange_statistics_information",
+  "title": "Foreign Exchange Statistics Information",
+  "group": "Forex & Remittances",
+  "frequency": "periodic",
+  "endpoint": "/api/v1/flows/rest/API_FOREXSTATISTICSS/1.0/ForexStatisticsInfo",
+  "array_key": "FOREXSTATISTICS_DATA",
+  "notes": "",
+  "source_pages": [
+    87,
+    94
+  ],
+  "fields": [
+    {
+      "key": "row_id",
+      "name": "ROW ID",
+      "payload_key": "ROW ID",
+      "type": "string",
+      "required": true,
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1"
+    },
+    {
+      "key": "bank_code",
+      "name": "BANK CODE",
+      "payload_key": "BANK CODE",
+      "type": "string",
+      "required": false,
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA).",
+      "example": "0000001"
+    },
+    {
+      "key": "branch_id",
+      "name": "BRANCH ID",
+      "payload_key": "BRANCH ID",
+      "type": "date",
+      "required": false,
+      "description": "Branch id of the reporting branch",
+      "example": "003"
+    },
+    {
+      "key": "reporting_date",
+      "name": "REPORTING DATE",
+      "payload_key": "REPORTING DATE",
+      "type": "date",
+      "required": true,
+      "description": "The reporting date, Month & Year based on the frequency. Format {DD- MMM-YYYY}",
+      "example": "6/3/2020"
+    },
+    {
+      "key": "customer_id",
+      "name": "CUSTOMER ID",
+      "payload_key": "CUSTOMER ID",
+      "type": "string",
+      "required": false,
+      "description": "Customer unique id linked to the account.",
+      "example": "0354678"
+    },
+    {
+      "key": "customer_name",
+      "name": "CUSTOMER NAME",
+      "payload_key": "CUSTOMER NAME",
+      "type": "string",
+      "required": false,
+      "description": "Customer's First Name, Middle Name and Sir Name or registered company Name or Business/Trading Name.",
+      "example": "A.N. OTHER"
+    },
+    {
+      "key": "id_number",
+      "name": "ID NUMBER",
+      "payload_key": "ID NUMBER",
+      "type": "string",
+      "required": false,
+      "description": "Unique number issued to Kenyans that are 18 years and above.",
+      "example": "11453678"
+    },
+    {
+      "key": "fx_customer_type",
+      "name": "FX CUSTOMER TYPE",
+      "payload_key": "FX CUSTOMER TYPE",
+      "type": "string",
+      "required": false,
+      "description": "e.g. Individual, Public financial corporations, Banking Institutions, etc",
+      "example": "FXCT01"
+    },
+    {
+      "key": "business_date",
+      "name": "BUSINESS DATE",
+      "payload_key": "BUSINESS DATE",
+      "type": "date",
+      "required": false,
+      "description": "The date of the transaction. Format {YYYYMMDD} as per ISO 8601.",
+      "example": "5/28/2020"
+    },
+    {
+      "key": "txn_ref_number",
+      "name": "TXN REF NUMBER",
+      "payload_key": "TXN REF NUMBER",
+      "type": "string",
+      "required": false,
+      "description": "Unique number reference for the transaction",
+      "example": "FX0980000"
+    },
+    {
+      "key": "transaction_type",
+      "name": "TRANSACTION TYPE",
+      "payload_key": "TRANSACTION TYPE",
+      "type": "string",
+      "required": false,
+      "description": "Whether the transaction is a 'Receipt' or 'Payment'",
+      "example": "FXTTC03"
+    },
+    {
+      "key": "txn_currency_code",
+      "name": "TXN CURRENCY CODE",
+      "payload_key": "TXN CURRENCY CODE",
+      "type": "string",
+      "required": false,
+      "description": "ISO currency codes as per ISO-4217. {e.g. USD, GPB, EUR, KES. etc.}",
+      "example": "AUD"
+    },
+    {
+      "key": "amount_in_txn_currency",
+      "name": "AMOUNT IN TXN CURRENCY",
+      "payload_key": "AMOUNT IN TXN CURRENCY",
+      "type": "string",
+      "required": false,
+      "description": "Amount in transaction currency",
+      "example": "5000"
+    },
+    {
+      "key": "amnt_in_local_cur_eqv",
+      "name": "AMNT IN LOCAL CUR EQV",
+      "payload_key": "AMNT IN LOCAL CUR EQV",
+      "type": "string",
+      "required": false,
+      "description": "Corresponding local currency equivalent",
+      "example": "390941.89"
+    },
+    {
+      "key": "fx_txn_category_type",
+      "name": "FX TXN CATEGORY TYPE",
+      "payload_key": "FX TXN CATEGORY TYPE",
+      "type": "string",
+      "required": false,
+      "description": "e.g. SPOT, FORWARD, etc",
+      "example": "FXT01"
+    },
+    {
+      "key": "local_cur_fx_rate_type",
+      "name": "LOCAL CUR FX RATE TYPE",
+      "payload_key": "LOCAL CUR FX RATE TYPE",
+      "type": "string",
+      "required": false,
+      "description": "SPOT or FORWARD",
+      "example": "FXRT03"
+    },
+    {
+      "key": "usd_cross_rate",
+      "name": "USD CROSS RATE",
+      "payload_key": "USD CROSS RATE",
+      "type": "string",
+      "required": false,
+      "description": "Cross rate of currencies against USD. The USD mean rate for the reporting date as provided by CBK to the reporting institutions.",
+      "example": "1.26"
+    },
+    {
+      "key": "txn_charge_cost_in_kes",
+      "name": "TXN CHARGE_COST IN KES",
+      "payload_key": "TXN CHARGE COST IN KES",
+      "type": "string",
+      "required": false,
+      "description": "Total charge/cost levied on the transaction",
+      "example": "650"
+    },
+    {
+      "key": "fx_txn_channel_type",
+      "name": "FX TXN CHANNEL TYPE",
+      "payload_key": "FX TXN CHANNEL TYPE",
+      "type": "string",
+      "required": false,
+      "description": "The channel used for the receipt/payment of foreign currency",
+      "example": "FXTCH07"
+    },
+    {
+      "key": "economic_activity_code_isic",
+      "name": "ECONOMIC ACTIVITY CODE_ISIC",
+      "payload_key": "ECONOMIC ACTIVITY CODE ISIC",
+      "type": "string",
+      "required": false,
+      "description": "Section, division, group and class as per ISIC guidelines",
+      "example": "J6010"
+    },
+    {
+      "key": "senders_description",
+      "name": "SENDERS DESCRIPTION",
+      "payload_key": "SENDERS DESCRIPTION",
+      "type": "string",
+      "required": false,
+      "description": "Description of the sender for 'Receipts' otherwise left blank for 'Payments'",
+      "example": ""
+    },
+    {
+      "key": "fxsm_domain_attribute",
+      "name": "FXSM DOMAIN ATTRIBUTE",
+      "payload_key": "FXSM DOMAIN ATTRIBUTE",
+      "type": "string",
+      "required": false,
+      "description": "Proceeds from exports of (economic activity description (As per ISIC guidelines), travel services, transportation services, insurance services, communication services, royalties and license fees, investment incomes, embassies, grants, non- official aid, direct investments, portfolio investments, loans received, Kenyan forex bureaus, in transit customer receipts between Kenyan banks and other capital receipts.",
+      "example": ""
+    },
+    {
+      "key": "nationality",
+      "name": "NATIONALITY",
+      "payload_key": "NATIONALITY",
+      "type": "string",
+      "required": false,
+      "description": "ISO country code of the party's Nationality. {As per ISO-3166-1}",
+      "example": "KE"
+    },
+    {
+      "key": "senders_residency",
+      "name": "SENDERS RESIDENCY",
+      "payload_key": "SENDERS RESIDENCY",
+      "type": "string",
+      "required": false,
+      "description": "Resident (Kenya) or Non- resident (Rest of the world). ISO country code of the party's Nationality. {As per ISO-3166-1}.",
+      "example": "AU"
+    },
+    {
+      "key": "receivers_residency",
+      "name": "RECEIVERS RESIDENCY",
+      "payload_key": "RECEIVERS RESIDENCY",
+      "type": "string",
+      "required": false,
+      "description": "Resident (Kenya) or Non- resident (Rest of the world). ISO country code of the party's Nationality. {As per ISO-3166-1}.",
+      "example": "KE"
+    },
+    {
+      "key": "country_of_origin",
+      "name": "COUNTRY OF ORIGIN",
+      "payload_key": "COUNTRY OF ORIGIN",
+      "type": "string",
+      "required": false,
+      "description": "ISO country code of the country of origin. {As per ISO-3166-1}",
+      "example": "AU"
+    },
+    {
+      "key": "country_of_destination",
+      "name": "COUNTRY OF DESTINATION",
+      "payload_key": "COUNTRY OF DESTINATION",
+      "type": "string",
+      "required": false,
+      "description": "ISO country code of the country of destination. {As per ISO-3166-1}",
+      "example": "KE"
+    }
+  ]
+}

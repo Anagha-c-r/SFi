@@ -1,0 +1,106 @@
+{
+  "number": 9,
+  "code": "accounts_balances",
+  "title": "Accounts Balances",
+  "group": "Accounts & Deposits",
+  "frequency": "periodic",
+  "endpoint": "/api/v1/flows/rest/API_ACCOUNTBALANCESSYNC/1.0/submitAccountsBalances",
+  "array_key": "ACCOUNTS_BALANCES",
+  "notes": "",
+  "source_pages": [
+    48,
+    52
+  ],
+  "fields": [
+    {
+      "key": "row_id",
+      "name": "ROW ID",
+      "payload_key": "ROW ID",
+      "type": "number",
+      "required": true,
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1"
+    },
+    {
+      "key": "bank_code",
+      "name": "BANK CODE",
+      "payload_key": "BANK CODE",
+      "type": "string",
+      "required": false,
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA).",
+      "example": "0000001"
+    },
+    {
+      "key": "branch_id",
+      "name": "BRANCH ID",
+      "payload_key": "BRANCH ID",
+      "type": "string",
+      "required": false,
+      "description": "Branch code where the account was opened/operated from.",
+      "example": "003"
+    },
+    {
+      "key": "business_reporting_day_month_year",
+      "name": "BUSINESS REPORTING DAY, MONTH & YEAR",
+      "payload_key": "BUSINESS REPORTING DAY, MONTH & YEAR",
+      "type": "date",
+      "required": true,
+      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY} as per ISO 8601.",
+      "example": "03-May-2022"
+    },
+    {
+      "key": "customer_id",
+      "name": "CUSTOMER ID",
+      "payload_key": "CUSTOMER ID",
+      "type": "string",
+      "required": false,
+      "description": "Customer unique id linked to the account.",
+      "example": "0354678"
+    },
+    {
+      "key": "account_contract_number",
+      "name": "ACCOUNT/CONTRACT NUMBER",
+      "payload_key": "ACCOUNT/CONTRACT NUMBER",
+      "type": "string",
+      "required": false,
+      "description": "Unique account identifier as assigned to customers' accounts by the reporting institution.",
+      "example": "01A002035467801"
+    },
+    {
+      "key": "accrued_interest_balance_in_ccy",
+      "name": "ACCRUED INTEREST BALANCE IN CCY",
+      "payload_key": "ACCOUNT BALANCE IN ACCOUNT CCY",
+      "type": "number",
+      "required": false,
+      "description": "Accumulated amount of interest that has not yet been applied in the foreign currency.",
+      "example": "325.00"
+    },
+    {
+      "key": "accrued_interest_balance_in_lcy_equivalent",
+      "name": "ACCRUED INTEREST BALANCE IN LCY EQUIVALENT",
+      "payload_key": "ACCOUNT BALANCE IN LCY EQUIVALENT",
+      "type": "number",
+      "required": false,
+      "description": "Accumulated amount of interest that has not yet been applied in the equivalent local currency (LCY).",
+      "example": "48,750.00"
+    },
+    {
+      "key": "account_balance_in_account_ccy",
+      "name": "ACCOUNT BALANCE IN ACCOUNT CCY",
+      "payload_key": "ACCRUED INTEREST BALANCE IN CCY",
+      "type": "number",
+      "required": false,
+      "description": "The balance amount in the account as at close of business for the reporting date in foreign currency .",
+      "example": "1,500.00"
+    },
+    {
+      "key": "account_balance_in_lcy_equivalent",
+      "name": "ACCOUNT BALANCE IN LCY EQUIVALENT",
+      "payload_key": "ACCRUED INTEREST BALANCE IN LCY EQUIVALENT",
+      "type": "number",
+      "required": false,
+      "description": "The balance amount in the account as at close of business for the reporting date in the equivalent local currency (LCY).",
+      "example": "1,500.00"
+    }
+  ]
+}

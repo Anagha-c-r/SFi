@@ -1,0 +1,232 @@
+{
+  "number": 13,
+  "code": "customer_party_information",
+  "title": "Customer(Party) Information",
+  "group": "Customers & Counterparties",
+  "frequency": "periodic",
+  "endpoint": "/api/v1/flows/rest/API_CUSTOMERINFOSYNC/1.0/submitCustomerData",
+  "array_key": "CUSTOMER_DATA",
+  "notes": "",
+  "source_pages": [
+    65,
+    71
+  ],
+  "fields": [
+    {
+      "key": "row_id",
+      "name": "ROW_ID",
+      "payload_key": "ROW ID",
+      "type": "number",
+      "required": true,
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1"
+    },
+    {
+      "key": "bank_code",
+      "name": "BANK CODE",
+      "payload_key": "BANK CODE",
+      "type": "string",
+      "required": false,
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA).",
+      "example": "0000001"
+    },
+    {
+      "key": "branch_id",
+      "name": "BRANCH ID",
+      "payload_key": "BRANCH ID",
+      "type": "string",
+      "required": false,
+      "description": "Assigned code for the branch that onboards the customer (party).",
+      "example": "003"
+    },
+    {
+      "key": "reporting_date",
+      "name": "REPORTING DATE",
+      "payload_key": "REPORTING DATE",
+      "type": "date",
+      "required": true,
+      "description": "The reporting date, Month & Year based on the frequency.",
+      "example": "2020-06-03"
+    },
+    {
+      "key": "customer_id",
+      "name": "CUSTOMER_ID",
+      "payload_key": "CUSTOMER ID",
+      "type": "string",
+      "required": false,
+      "description": "Unique customer identifier as assigned to customers by the reporting institution.",
+      "example": "0354678"
+    },
+    {
+      "key": "gender",
+      "name": "GENDER",
+      "payload_key": "GENDER",
+      "type": "string",
+      "required": false,
+      "description": "Customer's gender/sex with the possible options as {Male, Female, Corporate or Others}.",
+      "example": "M"
+    },
+    {
+      "key": "customer_name",
+      "name": "CUSTOMER NAME",
+      "payload_key": "CUSTOMER NAME",
+      "type": "string",
+      "required": false,
+      "description": "Customer's Surname or registered company Name or Business/Trading Name.",
+      "example": "Augustine Neto Other"
+    },
+    {
+      "key": "onboarding_date",
+      "name": "ONBOARDING DATE",
+      "payload_key": "ONBOARDING DATE",
+      "type": "date",
+      "required": false,
+      "description": "The date when the customer was onboraded in the format {YYYYMMDD} per ISO 8601.",
+      "example": "2015-01-08"
+    },
+    {
+      "key": "date_of_birth",
+      "name": "DATE OF BIRTH",
+      "payload_key": "DATE OF BIRTH",
+      "type": "date",
+      "required": false,
+      "description": "The customer's date of birth or registration in the format {YYYYMMDD} as per ISO 8601.",
+      "example": "1978-02-14"
+    },
+    {
+      "key": "nationality",
+      "name": "NATIONALITY",
+      "payload_key": "NATIONALITY",
+      "type": "string",
+      "required": false,
+      "description": "Customer's Nationality based on the ISO country code of the customer (party)'s Nationality.",
+      "example": "KE"
+    },
+    {
+      "key": "pri_id_doc_type",
+      "name": "PRI ID DOC TYPE",
+      "payload_key": "PRI ID DOC TYPE",
+      "type": "string",
+      "required": false,
+      "description": "Primary identification document used to open the account {Possible options include: National identity card, passport document, alien registration, service Id or company registraton certificate}.",
+      "example": "CUSTID01"
+    },
+    {
+      "key": "national_id",
+      "name": "NATIONAL ID",
+      "payload_key": "NATIONAL ID",
+      "type": "string",
+      "required": false,
+      "description": "Unique identification number issued to Kenyans that are 18 years and above",
+      "example": "21987563"
+    },
+    {
+      "key": "company_reg_number",
+      "name": "COMPANY REG NUMBER",
+      "payload_key": "COMPANY REG NUMBER",
+      "type": "string",
+      "required": false,
+      "description": "Unique registration certificate number assigned to registered corporates by the Registrar of Companies. Format to conform to the one for registrar of Companies in Kenya.",
+      "example": ""
+    },
+    {
+      "key": "passport_number",
+      "name": "PASSPORT NUMBER",
+      "payload_key": "PASSPORT NUMBER",
+      "type": "string",
+      "required": false,
+      "description": "Unique passport Number",
+      "example": ""
+    },
+    {
+      "key": "personal_id_number",
+      "name": "PERSONAL ID NUMBER",
+      "payload_key": "PERSONAL ID NUMBER",
+      "type": "string",
+      "required": false,
+      "description": "Personal Identification Number (PIN) as issued by Kenya Revenue Authority (KRA)",
+      "example": "A000597819E"
+    },
+    {
+      "key": "customer_legal_status",
+      "name": "CUSTOMER LEGAL STATUS",
+      "payload_key": "CUSTOMER LEGAL STATUS",
+      "type": "string",
+      "required": false,
+      "description": "The category for an individual, company or any other legal entity as provided by the law.",
+      "example": "LSTC01"
+    },
+    {
+      "key": "customer_type",
+      "name": "CUSTOMER TYPE",
+      "payload_key": "CUSTOMER TYPE",
+      "type": "string",
+      "required": false,
+      "description": "Whether the customer is an \"Insider\" or \"External\" to the reporting institution",
+      "example": "CUSTTC02"
+    },
+    {
+      "key": "insider_category_type",
+      "name": "INSIDER CATEGORY TYPE",
+      "payload_key": "INSIDER CATEGORY TYPE",
+      "type": "string",
+      "required": false,
+      "description": "E.g. {Directors, shareholders, employees and associates, etc}. Otherwise left blank",
+      "example": "ITC01"
+    },
+    {
+      "key": "economic_sector_code",
+      "name": "ECONOMIC SECTOR CODE",
+      "payload_key": "ECONOMIC SECTOR CODE",
+      "type": "string",
+      "required": false,
+      "description": "The sector code as per the System of National Accounts (SNA) 2008.",
+      "example": "0017.035"
+    },
+    {
+      "key": "business_segment",
+      "name": "BUSINESS SEGMENT",
+      "payload_key": "BUSINESS SEGMENT",
+      "type": "string",
+      "required": false,
+      "description": "e.g. Corporate, Micro, Small and Medium Enterprises, Personal and Parastatal.",
+      "example": "BSC04"
+    },
+    {
+      "key": "residency",
+      "name": "RESIDENCY",
+      "payload_key": "RESIDENCY",
+      "type": "string",
+      "required": false,
+      "description": "Resident (Kenya) or Non-resident (Rest of the world). ISO country code of the party's Nationality. {As per ISO-3166-1}.",
+      "example": "US"
+    },
+    {
+      "key": "postal_address",
+      "name": "POSTAL ADDRESS",
+      "payload_key": "POSTAL ADDRESS",
+      "type": "string",
+      "required": false,
+      "description": "Postal Address box number, Postal code, Town and ISO country code of the address location. {e.g. P.O. Box 123456, 00200-City Square, Nairobi, KE}.",
+      "example": "132, My Street, Kingston, New York 12401, United States"
+    },
+    {
+      "key": "telephone_number",
+      "name": "TELEPHONE NUMBER",
+      "payload_key": "TELEPHONE NUMBER",
+      "type": "string",
+      "required": false,
+      "description": "Mobile or Landline (CCC-AAA- XXXXXXX: CCC -Country Code, AAA - Area Code and XXXXXXX - Contact Number).",
+      "example": "(555) 555-1234"
+    },
+    {
+      "key": "email_address",
+      "name": "EMAIL ADDRESS",
+      "payload_key": "EMAIL ADDRESS",
+      "type": "string",
+      "required": false,
+      "description": "Customer (Party)'s email address",
+      "example": "another@anywhere.com"
+    }
+  ]
+}

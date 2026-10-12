@@ -1,0 +1,448 @@
+{
+  "number": 22,
+  "code": "loan_contracts_information",
+  "title": "Loan Contracts Information",
+  "group": "Credit & Loans",
+  "frequency": "periodic",
+  "endpoint": "/api/v1/flows/rest/API_LOANCONTRACTSINFOSYNC/1.0/submitLoanContractsData",
+  "array_key": "LOAN_CONTRACTS_DATA",
+  "notes": "",
+  "source_pages": [
+    113,
+    122
+  ],
+  "fields": [
+    {
+      "key": "row_id",
+      "name": "ROW ID",
+      "payload_key": "ROW ID",
+      "type": "string",
+      "required": true,
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1"
+    },
+    {
+      "key": "bank_code",
+      "name": "BANK CODE",
+      "payload_key": "BANK CODE",
+      "type": "string",
+      "required": false,
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA).",
+      "example": "0000001"
+    },
+    {
+      "key": "branch_id",
+      "name": "BRANCH ID",
+      "payload_key": "BRANCH ID",
+      "type": "string",
+      "required": false,
+      "description": "The code of the branch where the loan is advanced",
+      "example": "003"
+    },
+    {
+      "key": "reporting_date",
+      "name": "REPORTING DATE",
+      "payload_key": "REPORTING DATE",
+      "type": "date",
+      "required": true,
+      "description": "The reporting date, Month & Year based on the frequency. Format {DD-MMM-YYYY}",
+      "example": "01-JUN-2021"
+    },
+    {
+      "key": "customer_id",
+      "name": "CUSTOMER ID",
+      "payload_key": "CUSTOMER ID",
+      "type": "string",
+      "required": false,
+      "description": "Customer unique id linked to the Loan contract",
+      "example": "CUST00052"
+    },
+    {
+      "key": "acc_ln_number",
+      "name": "ACC LN NUMBER",
+      "payload_key": "ACC LN NUMBER",
+      "type": "string",
+      "required": false,
+      "description": "Unique number assigned to lndividual loan contracts",
+      "example": "LID09876565"
+    },
+    {
+      "key": "business_activity_code",
+      "name": "BUSINESS ACTIVITY CODE",
+      "payload_key": "BUSINESS ACTIVITY CODE",
+      "type": "string",
+      "required": false,
+      "description": "The economic activity associated with the lending, as per ISIC guidelines.",
+      "example": "B0910"
+    },
+    {
+      "key": "agric_enterprise_category",
+      "name": "AGRIC ENTERPRISE CATEGORY",
+      "payload_key": "AGRIC ENTERPRISE CATEGORY",
+      "type": "string",
+      "required": false,
+      "description": "This is a further classification for Agricultural \"Business Economic Activties\" classified further into either Small Scale Farm Enterprises and Large Scale Farm Enterprises, Agricultural boards and Cooperative Societies. If the above \"business economic Activity code\" is on Agriculture then this field should be mandatory.",
+      "example": "AEATC02"
+    },
+    {
+      "key": "loan_category",
+      "name": "LOAN CATEGORY",
+      "payload_key": "LOAN CATEGORY",
+      "type": "string",
+      "required": false,
+      "description": "Secured or Unsecured",
+      "example": "Secured"
+    },
+    {
+      "key": "loan_product_type",
+      "name": "LOAN PRODUCT TYPE",
+      "payload_key": "LOAN PRODUCT TYPE",
+      "type": "string",
+      "required": false,
+      "description": "The type of loan product granted",
+      "example": "LNPRD05"
+    },
+    {
+      "key": "loan_disbursement_date",
+      "name": "LOAN DISBURSEMENT DATE",
+      "payload_key": "LOAN DISBURSEMENT DATE",
+      "type": "date",
+      "required": false,
+      "description": "Date when a loan is disbursed, including for mobile loans. Format {DD-MMM-YYYY}",
+      "example": "6/1/2021"
+    },
+    {
+      "key": "loan_disbursement_time",
+      "name": "LOAN DISBURSEMENT TIME",
+      "payload_key": "LOAN DISBURSEMENT TIME",
+      "type": "string",
+      "required": false,
+      "description": "Time when a loan is disbursed, including for mobile loans. Format {HH:MM:SS}",
+      "example": "6/1/2021 10:35:45 AM"
+    },
+    {
+      "key": "loan_disbursement_amt_fcy",
+      "name": "LOAN DISBURSEMENT AMT FCY",
+      "payload_key": "LOAN DISBURSEMENT AMT FCY",
+      "type": "string",
+      "required": false,
+      "description": "Approved/Disbursed loan amount in foreign currency.",
+      "example": "350000.12345"
+    },
+    {
+      "key": "loan_disbursement_amt_lcy",
+      "name": "LOAN DISBURSEMENT AMT LCY",
+      "payload_key": "LOAN DISBURSEMENT AMT LCY",
+      "type": "string",
+      "required": false,
+      "description": "Approved/Disbursed loan amount in the local currency equivalent.",
+      "example": "2.12345"
+    },
+    {
+      "key": "outs_principal_ln_bal_fcy",
+      "name": "OUTS PRINCIPAL LN BAL FCY",
+      "payload_key": "OUTS PRINCIPAL LN BAL FCY",
+      "type": "string",
+      "required": false,
+      "description": "Outstanding Loan Principal Amount in foreign currency.",
+      "example": "290000.12345"
+    },
+    {
+      "key": "outs_principal_ln_bal_lcy",
+      "name": "OUTS PRINCIPAL LN BAL LCY",
+      "payload_key": "OUTS PRINCIPAL LN BAL LCY",
+      "type": "string",
+      "required": false,
+      "description": "Outstanding Loan Pricipal Amount in local currency equivalent.",
+      "example": "290000.12345"
+    },
+    {
+      "key": "outs_int_amt_due_fcy",
+      "name": "OUTS INT AMT DUE FCY",
+      "payload_key": "OUTS INT AMT DUE FCY",
+      "type": "string",
+      "required": false,
+      "description": "Interest Amount in the foreign currency.",
+      "example": "290000.12345"
+    },
+    {
+      "key": "outs_int_amt_due_lcy",
+      "name": "OUTS INT AMT DUE LCY",
+      "payload_key": "OUTS INT AMT DUE LCY",
+      "type": "string",
+      "required": false,
+      "description": "Interest Amount in the local currency equivalent.",
+      "example": "290000.12345"
+    },
+    {
+      "key": "outs_penalty_int_amt_due_fcy",
+      "name": "OUTS PENALTY INT AMT DUE FCY",
+      "payload_key": "OUTS PENALTY INT AMT DUE FCY",
+      "type": "string",
+      "required": false,
+      "description": "Penalty Interest Amount in foreign currency.",
+      "example": "1.12345"
+    },
+    {
+      "key": "outs_penalty_int_amt_due_lcy",
+      "name": "OUTS PENALTY INT AMT DUE LCY",
+      "payload_key": "OUTS PENALTY INT AMT DUE LCY",
+      "type": "string",
+      "required": false,
+      "description": "Penalty Interest Amount in the local currency equivalent.",
+      "example": "1.12345"
+    },
+    {
+      "key": "total_outstanding_ln_amt_fcy",
+      "name": "TOTAL OUTSTANDING LN AMT FCY",
+      "payload_key": "TOTAL OUTSTANDING LN AMT FCY",
+      "type": "string",
+      "required": false,
+      "description": "Total outstanding loan amount in foreign currency.",
+      "example": "1.12345"
+    },
+    {
+      "key": "total_outstanding_ln_amt_lcy",
+      "name": "TOTAL OUTSTANDING LN AMT LCY",
+      "payload_key": "TOTAL OUTSTANDING LN AMT LCY",
+      "type": "string",
+      "required": false,
+      "description": "Total outstanding loan amount in the local currency equivalent.",
+      "example": "1.12345"
+    },
+    {
+      "key": "principal_amount_arrears_fcy",
+      "name": "PRINCIPAL AMOUNT ARREARS FCY",
+      "payload_key": "PRINCIPAL AMOUNT ARREARS FCY",
+      "type": "string",
+      "required": false,
+      "description": "Principal amount in arrears in foreign currency.",
+      "example": "1.12345"
+    },
+    {
+      "key": "principal_amount_arrears_lcy",
+      "name": "PRINCIPAL AMOUNT ARREARS LCY",
+      "payload_key": "PRINCIPAL AMOUNT ARREARS LCY",
+      "type": "string",
+      "required": false,
+      "description": "Principal amount in arrears in the local currency equivalent.",
+      "example": "1.12345"
+    },
+    {
+      "key": "interest_amount_arrears_fcy",
+      "name": "INTEREST AMOUNT ARREARS FCY",
+      "payload_key": "INTEREST AMOUNT ARREARS FCY",
+      "type": "string",
+      "required": false,
+      "description": "Interest amount in arrears in foreign currency.",
+      "example": "1.12345"
+    },
+    {
+      "key": "interest_amount_arrears_lcy",
+      "name": "INTEREST AMOUNT ARREARS LCY",
+      "payload_key": "INTEREST AMOUNT ARREARS LCY",
+      "type": "string",
+      "required": false,
+      "description": "Interest amount in arrears in local currency equivalent.",
+      "example": "1.12345"
+    },
+    {
+      "key": "interest_suspense_fcy",
+      "name": "INTEREST SUSPENSE FCY",
+      "payload_key": "INTEREST SUSPENSE FCY",
+      "type": "string",
+      "required": false,
+      "description": "Suspended interest in the currency of disbursement {Accrued interest on non- performing loans that is not recognized as income in the institution's income statements}.",
+      "example": "1.12345"
+    },
+    {
+      "key": "interest_suspense_lcy",
+      "name": "INTEREST SUSPENSE LCY",
+      "payload_key": "INTEREST SUSPENSE LCY",
+      "type": "string",
+      "required": false,
+      "description": "Suspended interest in the local currency equivalent {Accrued interest on non-performing loans that is not recognized as income in the institution's income statements}.",
+      "example": "1.12345"
+    },
+    {
+      "key": "specific_provisions_lcy",
+      "name": "SPECIFIC PROVISIONS LCY",
+      "payload_key": "SPECIFIC PROVISIONS LCY",
+      "type": "string",
+      "required": false,
+      "description": "Amount of provisions held for the loan contract",
+      "example": "1.12345"
+    },
+    {
+      "key": "loan_performance_class",
+      "name": "LOAN PERFORMANCE CLASS",
+      "payload_key": "LOAN PERFORMANCE CLASS",
+      "type": "string",
+      "required": false,
+      "description": "Normal, watch, substandard, doubtful and loss classification as CBK's prudential guidelines.",
+      "example": "LNPC03"
+    },
+    {
+      "key": "perf_class_last_modified_date",
+      "name": "PERF CLASS LAST MODIFIED DATE",
+      "payload_key": "PERF CLASS LAST MODIFIED DATE",
+      "type": "date",
+      "required": false,
+      "description": "The date of last amendment of \"performance classification'. Format {DD-MMM-YYYY}.",
+      "example": "01-JUN-2021"
+    },
+    {
+      "key": "loan_tenure",
+      "name": "LOAN TENURE",
+      "payload_key": "LOAN TENURE",
+      "type": "string",
+      "required": false,
+      "description": "The loan repayment period for the facility based on the repayment frequency.",
+      "example": "120"
+    },
+    {
+      "key": "anticipated_maturity_period",
+      "name": "ANTICIPATED MATURITY PERIOD",
+      "payload_key": "ANTICIPATED MATURITY PERIOD",
+      "type": "string",
+      "required": false,
+      "description": "The anticipated maturity period. E.g. Matured, 0-30 days, 31-60 days, 61-90 days, 91-180 days, 6-9 months, 10- 12 months, 1-3 years, 3-5 years and over 5 years.",
+      "example": "AMTC12"
+    },
+    {
+      "key": "base_rate",
+      "name": "BASE RATE",
+      "payload_key": "BASE RATE",
+      "type": "string",
+      "required": false,
+      "description": "The reporting institution's base or reference rate.",
+      "example": ""
+    },
+    {
+      "key": "overall_interest_rate",
+      "name": "OVERALL INTEREST RATE",
+      "payload_key": "OVERALL INTEREST RATE",
+      "type": "string",
+      "required": false,
+      "description": "The overall prevailing interest rate for the credit facility.",
+      "example": "10.12345"
+    },
+    {
+      "key": "interest_calculation_method",
+      "name": "INTEREST CALCULATION METHOD",
+      "payload_key": "INTEREST CALCULATION METHOD",
+      "type": "string",
+      "required": false,
+      "description": "The method used to calculate interest e.g. {Fixed flat rate, Reducing balance or Reducing balance (with equal installments).",
+      "example": "INTCLMTD03"
+    },
+    {
+      "key": "loan_application_fee",
+      "name": "LOAN APPLICATION FEE",
+      "payload_key": "LOAN APPLICATION FEE",
+      "type": "string",
+      "required": false,
+      "description": "Loan application fees charged.",
+      "example": "2500.12345"
+    },
+    {
+      "key": "loan_administration_fee",
+      "name": "LOAN ADMINISTRATION FEE",
+      "payload_key": "LOAN ADMINISTRATION FEE",
+      "type": "string",
+      "required": false,
+      "description": "Cumulative annual loan maintenance/administrative charges.",
+      "example": "879.12345"
+    },
+    {
+      "key": "other_loan_charges",
+      "name": "OTHER LOAN CHARGES",
+      "payload_key": "OTHER LOAN CHARGES",
+      "type": "string",
+      "required": false,
+      "description": "Other annual cumulative loan charges (apart from above).",
+      "example": "0.00001"
+    },
+    {
+      "key": "annual_percentage_rate",
+      "name": "ANNUAL PERCENTAGE RATE",
+      "payload_key": "ANNUAL PERCENTAGE RATE",
+      "type": "string",
+      "required": false,
+      "description": "The calculated annual percentage rate.",
+      "example": "11.12345"
+    },
+    {
+      "key": "loan_repayment_frequency",
+      "name": "LOAN REPAYMENT FREQUENCY",
+      "payload_key": "LOAN REPAYMENT FREQUENCY",
+      "type": "string",
+      "required": false,
+      "description": "Loan frequency {e.g. Daily, Weekly, Fortnightly), Monthly, Quarterly, Semi-annually, Annually, Tri-annual (3 times in a year), Bi-annual (Once in 2 years), Bullet payment etc}.",
+      "example": "LNFRQ05"
+    },
+    {
+      "key": "loan_instalment_amount",
+      "name": "LOAN INSTALMENT AMOUNT",
+      "payload_key": "LOAN INSTALMENT AMOUNT",
+      "type": "string",
+      "required": false,
+      "description": "Equated Monthly Instalment (EMI) Amount. The scheduled loan installment amount",
+      "example": "458333.33333"
+    },
+    {
+      "key": "total_loan_repaid_amount",
+      "name": "TOTAL LOAN REPAID AMOUNT",
+      "payload_key": "TOTAL LOAN REPAID AMOUNT",
+      "type": "string",
+      "required": false,
+      "description": "The amount of loan repaid, composed of principal and interest components.",
+      "example": "8447310.00000"
+    },
+    {
+      "key": "total_instalments_paid",
+      "name": "TOTAL INSTALMENTS PAID",
+      "payload_key": "TOTAL INSTALMENTS PAID",
+      "type": "string",
+      "required": false,
+      "description": "Due and paid loan installments.",
+      "example": "18.12345"
+    },
+    {
+      "key": "arrears_start_date",
+      "name": "ARREARS START DATE",
+      "payload_key": "ARREARS START DATE",
+      "type": "date",
+      "required": false,
+      "description": "The date when the arrears start in the format {DD- MMM-YYYY}.",
+      "example": ""
+    },
+    {
+      "key": "instalments_arrears",
+      "name": "INSTALMENTS ARREARS",
+      "payload_key": "INSTALMENTS ARREARS",
+      "type": "string",
+      "required": false,
+      "description": "Due and unpaind loan installments.",
+      "example": "6.12345"
+    },
+    {
+      "key": "moratorium_period",
+      "name": "MORATORIUM PERIOD",
+      "payload_key": "MORATORIUM PERIOD",
+      "type": "string",
+      "required": false,
+      "description": "Grace period on repayment in days.",
+      "example": ""
+    },
+    {
+      "key": "moratorium_item",
+      "name": "MORATORIUM ITEM",
+      "payload_key": "MORATORIUM ITEM",
+      "type": "string",
+      "required": false,
+      "description": "The tem on which a grace period (moratorium), either on Principal or Interest",
+      "example": ""
+    }
+  ]
+}

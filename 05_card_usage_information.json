@@ -1,0 +1,133 @@
+{
+  "number": 5,
+  "code": "card_usage_information",
+  "title": "Card Usage Information",
+  "group": "Cards",
+  "frequency": "periodic",
+  "endpoint": "/api/v1/flows/rest/API_CARDUSAGEINFOSYN/1.0/submitCardUsageData",
+  "array_key": "CARD_USAGE_INFO",
+  "notes": "",
+  "source_pages": [
+    30,
+    34
+  ],
+  "fields": [
+    {
+      "key": "row_id",
+      "name": "ROW ID",
+      "payload_key": "ROW ID",
+      "type": "number",
+      "required": true,
+      "description": "A unique sequential number, running from the first record to the last.",
+      "example": "1"
+    },
+    {
+      "key": "bank_code",
+      "name": "BANK CODE",
+      "payload_key": "BANK CODE",
+      "type": "string",
+      "required": false,
+      "description": "Bank clearing code of the reporting bank as issued by Kenya Banker's Association (KBA)",
+      "example": "0000001"
+    },
+    {
+      "key": "reporting_date",
+      "name": "REPORTING DATE",
+      "payload_key": "REPORTING DATE",
+      "type": "date",
+      "required": true,
+      "description": "The reporting date, Month & Year based on the frequency.",
+      "example": "2022-06-03"
+    },
+    {
+      "key": "card_state",
+      "name": "CARD STATE",
+      "payload_key": "CARD STATE",
+      "type": "string",
+      "required": false,
+      "description": "Physical or virtual",
+      "example": "P"
+    },
+    {
+      "key": "card_type",
+      "name": "CARD TYPE",
+      "payload_key": "CARD TYPE",
+      "type": "string",
+      "required": false,
+      "description": "E.g. debit, credit, prepaid, charge, etc.",
+      "example": "CTC01"
+    },
+    {
+      "key": "card_brand",
+      "name": "CARD BRAND",
+      "payload_key": "CARD BRAND",
+      "type": "string",
+      "required": false,
+      "description": "Visa, Mastercard e.t.c.",
+      "example": "CDB04"
+    },
+    {
+      "key": "card_category_type",
+      "name": "CARD CATEGORY TYPE",
+      "payload_key": "CARD CATEGORY TYPE",
+      "type": "string",
+      "required": false,
+      "description": "E.g. Local and international usage",
+      "example": "I"
+    },
+    {
+      "key": "transaction_type",
+      "name": "TRANSACTION TYPE",
+      "payload_key": "TRANSACTION TYPE",
+      "type": "string",
+      "required": false,
+      "description": "Type of transaction",
+      "example": "AGTXN09"
+    },
+    {
+      "key": "channel_type",
+      "name": "CHANNEL TYPE",
+      "payload_key": "CHANNEL TYPE",
+      "type": "string",
+      "required": false,
+      "description": "The channel used for transacting {e.g. ATM, POS, etc}",
+      "example": "CDCH07"
+    },
+    {
+      "key": "total_no_of_live_cards_unexp",
+      "name": "TOTAL NO OF LIVE CARDS UNEXP",
+      "payload_key": "TOTAL NO OF LIVE CARDS UNEXP",
+      "type": "string",
+      "required": false,
+      "description": "Total number of live cards (Unexpired)",
+      "example": "1,870"
+    },
+    {
+      "key": "total_active_cards",
+      "name": "TOTAL ACTIVE CARDS",
+      "payload_key": "TOTAL ACTIVE CARDS",
+      "type": "string",
+      "required": false,
+      "description": "Total active cards",
+      "example": "5,675"
+    },
+    {
+      "key": "total_no_of_transactions_done",
+      "name": "TOTAL NO OF TRANSACTIONS DONE",
+      "payload_key": "TOTAL NO OF TRANSACTIONS DONE",
+      "type": "string",
+      "required": false,
+      "description": "Total number of transactions done per channel type",
+      "example": "25,000"
+    },
+    {
+      "key": "total_value_of_txns_done_lcy",
+      "name": "TOTAL VALUE OF TXNS DONE LCY",
+      "payload_key": "TOTAL VALUE OF TXNS DONE LCY",
+      "type": "string",
+      "required": false,
+      "description": "Total value of transactions done per channel type (LCY equivalent)",
+      "example": "36000650.12345"
+    }
+  ]
+}
